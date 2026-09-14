@@ -2,323 +2,825 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO & Metadata -->
+
   <title>About Us | GFC Restaurant Udayar Vilai, Kanyakumari</title>
-  <meta name="description" content="Learn more about GFC Restaurant in Udayar Vilai, Kanyakumari. Discover our culinary philosophy, focus on quality ingredients, authentic flavours, and warm hospitality.">
-  <meta name="keywords" content="about GFC Restaurant, restaurant story Udayar Vilai, Kanyakumari dining experience, family restaurant Kanyakumari">
-  <link rel="canonical" href="https://example.com/about.html">
-  
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="About GFC Restaurant | Where Great Food Meets Great Moments">
-  <meta property="og:description" content="Discover GFC Restaurant in Udayar Vilai, Kanyakumari. Good food, quality ingredients, and welcoming moments for every guest.">
-  <meta property="og:image" content="assets/images/about.jpg">
-  <meta property="og:url" content="https://example.com/about.html">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About GFC Restaurant | Udayar Vilai, Kanyakumari">
-  <meta name="twitter:description" content="Discover our culinary story, fresh ingredients, and welcoming hospitality.">
-  <meta name="twitter:image" content="assets/images/about.jpg">
+
+  <meta
+    name="description"
+    content="Learn about GFC Restaurant in Udayar Vilai, Kanyakumari. Discover our story, food, values and passion for creating memorable dining experiences."
+  >
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
 
-  <!-- Global Stylesheet -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- JSON-LD Local SEO Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "GFC Restaurant",
-    "url": "https://example.com/about.html",
-    "telephone": "[PHONE NUMBER]",
-    "servesCuisine": ["Indian", "Grill", "Biryani", "Fast Food", "Cafe"],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Udayar Vilai",
-      "addressLocality": "Kanyakumari",
-      "addressRegion": "Tamil Nadu",
-      "addressCountry": "IN"
-    }
-  }
-  </script>
+  <!-- About CSS -->
+  <link rel="stylesheet" href="css/about.css">
 </head>
+
 <body>
 
-  <!-- ==========================================================================
-       GLOBAL STICKY HEADER
-       ========================================================================== -->
-  <header class="site-header scrolled" id="siteHeader" role="banner">
+  <!-- =========================
+       HEADER / NAVBAR
+  ========================== -->
+
+  <header class="site-header" id="siteHeader">
+
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo" aria-label="GFC Restaurant Home">
-        <div class="logo-badge">GFC</div>
-        <div class="logo-text-group">
-          <span class="logo-title">GFC RESTAURANT</span>
-          <span class="logo-tagline">Udayar Vilai • Kanyakumari</span>
+
+      <!-- LOGO -->
+      <a
+        href="index.html"
+        class="brand-logo"
+        aria-label="GFC Restaurant Home"
+      >
+
+        <div class="logo-badge">
+          GFC
         </div>
+
+        <div class="logo-text-group">
+
+          <span class="logo-title">
+            GFC RESTAURANT
+          </span>
+
+          <span class="logo-tagline">
+            Udayar Vilai • Kanyakumari
+          </span>
+
+        </div>
+
       </a>
 
-      <nav class="main-nav" aria-label="Main Navigation">
+
+      <!-- DESKTOP NAVIGATION -->
+      <nav
+        class="main-nav"
+        aria-label="Main Navigation"
+      >
+
         <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="menu.html" class="nav-link">Menu</a></li>
-          <li><a href="about.html" class="nav-link active">About</a></li>
-          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+
+          <li>
+            <a
+              href="index.html"
+              class="nav-link"
+            >
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="menu.html"
+              class="nav-link"
+            >
+              Menu
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="about.html"
+              class="nav-link active"
+            >
+              About
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="gallery.html"
+              class="nav-link"
+            >
+              Gallery
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="contact.html"
+              class="nav-link"
+            >
+              Contact
+            </a>
+          </li>
+
         </ul>
+
       </nav>
 
+
+      <!-- HEADER ACTION -->
       <div class="header-actions">
-        <a href="reservation.html" class="btn btn-header-reservation">Reservation</a>
-        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNav">
+
+        <a
+          href="reservation.html"
+          class="btn btn-header-reservation"
+        >
+          Book a Table
+        </a>
+
+
+        <!-- MOBILE MENU BUTTON -->
+        <button
+          class="hamburger-btn"
+          id="hamburgerBtn"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+        >
+
           <span></span>
           <span></span>
           <span></span>
+
         </button>
+
       </div>
+
     </div>
+
+
+    <!-- MOBILE NAVIGATION -->
+    <div
+      class="mobile-nav"
+      id="mobileNav"
+    >
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="menu.html">
+        Menu
+      </a>
+
+      <a
+        href="about.html"
+        class="active"
+      >
+        About
+      </a>
+
+      <a href="gallery.html">
+        Gallery
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+      <a
+        href="reservation.html"
+        class="mobile-book-btn"
+      >
+        Book a Table
+      </a>
+
+    </div>
+
   </header>
 
-  <!-- Mobile Navigation Drawer -->
-  <div class="mobile-nav-backdrop" id="mobileBackdrop" tabindex="-1"></div>
-  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation" role="dialog" aria-modal="true">
-    <div class="mobile-nav-header" style="margin-bottom: 24px;">
-      <span class="eyebrow" style="margin: 0;">GFC Restaurant</span>
-      <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Udayar Vilai, Kanyakumari</div>
-    </div>
-    <ul class="mobile-nav-list">
-      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="menu.html" class="mobile-nav-link">Menu</a></li>
-      <li><a href="about.html" class="mobile-nav-link active">About</a></li>
-      <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-      <li><a href="reservation.html" class="mobile-nav-link">Reservation</a></li>
-    </ul>
-    <div class="mobile-nav-footer">
-      <a href="reservation.html" class="btn btn-primary btn-block">Book a Table</a>
-      <div class="mobile-nav-contact">
-        <p>Location: Udayar Vilai, Kanyakumari</p>
-        <p style="color: var(--primary); margin-top: 4px;">[PHONE NUMBER]</p>
-      </div>
-    </div>
-  </nav>
 
-  <!-- ==========================================================================
-       PAGE HERO
-       ========================================================================== -->
-  <main id="mainContent">
-    <section class="page-hero">
+
+
+
+    <!-- =========================
+         OUR STORY
+    ========================== -->
+
+    <section class="about-section">
+
       <div class="container">
-        <div class="breadcrumbs">
-          <a href="index.html">Home</a> &rsaquo; <span>About</span>
+
+        <div class="about-grid">
+
+          <!-- IMAGE -->
+
+          <div class="about-image reveal">
+
+            <img
+              src="assets/images/about.jpg"
+              alt="GFC Restaurant dining experience"
+            >
+
+            <div class="image-badge">
+
+              <strong>GFC</strong>
+
+              <span>
+                Since 2025
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- CONTENT -->
+
+          <div class="about-content reveal">
+
+            <span class="section-label">
+              OUR STORY
+            </span>
+
+            <h2>
+              More Than Just
+              <span>Good Food.</span>
+            </h2>
+
+            <p>
+              GFC Restaurant is a welcoming food destination
+              in Udayar Vilai, Kanyakumari, created for people
+              who love delicious food and good company.
+            </p>
+
+            <p>
+              From flavorful biryanis and smoky grills to
+              pizzas, wraps and refreshing beverages, every
+              dish is prepared with care and attention to
+              flavour.
+            </p>
+
+            <p>
+              Whether you are enjoying a meal with family,
+              meeting friends or simply treating yourself,
+              we want every visit to feel special.
+            </p>
+
+
+            <a
+              href="menu.html"
+              class="about-btn"
+            >
+              Explore Our Menu
+              <span>→</span>
+            </a>
+
+          </div>
+
         </div>
-        <span class="eyebrow">ABOUT GFC</span>
-        <h1 class="page-hero-title">Where Great Food Meets Great Moments</h1>
-        <p class="page-hero-subtitle">
-          A welcoming gathering space in Udayar Vilai, Kanyakumari, committed to flavor, freshness, and genuine hospitality.
-        </p>
+
       </div>
+
     </section>
 
-    <!-- ==========================================================================
-         ABOUT SECTIONS: OUR STORY, OUR FOOD, OUR VALUES
-         ========================================================================== -->
-    <section class="about-page-section">
+
+
+    <!-- =========================
+         FOOD SECTION
+    ========================== -->
+
+    <section class="food-section">
+
       <div class="container">
-        
-        <!-- SECTION 1: OUR STORY -->
-        <article class="story-block">
-          <div class="story-image-wrap reveal">
-            <img src="assets/images/about.jpg" alt="Interior ambience of GFC Restaurant" loading="lazy" referrerPolicy="no-referrer">
-          </div>
-          <div class="story-content reveal">
-            <span class="eyebrow">OUR STORY</span>
-            <h2 class="story-title">A Welcoming Place in Udayar Vilai</h2>
-            <p class="story-desc">
-              GFC Restaurant was created with a clear and humble passion: to provide a vibrant, comfortable dining space where residents and visitors in Kanyakumari can gather over memorable food.
-            </p>
-            <p class="story-desc">
-              From our kitchen counter to our dining tables, we believe that dining out should always feel special. We focus on culinary craftsmanship, hospitable service, and food that brings people closer together.
-            </p>
-            <div class="about-placeholder-note">
-              <strong>Editable Story Details:</strong> [Placeholder for founder background, exact launch year, and family culinary traditions]. Customize this text to feature your restaurant's exact heritage and local journey.
-            </div>
-            <div>
-              <a href="reservation.html" class="btn btn-primary">Dine With Us</a>
-            </div>
-          </div>
-        </article>
 
-        <!-- SECTION 2: OUR FOOD -->
-        <article class="story-block reversed">
-          <div class="story-image-wrap reveal">
-            <img src="assets/images/menu-1.jpg" alt="Freshly prepared cuisine at GFC Restaurant" loading="lazy" referrerPolicy="no-referrer">
-          </div>
-          <div class="story-content reveal">
-            <span class="eyebrow">OUR FOOD</span>
-            <h2 class="story-title">Honest Flavours & Quality Cooking</h2>
-            <p class="story-desc">
-              Every dish that leaves our kitchen starts with carefully sourced ingredients, balanced spices, and strict culinary standards. Whether it is our slow-dum biryanis infused with fragrant herbs, our smoky tandoori grills, or freshly baked thin crust pizzas, we take pride in preparing food to order.
+        <div class="food-grid">
+
+          <!-- CONTENT -->
+
+          <div class="food-content reveal">
+
+            <span class="section-label">
+              OUR FOOD
+            </span>
+
+            <h2>
+              Fresh Ingredients.
+              <span>Bold Flavours.</span>
+            </h2>
+
+            <p>
+              We believe that good food starts with good
+              ingredients. Our kitchen focuses on fresh,
+              flavorful ingredients and carefully prepared
+              dishes.
             </p>
-            <p class="story-desc">
-              We never cut corners on freshness, cleanliness, or taste. Our menu combines the best of traditional Indian warmth with popular cafe favourites, creating a balanced selection that satisfies every family member.
+
+            <p>
+              From aromatic biryani to sizzling grills,
+              crispy pizzas and refreshing mocktails,
+              there is something for everyone at GFC.
             </p>
-            <div>
-              <a href="menu.html" class="btn btn-secondary">Explore Full Menu</a>
+
+
+            <div class="food-points">
+
+              <div class="food-point">
+
+                <div class="point-icon">
+                  ✓
+                </div>
+
+                <div>
+                  <h3>
+                    Fresh Ingredients
+                  </h3>
+
+                  <p>
+                    Quality ingredients for better flavour.
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div class="food-point">
+
+                <div class="point-icon">
+                  ✓
+                </div>
+
+                <div>
+                  <h3>
+                    Made With Care
+                  </h3>
+
+                  <p>
+                    Every dish is prepared with attention.
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div class="food-point">
+
+                <div class="point-icon">
+                  ✓
+                </div>
+
+                <div>
+                  <h3>
+                    Great Taste
+                  </h3>
+
+                  <p>
+                    Flavours made to keep you coming back.
+                  </p>
+                </div>
+
+              </div>
+
             </div>
+
           </div>
-        </article>
+
+
+          <!-- IMAGE -->
+
+          <div class="food-image reveal">
+
+            <img
+              src="assets/images/menu-2.jpg"
+              alt="Delicious food at GFC Restaurant"
+            >
+
+            <div class="floating-card">
+
+              <span>
+                ★★★★★
+              </span>
+
+              <strong>
+                Made With Love
+              </strong>
+
+              <small>
+                Great food • Great moments
+              </small>
+
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
+
     </section>
 
-    <!-- ==========================================================================
-         OUR VALUES SECTION
-         ========================================================================== -->
+
+
+    <!-- =========================
+         OUR VALUES
+    ========================== -->
+
     <section class="values-section">
+
       <div class="container">
-        <div class="text-center reveal">
-          <span class="eyebrow">OUR CORE PRINCIPLES</span>
-          <h2 class="section-title">Values That Guide Our Kitchen</h2>
-          <p class="section-subtitle">
-            Four foundational pillars that define our service every single day.
+
+        <div class="section-heading reveal">
+
+          <span class="section-label">
+            WHAT WE BELIEVE
+          </span>
+
+          <h2>
+            Our <span>Values</span>
+          </h2>
+
+          <p>
+            The things that make every GFC experience special.
           </p>
+
         </div>
+
 
         <div class="values-grid">
-          <div class="value-card reveal">
-            <div class="value-number">01</div>
-            <h3 class="value-title">Uncompromising Quality</h3>
-            <p class="value-desc">We select high-grade poultry, farm-fresh produce, and authentic spices with rigorous hygiene standards.</p>
-          </div>
+
+
+          <!-- VALUE 1 -->
 
           <div class="value-card reveal">
-            <div class="value-number">02</div>
-            <h3 class="value-title">Authentic Taste</h3>
-            <p class="value-desc">Balancing rich seasonings, slow-cooking techniques, and chargrilled marinades to deliver unforgettable flavor.</p>
+
+            <div class="value-number">
+              01
+            </div>
+
+            <div class="value-icon">
+              🍴
+            </div>
+
+            <h3>
+              Great Food
+            </h3>
+
+            <p>
+              Delicious dishes prepared with care,
+              quality ingredients and bold flavours.
+            </p>
+
           </div>
 
-          <div class="value-card reveal">
-            <div class="value-number">03</div>
-            <h3 class="value-title">Warm Hospitality</h3>
-            <p class="value-desc">Treating every guest like extended family with attentive, prompt, and friendly service from start to finish.</p>
-          </div>
+
+          <!-- VALUE 2 -->
 
           <div class="value-card reveal">
-            <div class="value-number">04</div>
-            <h3 class="value-title">Dining Experience</h3>
-            <p class="value-desc">A clean, comfortable, and well-lit atmosphere where good conversations naturally flourish alongside great meals.</p>
+
+            <div class="value-number">
+              02
+            </div>
+
+            <div class="value-icon">
+              ❤️
+            </div>
+
+            <h3>
+              Warm Hospitality
+            </h3>
+
+            <p>
+              We want every guest to feel comfortable,
+              welcome and valued.
+            </p>
+
           </div>
+
+
+          <!-- VALUE 3 -->
+
+          <div class="value-card reveal">
+
+            <div class="value-number">
+              03
+            </div>
+
+            <div class="value-icon">
+              ✨
+            </div>
+
+            <h3>
+              Happy Moments
+            </h3>
+
+            <p>
+              A meal becomes special when shared with
+              family and friends.
+            </p>
+
+          </div>
+
+
+          <!-- VALUE 4 -->
+
+          <div class="value-card reveal">
+
+            <div class="value-number">
+              04
+            </div>
+
+            <div class="value-icon">
+              🌿
+            </div>
+
+            <h3>
+              Fresh & Quality
+            </h3>
+
+            <p>
+              We focus on freshness and quality in
+              everything we serve.
+            </p>
+
+          </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- ==========================================================================
-         COMMUNITY & AMBIENCE BANNER
-         ========================================================================== -->
-    <section style="padding: 90px 0; background-color: var(--black);">
-      <div class="container text-center reveal">
-        <span class="eyebrow">JOIN US AT GFC</span>
-        <h2 class="section-title" style="max-width: 700px; margin: 0 auto 16px;">We Look Forward to Welcoming You</h2>
-        <p class="section-subtitle" style="margin-bottom: 36px;">
-          Conveniently located in Udayar Vilai, Kanyakumari. Reserve a table for dinner or drop in for an afternoon treat.
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="about-cta">
+
+      <div class="cta-circle circle-one"></div>
+      <div class="cta-circle circle-two"></div>
+
+      <div class="container cta-content reveal">
+
+        <span class="section-label">
+          COME VISIT US
+        </span>
+
+        <h2>
+          Good Food.
+          <br>
+          Great Moments.
+          <br>
+          <span>That's GFC.</span>
+        </h2>
+
+        <p>
+          Bring your family, meet your friends and enjoy
+          something delicious at GFC Restaurant.
         </p>
-        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-          <a href="reservation.html" class="btn btn-primary">Book a Table</a>
-          <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+
+        <div class="cta-buttons">
+
+          <a
+            href="menu.html"
+            class="cta-btn orange-btn"
+          >
+            View Our Menu
+            <span>→</span>
+          </a>
+
+          <a
+            href="reservation.html"
+            class="cta-btn white-btn"
+          >
+            Book a Table
+          </a>
+
         </div>
+
       </div>
+
     </section>
 
   </main>
 
-  <!-- ==========================================================================
-       GLOBAL FOOTER
-       ========================================================================== -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-top-grid">
-        <div class="footer-brand-col">
-          <a href="index.html" class="brand-logo">
-            <div class="logo-badge">GFC</div>
-            <div class="logo-text-group">
-              <span class="logo-title">GFC RESTAURANT</span>
-              <span class="logo-tagline">Udayar Vilai • Kanyakumari</span>
-            </div>
-          </a>
-          <p class="footer-brand-desc">
-            A premium dining and cafe experience in Udayar Vilai, Kanyakumari. Fresh flavours, delicious moments, and warm hospitality made with love.
-          </p>
-          <div class="footer-social-links">
-            <a href="[INSTAGRAM_URL]" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            </a>
-            <a href="[FACEBOOK_URL]" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-            </a>
-            <a href="[WHATSAPP_URL]" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-            </a>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+      <!-- BRAND -->
+
+      <div class="footer-brand">
+
+        <div class="footer-logo">
+
+          <div class="logo-badge">
+            GFC
           </div>
+
+          <div>
+
+            <strong>
+              GFC RESTAURANT
+            </strong>
+
+            <span>
+              Udayar Vilai • Kanyakumari
+            </span>
+
+          </div>
+
         </div>
 
-        <div>
-          <h4 class="footer-heading">Quick Links</h4>
-          <ul class="footer-links-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Our Menu</a></li>
-            <li><a href="about.html">About GFC</a></li>
-            <li><a href="gallery.html">Photo Gallery</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="reservation.html">Reserve a Table</a></li>
-          </ul>
-        </div>
+        <p>
+          Good food, great ambience and happy moments.
+          Visit GFC Restaurant and make your moments memorable.
+        </p>
 
-        <div>
-          <h4 class="footer-heading">Visit Us</h4>
-          <div class="footer-contact-info">
-            <div class="footer-contact-item">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              <span>Udayar Vilai, Kanyakumari, Tamil Nadu, India</span>
-            </div>
-            <div class="footer-contact-item">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <span>[PHONE NUMBER]</span>
-            </div>
-            <div class="footer-contact-item">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <span>[EMAIL]</span>
-            </div>
-            <div class="footer-contact-item">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              <span>Hours: [OPENING HOURS]</span>
-            </div>
-          </div>
-        </div>
       </div>
 
-      <div class="footer-bottom">
-        <div class="footer-copyright">
-          &copy; 2026 GFC Restaurant. All Rights Reserved.
-        </div>
-        <div class="footer-location-sub">
-          Udayar Vilai • Kanyakumari • Tamil Nadu
-        </div>
+
+      <!-- QUICK LINKS -->
+
+      <div class="footer-column">
+
+        <h3>
+          Quick Links
+        </h3>
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="menu.html">
+          Menu
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="gallery.html">
+          Gallery
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
       </div>
+
+
+      <!-- VISIT -->
+
+      <div class="footer-column">
+
+        <h3>
+          Visit Us
+        </h3>
+
+        <p>
+          Udayar Vilai,
+          <br>
+          Kanyakumari,
+          <br>
+          Tamil Nadu, India
+        </p>
+
+      </div>
+
+
+      <!-- CONTACT -->
+
+      <div class="footer-column">
+
+        <h3>
+          Contact
+        </h3>
+
+        <a href="tel:+919876543210">
+          +91 98765 43210
+        </a>
+
+        <a href="mailto:info@gfcrestaurant.com">
+          info@gfcrestaurant.com
+        </a>
+
+        <p>
+          Open Daily
+          <br>
+          11:00 AM – 10:30 PM
+        </p>
+
+      </div>
+
     </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <p>
+          © 2026 GFC Restaurant. All Rights Reserved.
+        </p>
+
+      </div>
+
+    </div>
+
   </footer>
 
-  <a href="#siteHeader" class="back-to-top-btn" aria-label="Back to top">
-    <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
-  </a>
 
-  <script src="js/script.js"></script>
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /* Mobile Navigation */
+
+    const hamburgerBtn =
+      document.getElementById("hamburgerBtn");
+
+    const mobileNav =
+      document.getElementById("mobileNav");
+
+
+    hamburgerBtn.addEventListener("click", function () {
+
+      mobileNav.classList.toggle("open");
+
+      const isOpen =
+        mobileNav.classList.contains("open");
+
+      hamburgerBtn.setAttribute(
+        "aria-expanded",
+        isOpen
+      );
+
+    });
+
+
+
+    /* Scroll Reveal */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        function (entries) {
+
+          entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("show");
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.15
+        }
+      );
+
+
+    revealElements.forEach(function (element) {
+
+      revealObserver.observe(element);
+
+    });
+
+
+
+    /* Header shadow on scroll */
+
+    const siteHeader =
+      document.getElementById("siteHeader");
+
+
+    window.addEventListener("scroll", function () {
+
+      if (window.scrollY > 30) {
+
+        siteHeader.classList.add("scrolled");
+
+      } else {
+
+        siteHeader.classList.remove("scrolled");
+
+      }
+
+    });
+
+  </script>
+
 </body>
 </html>
