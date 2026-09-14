@@ -13,13 +13,13 @@
   --primary-dark: #B45309;
   --primary-glow: rgba(245, 158, 11, 0.22);
 
-  --dark: #111111;
-  --dark-surface: #141414;
-  --dark-card: #181818;
-  --dark-card-hover: #202020;
-  --dark-border: rgba(255, 255, 255, 0.08);
+  --dark: #e9e6d9;
+  --dark-surface: white;
+  --dark-card: #edb846;
+  --dark-card-hover: #de8202;
+  --dark-border: rgba(255, 248, 248, 0.08);
 
-  --black: #080808;
+  --black: #edb846;
   --obsidian: #050505;
 
   --cream: #FFF9E8;
@@ -91,7 +91,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: 
-    radial-gradient(ellipse at 50% 0%, rgba(245, 158, 11, 0.035) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 0%, rgba(226, 219, 210, 0.035) 0%, transparent 60%),
     radial-gradient(ellipse at 80% 40%, rgba(212, 160, 23, 0.02) 0%, transparent 50%);
   background-attachment: fixed;
 }
@@ -137,6 +137,8 @@ ul, ol {
   margin-right: auto;
   padding-left: 28px;
   padding-right: 28px;
+  
+
 }
 
 /* Editorial Typography Helpers */
