@@ -7,7 +7,7 @@
   <title>Blog | GFC Restaurant Udayar Vilai, Kanyakumari</title>
 
   <meta name="description"
-    content="Read the latest food stories, restaurant updates, dining tips and delicious moments from GFC Restaurant in Udayar Vilai, Kanyakumari.">
+    content="Read food stories, restaurant updates, dining tips and delicious moments from GFC Restaurant in Udayar Vilai, Kanyakumari.">
 
   <meta name="keywords"
     content="GFC Restaurant blog, food blog Kanyakumari, restaurant blog Udayar Vilai, food stories Kanyakumari">
@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- Global CSS -->
@@ -31,90 +31,80 @@
 <body>
 
 <!-- =========================================================
-     HEADER
+     HEADER — SAME AS INDEX
 ========================================================= -->
 
-<header class="site-header scrolled" id="siteHeader">
+<header id="header">
 
-  <div class="container header-inner">
+  <div class="navbar">
 
-    <a href="index.html" class="brand-logo" aria-label="GFC Restaurant Home">
+    <a href="index.html" class="logo">
 
-      <div class="logo-badge">GFC</div>
+      <div class="logo-circle">
+        GFC
+      </div>
 
-      <div class="logo-text-group">
-        <span class="logo-title">GFC RESTAURANT</span>
-        <span class="logo-tagline">
+      <div>
+        <div class="logo-name">
+          GFC RESTAURANT
+        </div>
+
+        <span class="logo-place">
           Udayar Vilai • Kanyakumari
         </span>
       </div>
 
     </a>
 
-    <nav class="main-nav" aria-label="Main Navigation">
 
-      <ul class="nav-list">
+    <ul class="nav-links">
 
-        <li>
-          <a href="index.html" class="nav-link">
-            Home
-          </a>
-        </li>
+      <li>
+        <a href="index.html">
+          Home
+        </a>
+      </li>
 
-        <li>
-          <a href="menu.html" class="nav-link">
-            Menu
-          </a>
-        </li>
+      <li>
+        <a href="menu.html">
+          Menu
+        </a>
+      </li>
 
-        <li>
-          <a href="about.html" class="nav-link">
-            About
-          </a>
-        </li>
+      <li>
+        <a href="about.html">
+          About
+        </a>
+      </li>
 
-        <li>
-          <a href="gallery.html" class="nav-link">
-            Gallery
-          </a>
-        </li>
+      <li>
+        <a href="gallery.html">
+          Gallery
+        </a>
+      </li>
 
-        <li>
-          <a href="blog.html" class="nav-link active">
-            Blog
-          </a>
-        </li>
+      <li>
+        <a href="blog.html" class="active">
+          Blog
+        </a>
+      </li>
 
-        <li>
-          <a href="contact.html" class="nav-link">
-            Contact
-          </a>
-        </li>
+      <li>
+        <a href="contact.html">
+          Contact
+        </a>
+      </li>
 
-      </ul>
+    </ul>
 
-    </nav>
 
-    <div class="header-actions">
+    <a href="reservation.html" class="nav-btn">
+      Book a Table
+    </a>
 
-      <a href="reservation.html"
-         class="btn btn-header-reservation">
-        Reservation
-      </a>
 
-      <button
-        class="hamburger-btn"
-        id="hamburgerBtn"
-        aria-label="Toggle navigation"
-        aria-expanded="false"
-        aria-controls="mobileNav">
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </button>
-
+    <div class="menu-toggle" id="menuToggle">
+      ☰
     </div>
 
   </div>
@@ -123,160 +113,345 @@
 
 
 <!-- =========================================================
-     MOBILE NAVIGATION
+     FEATURED BLOG
 ========================================================= -->
 
-<div
-  class="mobile-nav-backdrop"
-  id="mobileBackdrop">
-</div>
+<section class="featured-blog">
 
-<nav
-  class="mobile-nav"
-  id="mobileNav"
-  aria-label="Mobile Navigation">
+  <div class="container">
 
-  <div class="mobile-nav-header">
+    <div class="section-heading reveal">
 
-    <span class="eyebrow">
-      GFC Restaurant
-    </span>
+      <span class="eyebrow">
+        FEATURED STORY
+      </span>
 
-    <div class="mobile-location">
-      Udayar Vilai, Kanyakumari
-    </div>
+      <h2 class="section-title">
+        Taste. Discover. Enjoy.
+      </h2>
 
-  </div>
-
-  <ul class="mobile-nav-list">
-
-    <li>
-      <a href="index.html" class="mobile-nav-link">
-        Home
-      </a>
-    </li>
-
-    <li>
-      <a href="menu.html" class="mobile-nav-link">
-        Menu
-      </a>
-    </li>
-
-    <li>
-      <a href="about.html" class="mobile-nav-link">
-        About
-      </a>
-    </li>
-
-    <li>
-      <a href="gallery.html" class="mobile-nav-link">
-        Gallery
-      </a>
-    </li>
-
-    <li>
-      <a href="blog.html" class="mobile-nav-link active">
-        Blog
-      </a>
-    </li>
-
-    <li>
-      <a href="contact.html" class="mobile-nav-link">
-        Contact
-      </a>
-    </li>
-
-    <li>
-      <a href="reservation.html" class="mobile-nav-link">
-        Reservation
-      </a>
-    </li>
-
-  </ul>
-
-  <div class="mobile-nav-footer">
-
-    <a href="reservation.html"
-       class="btn btn-primary btn-block">
-      Book a Table
-    </a>
-
-    <div class="mobile-nav-contact">
-      <p>
-        Location: Udayar Vilai, Kanyakumari
+      <p class="section-subtitle">
+        A closer look at the food, flavours and
+        experiences that make GFC special.
       </p>
 
-      <p>
-        [PHONE NUMBER]
-      </p>
     </div>
 
-  </div>
 
-</nav>
-       
+    <article class="featured-card reveal">
 
-  <!-- =======================================================
-       FEATURED BLOG
-  ======================================================== -->
+      <div class="featured-image">
 
-  <section class="featured-blog">
+        <img
+          src="assets/images/gallery-2.jpg"
+          alt="Royal Dum Biryani">
 
-    <div class="container">
-
-      <div class="section-heading reveal">
-
-        <span class="eyebrow">
-          FEATURED STORY
+        <span class="featured-tag">
+          FOOD STORY
         </span>
-
-        <h2 class="section-title">
-          Taste. Discover. Enjoy.
-        </h2>
-
-        <p class="section-subtitle">
-          A closer look at the food, flavours and
-          experiences that make GFC special.
-        </p>
 
       </div>
 
 
-      <article class="featured-card reveal">
+      <div class="featured-content">
 
-        <div class="featured-image">
+        <div class="blog-date">
+          GFC • Food Stories
+        </div>
+
+        <h3>
+          The Story Behind Our Royal Dum Biryani
+        </h3>
+
+        <p>
+          Fragrant rice, aromatic spices and perfectly
+          cooked meat come together to create a comforting
+          biryani experience at GFC.
+        </p>
+
+        <a href="#" class="read-more">
+          Read Story
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     BLOG GRID
+========================================================= -->
+
+<section class="blog-section">
+
+  <div class="container">
+
+    <div class="section-heading reveal">
+
+      <span class="eyebrow">
+        LATEST STORIES
+      </span>
+
+      <h2 class="section-title">
+        From Our Kitchen
+      </h2>
+
+      <p class="section-subtitle">
+        Fresh ideas, delicious food and memorable
+        moments from GFC Restaurant.
+      </p>
+
+    </div>
+
+
+    <div class="blog-grid">
+
+
+      <!-- BLOG 1 -->
+
+      <article class="blog-card reveal">
+
+        <div class="blog-image">
 
           <img
-            src="assets/images/gallery-2.jpg"
-            alt="Royal Dum Biryani">
+            src="assets/images/menu-1.jpg"
+            alt="GFC Signature Biryani"
+            loading="lazy">
 
-          <span class="featured-tag">
-            FOOD STORY
+          <span class="blog-category">
+            FOOD
           </span>
 
         </div>
 
-        <div class="featured-content">
+        <div class="blog-content">
 
-          <div class="blog-date">
-            GFC • Food Stories
-          </div>
+          <span class="blog-small-date">
+            FOOD • GFC
+          </span>
 
           <h3>
-            The Story Behind Our Royal Dum Biryani
+            Why Biryani Is Everyone's Favourite
           </h3>
 
           <p>
-            Fragrant rice, aromatic spices and
-            perfectly cooked meat come together
-            to create a comforting biryani
-            experience at GFC.
+            Discover the aroma, spices and flavours
+            that make biryani a timeless favourite.
           </p>
 
-          <a href="#"
-             class="read-more">
-            Read Story
-            <span>→</span>
+          <a href="ariticle1.html" class="blog-link">
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- BLOG 2 -->
+
+      <article class="blog-card reveal">
+
+        <div class="blog-image">
+
+          <img
+            src="assets/images/menu-2.jpg"
+            alt="Grilled Chicken"
+            loading="lazy">
+
+          <span class="blog-category">
+            GRILLS
+          </span>
+
+        </div>
+
+        <div class="blog-content">
+
+          <span class="blog-small-date">
+            KITCHEN • GFC
+          </span>
+
+          <h3>
+            The Secret to Perfectly Grilled Chicken
+          </h3>
+
+          <p>
+            Smoky flavours, delicious marinades and
+            the right grilling technique create
+            the perfect bite.
+          </p>
+
+          <a href="ariticle2.html" class="blog-link">
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- BLOG 3 -->
+
+      <article class="blog-card reveal">
+
+        <div class="blog-image">
+
+          <img
+            src="assets/images/gallery-5.jpg"
+            alt="Pizza and Mocktails"
+            loading="lazy">
+
+          <span class="blog-category">
+            CAFE
+          </span>
+
+        </div>
+
+        <div class="blog-content">
+
+          <span class="blog-small-date">
+            DRINKS • GFC
+          </span>
+
+          <h3>
+            Pizza & Mocktails: A Perfect Combination
+          </h3>
+
+          <p>
+            Crispy pizza and refreshing mocktails
+            make a fun combination for a relaxed evening.
+          </p>
+
+          <a href="ariticle3.html" class="blog-link">
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- BLOG 4 -->
+
+      <article class="blog-card reveal">
+
+        <div class="blog-image">
+
+          <img
+            src="assets/images/gallery-1.jpg"
+            alt="GFC Restaurant Interior"
+            loading="lazy">
+
+          <span class="blog-category">
+            AMBIENCE
+          </span>
+
+        </div>
+
+        <div class="blog-content">
+
+          <span class="blog-small-date">
+            EXPERIENCE • GFC
+          </span>
+
+          <h3>
+            Creating a Comfortable Dining Experience
+          </h3>
+
+          <p>
+            Great food becomes even better when enjoyed
+            in a comfortable and welcoming atmosphere.
+          </p>
+
+          <a href="ariticle4.html" class="blog-link">
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- BLOG 5 -->
+
+      <article class="blog-card reveal">
+
+        <div class="blog-image">
+
+          <img
+            src="assets/images/gallery-4.jpg"
+            alt="Chargrilled Chicken"
+            loading="lazy">
+
+          <span class="blog-category">
+            GRILLS
+          </span>
+
+        </div>
+
+        <div class="blog-content">
+
+          <span class="blog-small-date">
+            FOOD • GFC
+          </span>
+
+          <h3>
+            Smoky Chargrilled Flavours
+          </h3>
+
+          <p>
+            Explore the rich smoky flavours created
+            by our grilled specialities.
+          </p>
+
+          <a href="ariticle5.html" class="blog-link">
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- BLOG 6 -->
+
+      <article class="blog-card reveal">
+
+        <div class="blog-image">
+
+          <img
+            src="assets/images/gallery-6.jpg"
+            alt="Family Dining at GFC"
+            loading="lazy">
+
+          <span class="blog-category">
+            EXPERIENCE
+          </span>
+
+        </div>
+
+        <div class="blog-content">
+
+          <span class="blog-small-date">
+            GFC • MOMENTS
+          </span>
+
+          <h3>
+            Good Food, Great Company
+          </h3>
+
+          <p>
+            Food tastes better when shared with family
+            and friends. Create your next happy moment at GFC.
+          </p>
+
+          <a href="ariticle6.html" class="blog-link">
+            Read More →
           </a>
 
         </div>
@@ -285,342 +460,55 @@
 
     </div>
 
-  </section>
+  </div>
 
+</section>
 
-  <!-- =======================================================
-       BLOG GRID
-  ======================================================== -->
 
-  <section class="blog-section">
+<!-- =========================================================
+     CTA
+========================================================= -->
 
-    <div class="container">
+<section class="blog-cta">
 
-      <div class="section-heading reveal">
+  <div class="cta-circle circle-one"></div>
+  <div class="cta-circle circle-two"></div>
 
-        <span class="eyebrow">
-          LATEST STORIES
-        </span>
+  <div class="container">
 
-        <h2 class="section-title">
-          From Our Kitchen
-        </h2>
+    <div class="blog-cta-content reveal">
 
-        <p class="section-subtitle">
-          Fresh ideas, delicious food and memorable
-          moments from GFC Restaurant.
-        </p>
+      <span class="eyebrow">
+        COME & EXPERIENCE GFC
+      </span>
 
-      </div>
+      <h2>
+        Your Next Delicious<br>
+        Moment Starts Here.
+      </h2>
 
+      <p>
+        Visit GFC Restaurant in Udayar Vilai
+        and enjoy delicious food with great company.
+      </p>
 
-      <div class="blog-grid">
+      <div class="cta-buttons">
 
+        <a href="menu.html" class="btn btn-primary">
+          Explore Menu
+        </a>
 
-        <!-- BLOG 1 -->
-
-        <article class="blog-card reveal">
-
-          <div class="blog-image">
-
-            <img
-              src="assets/images/menu-1.jpg"
-              alt="GFC Signature Biryani"
-              loading="lazy">
-
-            <span class="blog-category">
-              FOOD
-            </span>
-
-          </div>
-
-          <div class="blog-content">
-
-            <span class="blog-small-date">
-              FOOD • GFC
-            </span>
-
-            <h3>
-              Why Biryani Is Everyone's Favourite
-            </h3>
-
-            <p>
-              Discover the aroma, spices and
-              flavours that make biryani a
-              timeless favourite.
-            </p>
-
-            <a href="#" class="blog-link">
-              Read More →
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- BLOG 2 -->
-
-        <article class="blog-card reveal">
-
-          <div class="blog-image">
-
-            <img
-              src="assets/images/menu-2.jpg"
-              alt="Grilled Chicken"
-              loading="lazy">
-
-            <span class="blog-category">
-              GRILLS
-            </span>
-
-          </div>
-
-          <div class="blog-content">
-
-            <span class="blog-small-date">
-              KITCHEN • GFC
-            </span>
-
-            <h3>
-              The Secret to Perfectly Grilled Chicken
-            </h3>
-
-            <p>
-              Smoky flavours, delicious marinades
-              and the right grilling technique
-              create the perfect bite.
-            </p>
-
-            <a href="#" class="blog-link">
-              Read More →
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- BLOG 3 -->
-
-        <article class="blog-card reveal">
-
-          <div class="blog-image">
-
-            <img
-              src="assets/images/gallery-5.jpg"
-              alt="Pizza and Mocktails"
-              loading="lazy">
-
-            <span class="blog-category">
-              CAFE
-            </span>
-
-          </div>
-
-          <div class="blog-content">
-
-            <span class="blog-small-date">
-              DRINKS • GFC
-            </span>
-
-            <h3>
-              Pizza & Mocktails: A Perfect Combination
-            </h3>
-
-            <p>
-              Crispy pizza and refreshing
-              mocktails make a fun combination
-              for a relaxed evening.
-            </p>
-
-            <a href="#" class="blog-link">
-              Read More →
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- BLOG 4 -->
-
-        <article class="blog-card reveal">
-
-          <div class="blog-image">
-
-            <img
-              src="assets/images/gallery-1.jpg"
-              alt="GFC Restaurant Interior"
-              loading="lazy">
-
-            <span class="blog-category">
-              AMBIENCE
-            </span>
-
-          </div>
-
-          <div class="blog-content">
-
-            <span class="blog-small-date">
-              EXPERIENCE • GFC
-            </span>
-
-            <h3>
-              Creating a Comfortable Dining Experience
-            </h3>
-
-            <p>
-              Great food becomes even better when
-              enjoyed in a comfortable and welcoming
-              atmosphere.
-            </p>
-
-            <a href="#" class="blog-link">
-              Read More →
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- BLOG 5 -->
-
-        <article class="blog-card reveal">
-
-          <div class="blog-image">
-
-            <img
-              src="assets/images/gallery-4.jpg"
-              alt="Chargrilled Chicken"
-              loading="lazy">
-
-            <span class="blog-category">
-              GRILLS
-            </span>
-
-          </div>
-
-          <div class="blog-content">
-
-            <span class="blog-small-date">
-              FOOD • GFC
-            </span>
-
-            <h3>
-              Smoky Chargrilled Flavours
-            </h3>
-
-            <p>
-              Explore the rich smoky flavours
-              created by our grilled specialities.
-            </p>
-
-            <a href="#" class="blog-link">
-              Read More →
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- BLOG 6 -->
-
-        <article class="blog-card reveal">
-
-          <div class="blog-image">
-
-            <img
-              src="assets/images/gallery-6.jpg"
-              alt="Family Dining at GFC"
-              loading="lazy">
-
-            <span class="blog-category">
-              EXPERIENCE
-            </span>
-
-          </div>
-
-          <div class="blog-content">
-
-            <span class="blog-small-date">
-              GFC • MOMENTS
-            </span>
-
-            <h3>
-              Good Food, Great Company
-            </h3>
-
-            <p>
-              Food tastes better when shared with
-              family and friends. Create your next
-              happy moment at GFC.
-            </p>
-
-            <a href="#" class="blog-link">
-              Read More →
-            </a>
-
-          </div>
-
-        </article>
+        <a href="reservation.html" class="btn btn-outline">
+          Book a Table
+        </a>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
 
-
-  <!-- =======================================================
-       CTA
-  ======================================================== -->
-
-  <section class="blog-cta">
-
-    <div class="cta-circle circle-one"></div>
-    <div class="cta-circle circle-two"></div>
-
-    <div class="container">
-
-      <div class="blog-cta-content reveal">
-
-        <span class="eyebrow">
-          COME & EXPERIENCE GFC
-        </span>
-
-        <h2>
-          Your Next Delicious<br>
-          Moment Starts Here.
-        </h2>
-
-        <p>
-          Visit GFC Restaurant in Udayar Vilai
-          and enjoy delicious food with great
-          company.
-        </p>
-
-        <div class="cta-buttons">
-
-          <a href="menu.html"
-             class="btn btn-primary">
-            Explore Menu
-          </a>
-
-          <a href="reservation.html"
-             class="btn btn-outline">
-            Book a Table
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
+</section>
 
 </main>
 
@@ -746,14 +634,71 @@
 
 <!-- Back To Top -->
 
-<a href="#siteHeader"
+<a href="#header"
    class="back-to-top-btn"
    aria-label="Back to top">
   ↑
 </a>
 
 
+<!-- JavaScript -->
+
 <script src="js/script.js"></script>
+
+<script>
+/* =========================================================
+   SAME HEADER JAVASCRIPT AS INDEX
+========================================================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (menuToggle && navLinks) {
+
+  menuToggle.addEventListener("click", function () {
+
+    navLinks.classList.toggle("mobile-open");
+
+  });
+
+}
+
+
+/* Close mobile menu after clicking a link */
+
+document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+  link.addEventListener("click", function() {
+
+    navLinks.classList.remove("mobile-open");
+
+  });
+
+});
+
+
+/* Header scroll effect */
+
+const header = document.getElementById("header");
+
+if (header) {
+
+  window.addEventListener("scroll", function() {
+
+    if (window.scrollY > 50) {
+
+      header.classList.add("scrolled");
+
+    } else {
+
+      header.classList.remove("scrolled");
+
+    }
+
+  });
+
+}
+</script>
 
 </body>
 </html>

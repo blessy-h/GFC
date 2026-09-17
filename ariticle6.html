@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>What Makes a Restaurant Worth Visiting? | GFC Restaurant Kanyakumari</title>
+
+<meta name="description" content="Discover what makes a restaurant worth visiting, from delicious food and atmosphere to service, cleanliness and location. Explore GFC Restaurant in Udayar Vilai, Kanyakumari.">
+
+<meta name="keywords" content="restaurant in Kanyakumari, restaurant near me, best restaurant near me, restaurants around me, food near me, restaurant in Udayar Vilai, GFC Restaurant">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+    --orange: #e85d04;
+    --dark-orange: #c94700;
+    --cream: #fffaf4;
+    --dark: #171717;
+    --white: #ffffff;
+    --gold: #f4a261;
+    --gray: #777;
+    --shadow: 0 20px 50px rgba(0,0,0,.12);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 5%;
+    transition: .4s;
+}
+
+header.scrolled {
+    background: rgba(255,255,255,.95);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 5px 25px rgba(0,0,0,.08);
+    padding: 12px 5%;
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--orange);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 27px;
+    box-shadow: 0 8px 25px rgba(232,93,4,.35);
+    transition: .4s;
+}
+
+.logo:hover .logo-circle {
+    transform: rotate(-8deg) scale(1.05);
+}
+
+.logo-name {
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: var(--dark);
+}
+
+.logo-place {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    margin-top: 3px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: var(--orange);
+    transition: .3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a.active {
+    color: var(--orange);
+}
+
+.nav-btn {
+    background: var(--orange);
+    color: white !important;
+    padding: 17px 32px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.nav-btn:hover {
+    background: var(--dark-orange);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(232,93,4,.3);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--dark);
+}
+
+
+/* =========================================================
+   ARTICLE HERO
+========================================================= */
+
+.article-hero {
+    min-height: 620px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        url("assets/images/gallery-6.jpg")
+        center/cover no-repeat;
+
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,0,0,.85),
+            rgba(0,0,0,.48),
+            rgba(0,0,0,.80)
+        );
+}
+
+
+/* animated glow */
+
+.article-hero::before {
+    content: "";
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(232,93,4,.18);
+
+    filter: blur(80px);
+
+    top: -180px;
+    left: -150px;
+
+    animation: heroGlow 7s ease-in-out infinite;
+}
+
+.article-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(244,162,97,.13);
+
+    filter: blur(70px);
+
+    right: -120px;
+    bottom: -150px;
+
+    animation: heroGlow2 9s ease-in-out infinite;
+}
+
+@keyframes heroGlow {
+
+    0%,100% {
+        transform: translate(0,0) scale(1);
+    }
+
+    50% {
+        transform: translate(100px,80px) scale(1.2);
+    }
+
+}
+
+@keyframes heroGlow2 {
+
+    0%,100% {
+        transform: translate(0,0);
+    }
+
+    50% {
+        transform: translate(-80px,-70px);
+    }
+
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+
+    padding: 140px 25px 70px;
+}
+
+.hero-category {
+    color: var(--gold);
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    animation: fadeDown .9s ease forwards;
+}
+
+.hero-content h1 {
+    color: white;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(45px, 6vw, 78px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+    animation: heroTitle 1s ease forwards;
+}
+
+.hero-content h1 span {
+    color: var(--gold);
+}
+
+.hero-content p {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: rgba(255,255,255,.85);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.breadcrumb {
+    margin-top: 30px;
+
+    color: rgba(255,255,255,.65);
+
+    font-size: 13px;
+}
+
+.breadcrumb a {
+    color: white;
+    transition: .3s;
+}
+
+.breadcrumb a:hover {
+    color: var(--gold);
+}
+
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes heroTitle {
+
+    from {
+        opacity: 0;
+        transform: translateY(45px) scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   ARTICLE SECTION
+========================================================= */
+
+.article-section {
+    padding: 100px 5%;
+}
+
+.article-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        330px;
+
+    gap: 70px;
+}
+
+.article-content {
+    background: white;
+
+    padding: 55px;
+
+    border-radius: 25px;
+
+    box-shadow: var(--shadow);
+}
+
+.article-meta {
+    display: flex;
+
+    gap: 12px;
+
+    color: var(--orange);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.article-content h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(35px,5vw,52px);
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+}
+
+.article-content h3 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 29px;
+
+    margin-top: 45px;
+
+    margin-bottom: 16px;
+}
+
+.article-content p {
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+.article-content .intro {
+    font-size: 19px;
+
+    color: #444;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   ARTICLE IMAGE
+========================================================= */
+
+.article-image {
+    margin: 40px 0;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+.article-image img {
+    height: 430px;
+
+    object-fit: cover;
+
+    transition: transform .8s ease;
+}
+
+.article-image:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   INTERNAL LINKS
+========================================================= */
+
+.article-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 40px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #eee;
+}
+
+.article-links a {
+    background: #fff3e8;
+
+    color: var(--orange);
+
+    padding: 13px 18px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+.article-links a:hover {
+    background: var(--orange);
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.article-sidebar {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.sidebar-card {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    box-shadow: var(--shadow);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.sidebar-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    background: rgba(232,93,4,.1);
+
+    right: -40px;
+    top: -40px;
+}
+
+.sidebar-card > span {
+    color: var(--orange);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.sidebar-card h3 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 29px;
+
+    line-height: 1.2;
+
+    margin: 15px 0;
+}
+
+.sidebar-card p {
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+.sidebar-card a {
+    color: var(--orange);
+
+    font-weight: 800;
+
+    font-size: 13px;
+}
+
+.dark-card {
+    background: var(--dark);
+
+    color: white;
+}
+
+.dark-card p {
+    color: #bbb;
+}
+
+.dark-card h3 {
+    color: white;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.article-cta {
+    margin: 0 5% 100px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171717,
+            #2a2a2a
+        );
+
+    padding: 90px 30px;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.article-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(232,93,4,.2);
+
+    filter: blur(70px);
+
+    left: -100px;
+    top: -150px;
+
+    animation: ctaMove 7s ease-in-out infinite;
+}
+
+@keyframes ctaMove {
+
+    0%,100% {
+        transform: translate(0,0);
+    }
+
+    50% {
+        transform: translate(150px,100px);
+    }
+
+}
+
+.cta-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+.cta-content span {
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.cta-content h2 {
+    color: white;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(40px,5vw,60px);
+
+    margin: 15px 0;
+}
+
+.cta-content p {
+    color: #bbb;
+
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 28px;
+
+    border-radius: 30px;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    transition: .3s;
+}
+
+.btn.primary {
+    background: var(--orange);
+
+    color: white;
+}
+
+.btn.primary:hover {
+    background: var(--dark-orange);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(232,93,4,.3);
+}
+
+.btn.secondary {
+    border: 1px solid rgba(255,255,255,.4);
+
+    color: white;
+}
+
+.btn.secondary:hover {
+    background: white;
+
+    color: var(--dark);
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #111;
+
+    color: white;
+
+    padding: 70px 5% 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 60px;
+}
+
+.footer-logo {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: var(--orange);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: 'Playfair Display', serif;
+
+    font-weight: 800;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+.footer-brand h3 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    color: #aaa;
+
+    max-width: 400px;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.footer-links h4 {
+    color: white;
+
+    margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-links p {
+    color: #aaa;
+
+    font-size: 14px;
+
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: var(--orange);
+
+    transform: translateX(4px);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+
+    margin: 50px auto 0;
+
+    padding: 25px 0;
+
+    border-top: 1px solid #333;
+
+    color: #777;
+
+    text-align: center;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+#backTop {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--orange);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+    transition: .3s;
+
+    z-index: 999;
+}
+
+#backTop.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+#backTop:hover {
+    background: var(--dark-orange);
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(45px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav-links,
+    .nav-btn {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links.mobile-open {
+
+        display: flex;
+
+        position: absolute;
+
+        top: 90px;
+
+        left: 5%;
+        right: 5%;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        background: white;
+
+        padding: 25px;
+
+        border-radius: 20px;
+
+        box-shadow:
+            0 20px 50px
+            rgba(0,0,0,.15);
+    }
+
+    .nav-links.mobile-open li {
+        width: 100%;
+    }
+
+    .nav-links.mobile-open a {
+
+        display: block;
+
+        padding: 15px 0;
+
+        border-bottom: 1px solid #eee;
+    }
+
+    .article-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .article-content {
+        padding: 35px 25px;
+    }
+
+    .article-sidebar {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-container {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 12px 5%;
+    }
+
+    .logo-circle {
+
+        width: 50px;
+        height: 50px;
+
+        font-size: 21px;
+    }
+
+    .logo-name {
+        font-size: 16px;
+    }
+
+    .logo-place {
+        font-size: 9px;
+    }
+
+    .article-hero {
+        min-height: 580px;
+    }
+
+    .hero-content {
+        padding: 130px 20px 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .article-section {
+        padding: 60px 5%;
+    }
+
+    .article-content {
+        padding: 30px 20px;
+    }
+
+    .article-content h2 {
+        font-size: 36px;
+    }
+
+    .article-content h3 {
+        font-size: 25px;
+    }
+
+    .article-content p {
+        font-size: 15px;
+    }
+
+    .article-image img {
+        height: 280px;
+    }
+
+    .article-sidebar {
+        display: flex;
+    }
+
+    .article-cta {
+        margin: 0 5% 60px;
+
+        padding: 65px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header id="header">
+
+    <div class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-circle">
+                GFC
+            </div>
+
+            <div>
+
+                <div class="logo-name">
+                    GFC RESTAURANT
+                </div>
+
+                <span class="logo-place">
+                    Udayar Vilai • Kanyakumari
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="menu.html">
+                    Menu
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="gallery.html">
+                    Gallery
+                </a>
+            </li>
+
+            <li>
+                <a href="blog.html" class="active">
+                    Blog
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <a href="reservation.html" class="nav-btn">
+            Book a Table
+        </a>
+
+
+        <div class="menu-toggle" id="menuToggle">
+            ☰
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     ARTICLE
+========================================================= -->
+
+<main class="article-section">
+
+    <div class="article-container">
+
+
+        <article class="article-content reveal">
+
+            <div class="article-meta">
+
+                <span>
+                    EXPERIENCE • GFC
+                </span>
+
+                <span>•</span>
+
+                <span>
+                    GFC RESTAURANT
+                </span>
+
+            </div>
+
+
+            <h2>
+                What Makes a Restaurant Worth Visiting?
+            </h2>
+
+
+            <p class="intro">
+                Choosing a restaurant is about more than simply
+                finding something to eat. A good restaurant can make
+                an ordinary meal feel enjoyable through delicious
+                food, a comfortable atmosphere, friendly service,
+                cleanliness and a convenient location.
+            </p>
+
+
+            <p>
+                When people search for a restaurant near me or look
+                for restaurants around them, they often consider
+                several things before deciding where to eat. The food
+                is important, but the overall experience also plays
+                an important role.
+            </p>
+
+
+            <h3>
+                1. Delicious and Well-Prepared Food
+            </h3>
+
+            <p>
+                Food is naturally one of the first things people
+                consider when choosing a restaurant. A good menu
+                should offer food that is prepared with care and
+                served fresh.
+            </p>
+
+            <p>
+                Different people have different preferences. Some
+                may enjoy traditional Indian flavours, while others
+                may prefer grilled food, fast food or cafe-style
+                options. Having different choices can make it easier
+                for families and groups to find something they enjoy.
+            </p>
+
+
+            <div class="article-image reveal">
+
+                <img
+                    src="assets/images/gallery-6.jpg"
+                    alt="Food and restaurant experience at GFC">
+
+            </div>
+
+
+            <h3>
+                2. A Comfortable Atmosphere
+            </h3>
+
+            <p>
+                The atmosphere of a restaurant can change the way a
+                meal feels. Comfortable seating, a pleasant interior
+                and a welcoming environment can make guests feel
+                relaxed.
+            </p>
+
+            <p>
+                Whether someone is having a quick meal, meeting
+                friends or spending time with family, a comfortable
+                environment can make the experience more enjoyable.
+            </p>
+
+
+            <h3>
+                3. Friendly Service
+            </h3>
+
+            <p>
+                Service is another important part of the restaurant
+                experience. Simple things such as welcoming guests,
+                taking orders clearly and serving food properly can
+                create a positive impression.
+            </p>
+
+            <p>
+                Good communication between the restaurant team and
+                guests helps create a smoother experience from the
+                moment people arrive until they finish their meal.
+            </p>
+
+
+            <h3>
+                4. Cleanliness Matters
+            </h3>
+
+            <p>
+                Cleanliness is an important consideration when
+                choosing a restaurant. Guests naturally appreciate
+                clean tables, dining areas and surroundings.
+            </p>
+
+            <p>
+                A clean environment helps people feel comfortable
+                while enjoying their food and spending time with
+                friends or family.
+            </p>
+
+
+            <h3>
+                5. A Menu With Different Choices
+            </h3>
+
+            <p>
+                A restaurant can become more convenient when its menu
+                offers different types of food. Groups often include
+                people with different tastes, so having several
+                options can make choosing a meal easier.
+            </p>
+
+            <p>
+                From Indian food to grilled specialities and fast
+                food, a varied menu can give guests the freedom to
+                choose according to their mood and preferences.
+            </p>
+
+
+            <h3>
+                6. A Convenient Location
+            </h3>
+
+            <p>
+                Location also matters when people search for a
+                restaurant. Someone looking for food near me will
+                usually prefer a place that is convenient to reach.
+            </p>
+
+            <p>
+                For people around Udayar Vilai and Kanyakumari,
+                finding a restaurant in a convenient location can make
+                planning a meal easier.
+            </p>
+
+
+            <h3>
+                7. The Overall Experience
+            </h3>
+
+            <p>
+                A restaurant experience is created by many small
+                details working together. Food, atmosphere, service,
+                cleanliness and convenience all contribute to the
+                overall experience.
+            </p>
+
+            <p>
+                This is why choosing a restaurant is not always about
+                one particular feature. People often remember how
+                comfortable they felt, how they enjoyed their food
+                and the moments they shared with others.
+            </p>
+
+
+            <h3>
+                Enjoy Your Food Experience at GFC
+            </h3>
+
+            <p>
+                At GFC Restaurant, the focus is on creating a
+                comfortable place where guests can enjoy food and
+                spend meaningful moments together.
+            </p>
+
+            <p>
+                Located in Udayar Vilai, Kanyakumari, GFC offers a
+                place to explore different food choices in a relaxed
+                restaurant environment.
+            </p>
+
+            <p>
+                Whether you are searching for a restaurant near me,
+                looking for food in Kanyakumari or planning a meal
+                with friends and family, you can explore the GFC menu
+                and discover the available options.
+            </p>
+
+
+            <div class="article-links">
+
+                <a href="menu.html">
+                    Explore Our Menu →
+                </a>
+
+                <a href="about.html">
+                    About GFC →
+                </a>
+
+                <a href="contact.html">
+                    Contact Us →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="article-sidebar reveal">
+
+            <div class="sidebar-card">
+
+                <span>
+                    GFC RESTAURANT
+                </span>
+
+                <h3>
+                    Good Food.
+                    Good Moments.
+                </h3>
+
+                <p>
+                    Explore our menu and discover delicious food
+                    at GFC Restaurant, Udayar Vilai, Kanyakumari.
+                </p>
+
+                <a href="menu.html">
+                    Explore Menu →
+                </a>
+
+            </div>
+
+
+            <div class="sidebar-card dark-card">
+
+                <span>
+                    READY TO VISIT?
+                </span>
+
+                <h3>
+                    Make Your
+                    Next Meal Special
+                </h3>
+
+                <p>
+                    Plan your next visit to GFC Restaurant.
+                </p>
+
+                <a href="reservation.html">
+                    Book a Table →
+                </a>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="article-cta reveal">
+
+    <div class="cta-content">
+
+        <span>
+            GFC • KANYAKUMARI
+        </span>
+
+        <h2>
+            Good Food Starts
+            With a Great Place
+        </h2>
+
+        <p>
+            Explore the GFC menu and enjoy your next food experience.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="menu.html" class="btn primary">
+                Explore Menu
+            </a>
+
+            <a href="reservation.html" class="btn secondary">
+                Book a Table
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+                GFC
+            </div>
+
+            <h3>
+                GFC RESTAURANT
+            </h3>
+
+            <p>
+                Delicious food, comfortable moments and
+                memorable experiences.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>
+                Visit GFC
+            </h4>
+
+            <p>
+                Udayar Vilai
+            </p>
+
+            <p>
+                Kanyakumari, Tamil Nadu
+            </p>
+
+            <a href="reservation.html">
+                Book a Table
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 GFC Restaurant. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<button id="backTop">
+    ↑
+</button>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const navLinks =
+    document.querySelector(".nav-links");
+
+
+menuToggle.addEventListener("click", function () {
+
+    navLinks.classList.toggle("mobile-open");
+
+});
+
+
+/* =========================================================
+   HEADER SCROLL
+========================================================= */
+
+const header =
+    document.getElementById("header");
+
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 50) {
+
+        header.classList.add("scrolled");
+
+    } else {
+
+        header.classList.remove("scrolled");
+
+    }
+
+});
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+const observer =
+    new IntersectionObserver(
+
+        (entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
+
+
+revealElements.forEach(element => {
+
+    observer.observe(element);
+
+});
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+const backTop =
+    document.getElementById("backTop");
+
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 500) {
+
+        backTop.classList.add("show");
+
+    } else {
+
+        backTop.classList.remove("show");
+
+    }
+
+});
+
+
+backTop.addEventListener("click", function () {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
