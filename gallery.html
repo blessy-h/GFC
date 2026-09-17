@@ -16,11 +16,16 @@
 
   <meta
     name="keywords"
-    content="GFC Restaurant photos, restaurant gallery Kanyakumari, food gallery Udayar Vilai, GFC food photos"
+    content="GFC Restaurant photos, restaurant gallery Kanyakumari, food gallery Udayar Vilai, GFC food photos, best restaurant in Kanyakumari"
   >
 
-  <!-- Google Fonts -->
+  <meta name="author" content="GFC Restaurant">
+
+
+  <!-- GOOGLE FONTS -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
@@ -28,10 +33,9 @@
     rel="stylesheet"
   >
 
-  <!-- COMMON HOME PAGE CSS -->
-  <link rel="stylesheet" href="css/style.css">
 
-  <!-- GALLERY PAGE CSS -->
+  <!-- GALLERY CSS -->
+
   <link rel="stylesheet" href="css/gallery.css">
 
 </head>
@@ -42,33 +46,33 @@
 
   <!-- =====================================================
        HEADER
-       SAME NAVBAR AS HOME PAGE
+       EXACT SAME HEADER AS INDEX.HTML
   ====================================================== -->
 
-  <header class="site-header" id="siteHeader">
+  <header id="header">
 
-    <div class="container header-inner">
+    <div class="navbar">
 
 
       <!-- LOGO -->
 
       <a
         href="index.html"
-        class="brand-logo"
+        class="logo"
         aria-label="GFC Restaurant Home"
       >
 
-        <div class="logo-badge">
+        <div class="logo-circle">
           GFC
         </div>
 
-        <div class="logo-text-group">
+        <div>
 
-          <span class="logo-title">
+          <div class="logo-name">
             GFC RESTAURANT
-          </span>
+          </div>
 
-          <span class="logo-tagline">
+          <span class="logo-place">
             Udayar Vilai • Kanyakumari
           </span>
 
@@ -80,146 +84,82 @@
 
       <!-- NAVIGATION -->
 
-      <nav
-        class="main-nav"
-        aria-label="Main Navigation"
-      >
+      <ul class="nav-links">
 
-        <ul class="nav-list">
+        <li>
+          <a href="index.html">
+            Home
+          </a>
+        </li>
 
-          <li>
-            <a
-              href="index.html"
-              class="nav-link"
-            >
-              Home
-            </a>
-          </li>
+        <li>
+          <a href="menu.html">
+            Menu
+          </a>
+        </li>
 
-          <li>
-            <a
-              href="menu.html"
-              class="nav-link"
-            >
-              Menu
-            </a>
-          </li>
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
 
-          <li>
-            <a
-              href="about.html"
-              class="nav-link"
-            >
-              About
-            </a>
-          </li>
+        <li>
+          <a
+            href="gallery.html"
+            class="active"
+          >
+            Gallery
+          </a>
+        </li>
 
-          <li>
-            <a
-              href="gallery.html"
-              class="nav-link active"
-            >
-              Gallery
-            </a>
-          </li>
+        <li>
+          <a href="blog.html">
+            Blog
+          </a>
+        </li>
 
-          <li>
-            <a
-              href="contact.html"
-              class="nav-link"
-            >
-              Contact
-            </a>
-          </li>
+        <li>
+          <a href="contact.html">
+            Contact
+          </a>
+        </li>
 
-        </ul>
-
-      </nav>
+      </ul>
 
 
 
-      <!-- HEADER BUTTON -->
-
-      <div class="header-actions">
-
-        <a
-          href="reservation.html"
-          class="btn btn-header-reservation"
-        >
-          Book a Table
-        </a>
-
-
-        <!-- MOBILE BUTTON -->
-
-        <button
-          class="hamburger-btn"
-          id="hamburgerBtn"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-          aria-controls="mobileNav"
-        >
-
-          <span></span>
-          <span></span>
-          <span></span>
-
-        </button>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- MOBILE NAVIGATION -->
-
-    <nav
-      class="mobile-nav"
-      id="mobileNav"
-      aria-label="Mobile Navigation"
-    >
-
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="menu.html">
-        Menu
-      </a>
-
-      <a href="about.html">
-        About
-      </a>
-
-      <a
-        href="gallery.html"
-        class="active"
-      >
-        Gallery
-      </a>
-
-      <a href="contact.html">
-        Contact
-      </a>
+      <!-- BOOK A TABLE -->
 
       <a
         href="reservation.html"
-        class="mobile-book-btn"
+        class="nav-btn"
       >
         Book a Table
       </a>
 
-    </nav>
+
+
+      <!-- MOBILE MENU -->
+
+      <div
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+      >
+        ☰
+      </div>
+
+
+    </div>
 
   </header>
 
 
 
-
-    <!-- =================================================
+    <!-- =====================================================
          GALLERY SECTION
-    ================================================== -->
+    ====================================================== -->
 
     <section class="gallery-section">
 
@@ -235,20 +175,26 @@
           </span>
 
           <h2>
+
             Moments Worth
             <strong>Remembering.</strong>
+
           </h2>
 
           <p>
+
             Take a look at the food, ambience and moments
             that make GFC special.
+
           </p>
 
         </div>
 
 
 
-        <!-- FILTER BUTTONS -->
+        <!-- =================================================
+             FILTER BUTTONS
+        ================================================== -->
 
         <div
           class="gallery-filters reveal"
@@ -256,40 +202,51 @@
           aria-label="Gallery filters"
         >
 
+
           <button
             class="gallery-filter active"
             data-filter="ALL"
+            type="button"
           >
             All
           </button>
 
+
           <button
             class="gallery-filter"
             data-filter="FOOD"
+            type="button"
           >
             Food
           </button>
 
+
           <button
             class="gallery-filter"
             data-filter="INTERIOR"
+            type="button"
           >
             Interior
           </button>
 
+
           <button
             class="gallery-filter"
             data-filter="DRINKS"
+            type="button"
           >
             Drinks
           </button>
 
+
           <button
             class="gallery-filter"
             data-filter="EXPERIENCE"
+            type="button"
           >
             Experience
           </button>
+
 
         </div>
 
@@ -299,7 +256,10 @@
              GALLERY GRID
         ================================================== -->
 
-        <div class="gallery-grid" id="galleryGrid">
+        <div
+          class="gallery-grid"
+          id="galleryGrid"
+        >
 
 
 
@@ -470,12 +430,12 @@
             data-category="DRINKS"
             data-image="assets/images/gallery-5.jpg"
             data-title="Specialty Mocktails"
-            data-description="Refreshing drinks and delicious pizza for a perfect meal."
+            data-description="Refreshing drinks for a perfect meal."
           >
 
             <img
               src="assets/images/gallery-5.jpg"
-              alt="Pizza and refreshing mocktails"
+              alt="Specialty mocktails"
               loading="lazy"
             >
 
@@ -671,13 +631,15 @@
 
 
 
-    <!-- =================================================
+    <!-- =====================================================
          CTA
-    ================================================== -->
+    ====================================================== -->
 
     <section class="gallery-cta">
 
+
       <div class="gallery-cta-circle"></div>
+
 
       <div class="container">
 
@@ -687,23 +649,35 @@
             COME EXPERIENCE GFC
           </span>
 
+
           <h2>
+
             Your Next
             <strong>Happy Moment</strong>
             Starts Here.
+
           </h2>
 
+
           <p>
+
             Good food tastes even better when shared with
             people you love.
+
           </p>
+
 
           <a
             href="menu.html"
             class="gallery-cta-button"
           >
+
             Explore Our Menu
-            <b>→</b>
+
+            <b>
+              →
+            </b>
+
           </a>
 
         </div>
@@ -711,6 +685,7 @@
       </div>
 
     </section>
+
 
   </main>
 
@@ -726,31 +701,44 @@
     aria-hidden="true"
   >
 
+
+    <!-- CLOSE -->
+
     <button
       class="lightbox-close"
       id="lightboxClose"
       aria-label="Close image"
+      type="button"
     >
       ×
     </button>
 
 
+
+    <!-- PREVIOUS -->
+
     <button
       class="lightbox-prev"
       id="lightboxPrev"
       aria-label="Previous image"
+      type="button"
     >
       ‹
     </button>
 
 
+
+    <!-- CONTENT -->
+
     <div class="lightbox-inner">
+
 
       <img
         id="lightboxImage"
         src=""
         alt=""
       >
+
 
       <div class="lightbox-info">
 
@@ -768,16 +756,22 @@
 
       </div>
 
+
     </div>
 
+
+
+    <!-- NEXT -->
 
     <button
       class="lightbox-next"
       id="lightboxNext"
       aria-label="Next image"
+      type="button"
     >
       ›
     </button>
+
 
   </div>
 
@@ -789,6 +783,7 @@
 
   <footer class="site-footer">
 
+
     <div class="container footer-top-grid">
 
 
@@ -796,22 +791,23 @@
 
       <div class="footer-brand-col">
 
+
         <a
           href="index.html"
-          class="brand-logo"
+          class="footer-logo"
         >
 
-          <div class="logo-badge">
+          <div class="footer-logo-circle">
             GFC
           </div>
 
-          <div class="logo-text-group">
+          <div>
 
-            <span class="logo-title">
+            <span class="footer-logo-title">
               GFC RESTAURANT
             </span>
 
-            <span class="logo-tagline">
+            <span class="footer-logo-place">
               Udayar Vilai • Kanyakumari
             </span>
 
@@ -829,6 +825,7 @@
 
         </p>
 
+
       </div>
 
 
@@ -840,6 +837,7 @@
         <h4 class="footer-heading">
           Quick Links
         </h4>
+
 
         <ul class="footer-links-list">
 
@@ -868,6 +866,12 @@
           </li>
 
           <li>
+            <a href="blog.html">
+              Blog
+            </a>
+          </li>
+
+          <li>
             <a href="contact.html">
               Contact Us
             </a>
@@ -887,14 +891,17 @@
           Visit Us
         </h4>
 
+
         <div class="footer-contact-info">
 
           <p>
+
             Udayar Vilai,
             <br>
             Kanyakumari,
             <br>
             Tamil Nadu, India
+
           </p>
 
         </div>
@@ -911,6 +918,7 @@
           Contact
         </h4>
 
+
         <div class="footer-contact-info">
 
           <p>
@@ -922,9 +930,11 @@
           </p>
 
           <p>
+
             Open Daily
             <br>
             11:00 AM – 10:30 PM
+
           </p>
 
         </div>
@@ -936,53 +946,276 @@
 
 
 
+    <!-- FOOTER BOTTOM -->
+
     <div class="footer-bottom">
 
       <div class="container">
 
         <p>
-          © 2026 GFC Restaurant. All Rights Reserved.
+
+          © 2026 GFC Restaurant.
+          All Rights Reserved.
+
         </p>
 
       </div>
 
     </div>
 
+
   </footer>
 
 
 
   <!-- =====================================================
-       GALLERY JAVASCRIPT
+       JAVASCRIPT
   ====================================================== -->
 
   <script>
 
-    /* =========================================
-       MOBILE NAVIGATION
-    ========================================= */
 
-    const hamburgerBtn =
-      document.getElementById("hamburgerBtn");
+    /* =====================================================
+       MOBILE MENU
+    ====================================================== */
 
-    const mobileNav =
-      document.getElementById("mobileNav");
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const navLinks =
+      document.querySelector(".nav-links");
 
 
-    if (hamburgerBtn && mobileNav) {
+    menuToggle.addEventListener(
+      "click",
+      function () {
 
-      hamburgerBtn.addEventListener(
-        "click",
-        function () {
+        navLinks.classList.toggle(
+          "mobile-open"
+        );
 
-          mobileNav.classList.toggle("open");
+      }
+    );
 
-          const open =
-            mobileNav.classList.contains("open");
 
-          hamburgerBtn.setAttribute(
-            "aria-expanded",
-            open
+    /* CLOSE MOBILE MENU */
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(function(link) {
+
+        link.addEventListener(
+          "click",
+          function() {
+
+            navLinks.classList.remove(
+              "mobile-open"
+            );
+
+          }
+        );
+
+      });
+
+
+
+    /* =====================================================
+       HEADER SCROLL
+    ====================================================== */
+
+    const header =
+      document.getElementById("header");
+
+
+    window.addEventListener(
+      "scroll",
+      function() {
+
+        if (window.scrollY > 50) {
+
+          header.classList.add(
+            "scrolled"
+          );
+
+        } else {
+
+          header.classList.remove(
+            "scrolled"
+          );
+
+        }
+
+      }
+    );
+
+
+
+    /* =====================================================
+       GALLERY FILTER
+    ====================================================== */
+
+    const filterButtons =
+      document.querySelectorAll(
+        ".gallery-filter"
+      );
+
+    const galleryCards =
+      document.querySelectorAll(
+        ".gallery-card"
+      );
+
+
+    filterButtons.forEach(
+      function(button) {
+
+        button.addEventListener(
+          "click",
+          function() {
+
+            const filter =
+              this.getAttribute(
+                "data-filter"
+              );
+
+
+            /* ACTIVE BUTTON */
+
+            filterButtons.forEach(
+              function(btn) {
+
+                btn.classList.remove(
+                  "active"
+                );
+
+              }
+            );
+
+
+            this.classList.add(
+              "active"
+            );
+
+
+            /* FILTER CARDS */
+
+            galleryCards.forEach(
+              function(card) {
+
+                const category =
+                  card.getAttribute(
+                    "data-category"
+                  );
+
+
+                if (
+                  filter === "ALL" ||
+                  category === filter
+                ) {
+
+                  card.classList.remove(
+                    "hidden"
+                  );
+
+                  card.style.display =
+                    "block";
+
+                } else {
+
+                  card.classList.add(
+                    "hidden"
+                  );
+
+                  setTimeout(
+                    function() {
+
+                      if (
+                        card.classList.contains(
+                          "hidden"
+                        )
+                      ) {
+
+                        card.style.display =
+                          "none";
+
+                      }
+
+                    },
+                    350
+                  );
+
+                }
+
+              }
+            );
+
+          }
+        );
+
+      }
+    );
+
+
+
+    /* =====================================================
+       LIGHTBOX
+    ====================================================== */
+
+    const lightbox =
+      document.getElementById(
+        "galleryLightbox"
+      );
+
+    const lightboxImage =
+      document.getElementById(
+        "lightboxImage"
+      );
+
+    const lightboxTitle =
+      document.getElementById(
+        "lightboxTitle"
+      );
+
+    const lightboxDescription =
+      document.getElementById(
+        "lightboxDescription"
+      );
+
+    const lightboxCategory =
+      document.getElementById(
+        "lightboxCategory"
+      );
+
+    const closeButton =
+      document.getElementById(
+        "lightboxClose"
+      );
+
+    const previousButton =
+      document.getElementById(
+        "lightboxPrev"
+      );
+
+    const nextButton =
+      document.getElementById(
+        "lightboxNext"
+      );
+
+
+    let currentIndex = 0;
+
+
+
+    /* GET VISIBLE CARDS */
+
+    function visibleCards() {
+
+      return Array.from(
+        galleryCards
+      ).filter(
+        function(card) {
+
+          return !card.classList.contains(
+            "hidden"
           );
 
         }
@@ -992,138 +1225,31 @@
 
 
 
-    /* =========================================
-       GALLERY FILTER
-    ========================================= */
-
-    const filterButtons =
-      document.querySelectorAll(".gallery-filter");
-
-    const galleryCards =
-      document.querySelectorAll(".gallery-card");
-
-
-    filterButtons.forEach(function(button) {
-
-      button.addEventListener(
-        "click",
-        function() {
-
-          const filter =
-            this.getAttribute("data-filter");
-
-
-          filterButtons.forEach(function(btn) {
-
-            btn.classList.remove("active");
-
-          });
-
-
-          this.classList.add("active");
-
-
-          galleryCards.forEach(function(card) {
-
-            const category =
-              card.getAttribute("data-category");
-
-
-            if (
-              filter === "ALL" ||
-              category === filter
-            ) {
-
-              card.classList.remove("hidden");
-
-              setTimeout(function() {
-
-                card.style.display = "block";
-
-              }, 50);
-
-            } else {
-
-              card.classList.add("hidden");
-
-              setTimeout(function() {
-
-                card.style.display = "none";
-
-              }, 350);
-
-            }
-
-          });
-
-        }
-      );
-
-    });
-
-
-
-    /* =========================================
-       LIGHTBOX
-    ========================================= */
-
-    const lightbox =
-      document.getElementById("galleryLightbox");
-
-    const lightboxImage =
-      document.getElementById("lightboxImage");
-
-    const lightboxTitle =
-      document.getElementById("lightboxTitle");
-
-    const lightboxDescription =
-      document.getElementById("lightboxDescription");
-
-    const lightboxCategory =
-      document.getElementById("lightboxCategory");
-
-    const closeButton =
-      document.getElementById("lightboxClose");
-
-    const previousButton =
-      document.getElementById("lightboxPrev");
-
-    const nextButton =
-      document.getElementById("lightboxNext");
-
-
-    let currentIndex = 0;
-
-
-    function visibleCards() {
-
-      return Array.from(
-        galleryCards
-      ).filter(function(card) {
-
-        return !card.classList.contains("hidden");
-
-      });
-
-    }
-
+    /* OPEN LIGHTBOX */
 
     function openLightbox(card) {
 
       const cards =
         visibleCards();
 
+
       currentIndex =
         cards.indexOf(card);
 
+
       updateLightbox();
 
-      lightbox.classList.add("show");
+
+      lightbox.classList.add(
+        "show"
+      );
+
 
       lightbox.setAttribute(
         "aria-hidden",
         "false"
       );
+
 
       document.body.classList.add(
         "lightbox-open"
@@ -1131,6 +1257,9 @@
 
     }
 
+
+
+    /* UPDATE LIGHTBOX */
 
     function updateLightbox() {
 
@@ -1151,7 +1280,10 @@
       }
 
 
-      if (currentIndex >= cards.length) {
+      if (
+        currentIndex >=
+        cards.length
+      ) {
 
         currentIndex = 0;
 
@@ -1163,16 +1295,24 @@
 
 
       const image =
-        card.getAttribute("data-image");
+        card.getAttribute(
+          "data-image"
+        );
 
       const title =
-        card.getAttribute("data-title");
+        card.getAttribute(
+          "data-title"
+        );
 
       const description =
-        card.getAttribute("data-description");
+        card.getAttribute(
+          "data-description"
+        );
 
       const category =
-        card.getAttribute("data-category");
+        card.getAttribute(
+          "data-category"
+        );
 
 
       lightboxImage.src =
@@ -1193,19 +1333,27 @@
     }
 
 
-    galleryCards.forEach(function(card) {
 
-      card.addEventListener(
-        "click",
-        function() {
+    /* CARD CLICK */
 
-          openLightbox(this);
+    galleryCards.forEach(
+      function(card) {
 
-        }
-      );
+        card.addEventListener(
+          "click",
+          function() {
 
-    });
+            openLightbox(this);
 
+          }
+        );
+
+      }
+    );
+
+
+
+    /* CLOSE LIGHTBOX */
 
     closeButton.addEventListener(
       "click",
@@ -1215,12 +1363,16 @@
 
     function closeLightbox() {
 
-      lightbox.classList.remove("show");
+      lightbox.classList.remove(
+        "show"
+      );
+
 
       lightbox.setAttribute(
         "aria-hidden",
         "true"
       );
+
 
       document.body.classList.remove(
         "lightbox-open"
@@ -1228,6 +1380,9 @@
 
     }
 
+
+
+    /* NEXT */
 
     nextButton.addEventListener(
       "click",
@@ -1241,6 +1396,9 @@
     );
 
 
+
+    /* PREVIOUS */
+
     previousButton.addEventListener(
       "click",
       function() {
@@ -1253,13 +1411,16 @@
     );
 
 
-    /* Close when clicking outside */
+
+    /* CLICK OUTSIDE */
 
     lightbox.addEventListener(
       "click",
       function(event) {
 
-        if (event.target === lightbox) {
+        if (
+          event.target === lightbox
+        ) {
 
           closeLightbox();
 
@@ -1269,25 +1430,38 @@
     );
 
 
-    /* Keyboard */
+
+    /* =====================================================
+       KEYBOARD
+    ====================================================== */
 
     document.addEventListener(
       "keydown",
       function(event) {
 
-        if (!lightbox.classList.contains("show")) {
+        if (
+          !lightbox.classList.contains(
+            "show"
+          )
+        ) {
+
           return;
+
         }
 
 
-        if (event.key === "Escape") {
+        if (
+          event.key === "Escape"
+        ) {
 
           closeLightbox();
 
         }
 
 
-        if (event.key === "ArrowRight") {
+        if (
+          event.key === "ArrowRight"
+        ) {
 
           currentIndex++;
 
@@ -1296,7 +1470,9 @@
         }
 
 
-        if (event.key === "ArrowLeft") {
+        if (
+          event.key === "ArrowLeft"
+        ) {
 
           currentIndex--;
 
@@ -1309,27 +1485,35 @@
 
 
 
-    /* =========================================
+    /* =====================================================
        SCROLL REVEAL
-    ========================================= */
+    ====================================================== */
 
     const revealElements =
-      document.querySelectorAll(".reveal");
+      document.querySelectorAll(
+        ".reveal"
+      );
 
 
     const revealObserver =
       new IntersectionObserver(
         function(entries) {
 
-          entries.forEach(function(entry) {
+          entries.forEach(
+            function(entry) {
 
-            if (entry.isIntersecting) {
+              if (
+                entry.isIntersecting
+              ) {
 
-              entry.target.classList.add("show");
+                entry.target.classList.add(
+                  "show"
+                );
+
+              }
 
             }
-
-          });
+          );
 
         },
         {
@@ -1338,14 +1522,20 @@
       );
 
 
-    revealElements.forEach(function(element) {
+    revealElements.forEach(
+      function(element) {
 
-      revealObserver.observe(element);
+        revealObserver.observe(
+          element
+        );
 
-    });
+      }
+    );
+
 
   </script>
 
 
 </body>
+
 </html>

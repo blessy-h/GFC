@@ -1,148 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Reservation | GFC Restaurant Udayar Vilai</title>
-  <meta name="description"
-        content="Reserve your table at GFC Restaurant in Udayar Vilai, Kanyakumari. Enjoy delicious food and great ambience with family and friends.">
+
+  <meta
+    name="description"
+    content="Reserve your table at GFC Restaurant in Udayar Vilai, Kanyakumari. Enjoy delicious food and great ambience with family and friends."
+  >
+
+  <!-- Google Fonts -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
 
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Reservation CSS -->
+
   <link rel="stylesheet" href="css/reservation.css">
+
 </head>
+
 
 <body>
 
-<!-- ================= HEADER ================= -->
 
-<header class="site-header" id="siteHeader">
-  <div class="container header-inner">
+<!-- =====================================================
+     HEADER
+     SAME AS INDEX.HTML
+===================================================== -->
 
-    <a href="index.html" class="brand-logo">
-      <div class="logo-badge">GFC</div>
+<header id="header">
 
-      <div class="logo-text-group">
-        <span class="logo-title">GFC RESTAURANT</span>
-        <span class="logo-tagline">
+  <div class="navbar">
+
+
+    <!-- LOGO -->
+
+    <a href="index.html"
+       class="logo"
+       aria-label="GFC Restaurant Home">
+
+      <div class="logo-circle">
+        GFC
+      </div>
+
+      <div>
+
+        <div class="logo-name">
+          GFC RESTAURANT
+        </div>
+
+        <span class="logo-place">
           Udayar Vilai • Kanyakumari
         </span>
+
       </div>
+
     </a>
 
-    <nav class="main-nav">
-      <ul class="nav-list">
 
-        <li>
-          <a href="index.html" class="nav-link">
-            Home
-          </a>
-        </li>
+    <!-- NAVIGATION -->
 
-        <li>
-          <a href="menu.html" class="nav-link">
-            Menu
-          </a>
-        </li>
+    <ul class="nav-links">
 
-        <li>
-          <a href="about.html" class="nav-link">
-            About
-          </a>
-        </li>
+      <li>
+        <a href="index.html">
+          Home
+        </a>
+      </li>
 
-        <li>
-          <a href="gallery.html" class="nav-link">
-            Gallery
-          </a>
-        </li>
+      <li>
+        <a href="menu.html">
+          Menu
+        </a>
+      </li>
 
-        <li>
-          <a href="contact.html" class="nav-link">
-            Contact
-          </a>
-        </li>
+      <li>
+        <a href="about.html">
+          About
+        </a>
+      </li>
 
-      </ul>
-    </nav>
+      <li>
+        <a href="gallery.html">
+          Gallery
+        </a>
+      </li>
 
-    <div class="header-actions">
-      <a href="reservation.html"
-         class="btn btn-header-reservation">
-        Book a Table
-      </a>
+      <li>
+        <a href="blog.html">
+          Blog
+        </a>
+      </li>
 
-      <button class="hamburger-btn"
-              id="hamburgerBtn"
-              aria-label="Toggle navigation menu">
+      <li>
+        <a href="contact.html">
+          Contact
+        </a>
+      </li>
 
-        <span></span>
-        <span></span>
-        <span></span>
+    </ul>
 
-      </button>
+
+    <!-- BOOK TABLE -->
+
+    <a href="reservation.html"
+       class="nav-btn">
+
+      Book a Table
+
+    </a>
+
+
+    <!-- MOBILE MENU -->
+
+    <div class="menu-toggle"
+         id="menuToggle">
+
+      ☰
+
     </div>
 
   </div>
+
 </header>
 
 
-<!-- ================= HERO ================= -->
-
-<section class="reservation-hero">
-
-  <div class="reservation-hero-shape shape-one"></div>
-  <div class="reservation-hero-shape shape-two"></div>
-
-  <div class="container">
-
-    <div class="breadcrumbs">
-      <a href="index.html">Home</a>
-      <span>›</span>
-      <span>Reservation</span>
-    </div>
-
-    <span class="eyebrow">
-      RESERVE YOUR TABLE
-    </span>
-
-    <h1>
-      Make Your Moment Special
-    </h1>
-
-    <p>
-      Book your table at GFC Restaurant and enjoy
-      delicious food, warm ambience, and happy moments.
-    </p>
-
-  </div>
-
-</section>
 
 
-<!-- ================= RESERVATION SECTION ================= -->
+<!-- =====================================================
+     RESERVATION SECTION
+===================================================== -->
 
 <section class="reservation-section">
 
   <div class="container reservation-grid">
 
-    <!-- LEFT CONTENT -->
+
+    <!-- =================================================
+         LEFT CONTENT
+    ================================================== -->
 
     <div class="reservation-info reveal">
+
 
       <span class="eyebrow">
         GFC RESTAURANT
       </span>
 
+
       <h2>
         Your Table Is Waiting
       </h2>
+
 
       <p>
         Planning a family dinner, a friendly gathering,
@@ -150,62 +177,113 @@
         and let GFC make your visit memorable.
       </p>
 
+
+      <!-- FEATURES -->
+
       <div class="reservation-features">
 
+
+        <!-- FEATURE 1 -->
+
         <div class="feature-item">
-          <div class="feature-icon">🍽️</div>
+
+          <div class="feature-icon">
+            🍽️
+          </div>
 
           <div>
-            <h3>Delicious Food</h3>
+
+            <h3>
+              Delicious Food
+            </h3>
+
             <p>
               Freshly prepared dishes made with care.
             </p>
+
           </div>
+
         </div>
 
 
+        <!-- FEATURE 2 -->
+
         <div class="feature-item">
-          <div class="feature-icon">✨</div>
+
+          <div class="feature-icon">
+            ✨
+          </div>
 
           <div>
-            <h3>Great Ambience</h3>
+
+            <h3>
+              Great Ambience
+            </h3>
+
             <p>
               A comfortable place for every occasion.
             </p>
+
           </div>
+
         </div>
 
 
+        <!-- FEATURE 3 -->
+
         <div class="feature-item">
-          <div class="feature-icon">❤️</div>
+
+          <div class="feature-icon">
+            ❤️
+          </div>
 
           <div>
-            <h3>Happy Moments</h3>
+
+            <h3>
+              Happy Moments
+            </h3>
+
             <p>
               Create wonderful memories with your loved ones.
             </p>
+
           </div>
+
         </div>
 
       </div>
 
+
+      <!-- LOCATION -->
+
       <div class="reservation-note">
-        <strong>📍 Visit Us</strong>
+
+        <strong>
+          📍 Visit Us
+        </strong>
+
         <span>
           Udayar Vilai, Kanyakumari
         </span>
+
       </div>
 
     </div>
 
 
-    <!-- FORM -->
+
+    <!-- =================================================
+         RESERVATION FORM
+    ================================================== -->
 
     <div class="reservation-card reveal">
 
+
       <div class="reservation-card-header">
 
-        <span>TABLE RESERVATION</span>
+        <span>
+          TABLE RESERVATION
+        </span>
 
         <h2>
           Book Your Table
@@ -218,11 +296,17 @@
       </div>
 
 
+
       <form id="reservationForm">
+
+
+        <!-- NAME + PHONE -->
 
         <div class="form-row">
 
+
           <div class="form-group">
+
             <label for="name">
               Full Name
             </label>
@@ -232,11 +316,14 @@
               id="name"
               name="name"
               placeholder="Enter your name"
-              required>
+              required
+            >
+
           </div>
 
 
           <div class="form-group">
+
             <label for="phone">
               Phone Number
             </label>
@@ -246,13 +333,19 @@
               id="phone"
               name="phone"
               placeholder="Enter your phone number"
-              required>
+              required
+            >
+
           </div>
 
         </div>
 
 
+
+        <!-- DATE + TIME -->
+
         <div class="form-row">
+
 
           <div class="form-group">
 
@@ -264,7 +357,8 @@
               type="date"
               id="date"
               name="date"
-              required>
+              required
+            >
 
           </div>
 
@@ -279,12 +373,16 @@
               type="time"
               id="time"
               name="time"
-              required>
+              required
+            >
 
           </div>
 
         </div>
 
+
+
+        <!-- GUESTS -->
 
         <div class="form-group">
 
@@ -292,7 +390,11 @@
             Number of Guests
           </label>
 
-          <select id="guests" name="guests" required>
+          <select
+            id="guests"
+            name="guests"
+            required
+          >
 
             <option value="">
               Select guests
@@ -335,6 +437,9 @@
         </div>
 
 
+
+        <!-- SPECIAL REQUEST -->
+
         <div class="form-group">
 
           <label for="message">
@@ -345,21 +450,35 @@
             id="message"
             name="message"
             rows="4"
-            placeholder="Any special request?"></textarea>
+            placeholder="Any special request?"
+          ></textarea>
 
         </div>
 
 
+
+        <!-- SUBMIT -->
+
         <button
           type="submit"
-          class="reservation-submit">
+          class="reservation-submit"
+        >
 
           Reserve My Table
-          <span>→</span>
+
+          <span>
+            →
+          </span>
 
         </button>
 
-        <p class="form-message" id="formMessage"></p>
+
+        <!-- FORM MESSAGE -->
+
+        <p
+          class="form-message"
+          id="formMessage"
+        ></p>
 
       </form>
 
@@ -370,7 +489,10 @@
 </section>
 
 
-<!-- ================= CTA ================= -->
+
+<!-- =====================================================
+     CTA
+===================================================== -->
 
 <section class="reservation-cta">
 
@@ -378,26 +500,38 @@
 
     <div class="cta-content">
 
+
       <span class="eyebrow">
         HAVE QUESTIONS?
       </span>
 
+
       <h2>
         We'd Love to Hear From You
       </h2>
+
 
       <p>
         For special requests or group reservations,
         feel free to contact GFC Restaurant.
       </p>
 
+
       <div class="cta-buttons">
 
-        <a href="contact.html" class="btn btn-primary">
+
+        <a
+          href="contact.html"
+          class="btn btn-primary"
+        >
           Contact Us
         </a>
 
-        <a href="menu.html" class="btn btn-secondary">
+
+        <a
+          href="menu.html"
+          class="btn btn-secondary"
+        >
           Explore Menu
         </a>
 
@@ -410,17 +544,30 @@
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer class="site-footer">
 
   <div class="container footer-grid">
 
+
+    <!-- BRAND -->
+
     <div class="footer-brand">
 
-      <div class="logo-badge">GFC</div>
+      <div class="logo-badge">
+        GFC
+      </div>
 
-      <h3>GFC RESTAURANT</h3>
+      <h3>
+        GFC RESTAURANT
+      </h3>
 
       <p>
         Good Food • Great Ambience • Happy Moments
@@ -429,22 +576,50 @@
     </div>
 
 
+
+    <!-- LINKS -->
+
     <div class="footer-links">
 
-      <h4>Quick Links</h4>
+      <h4>
+        Quick Links
+      </h4>
 
-      <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="menu.html">
+        Menu
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="gallery.html">
+        Gallery
+      </a>
+
+      <a href="blog.html">
+        Blog
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
 
     </div>
 
 
+
+    <!-- CONTACT -->
+
     <div class="footer-contact">
 
-      <h4>Visit Us</h4>
+      <h4>
+        Visit Us
+      </h4>
 
       <p>
         📍 Udayar Vilai,<br>
@@ -461,8 +636,11 @@
 
     </div>
 
+
   </div>
 
+
+  <!-- FOOTER BOTTOM -->
 
   <div class="footer-bottom">
 
@@ -475,41 +653,119 @@
 </footer>
 
 
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
 
-/* ================= MOBILE MENU ================= */
 
-const hamburgerBtn =
-  document.getElementById("hamburgerBtn");
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
-const mainNav =
-  document.querySelector(".main-nav");
+const menuToggle =
+  document.getElementById("menuToggle");
 
-hamburgerBtn.addEventListener("click", () => {
-
-  mainNav.classList.toggle("mobile-open");
-
-  hamburgerBtn.classList.toggle("active");
-
-});
+const navLinks =
+  document.querySelector(".nav-links");
 
 
-/* ================= SCROLL REVEAL ================= */
+if (menuToggle && navLinks) {
+
+
+  menuToggle.addEventListener(
+    "click",
+    function () {
+
+      navLinks.classList.toggle(
+        "mobile-open"
+      );
+
+    }
+  );
+
+
+  document
+    .querySelectorAll(".nav-links a")
+    .forEach(function (link) {
+
+      link.addEventListener(
+        "click",
+        function () {
+
+          navLinks.classList.remove(
+            "mobile-open"
+          );
+
+        }
+      );
+
+    });
+
+}
+
+
+
+/* =====================================================
+   HEADER SCROLL
+===================================================== */
+
+const header =
+  document.getElementById("header");
+
+
+if (header) {
+
+  window.addEventListener(
+    "scroll",
+    function () {
+
+      if (window.scrollY > 50) {
+
+        header.classList.add(
+          "scrolled"
+        );
+
+      } else {
+
+        header.classList.remove(
+          "scrolled"
+        );
+
+      }
+
+    }
+  );
+
+}
+
+
+
+/* =====================================================
+   REVEAL ANIMATION
+===================================================== */
 
 const revealElements =
   document.querySelectorAll(".reveal");
 
+
 const revealObserver =
   new IntersectionObserver(
-    (entries) => {
+    function (entries) {
 
-      entries.forEach((entry) => {
+      entries.forEach(function (entry) {
 
         if (entry.isIntersecting) {
 
-          entry.target.classList.add("show");
+          entry.target.classList.add(
+            "show"
+          );
 
-          revealObserver.unobserve(entry.target);
+          revealObserver.unobserve(
+            entry.target
+          );
 
         }
 
@@ -522,35 +778,58 @@ const revealObserver =
   );
 
 
-revealElements.forEach((element) => {
+revealElements.forEach(function (element) {
 
   revealObserver.observe(element);
 
 });
 
 
-/* ================= FORM ================= */
+
+/* =====================================================
+   RESERVATION FORM
+===================================================== */
 
 const reservationForm =
-  document.getElementById("reservationForm");
+  document.getElementById(
+    "reservationForm"
+  );
 
 const formMessage =
-  document.getElementById("formMessage");
+  document.getElementById(
+    "formMessage"
+  );
 
-reservationForm.addEventListener("submit", (event) => {
 
-  event.preventDefault();
+if (reservationForm) {
 
-  formMessage.textContent =
-    "Thank you! Your reservation request has been received.";
+  reservationForm.addEventListener(
+    "submit",
+    function (event) {
 
-  formMessage.classList.add("success");
+      event.preventDefault();
 
-  reservationForm.reset();
 
-});
+      formMessage.textContent =
+        "Thank you! Your reservation request has been received.";
+
+
+      formMessage.classList.add(
+        "success"
+      );
+
+
+      reservationForm.reset();
+
+    }
+  );
+
+}
+
 
 </script>
 
+
 </body>
+
 </html>
