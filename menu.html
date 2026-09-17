@@ -1,551 +1,662 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Menu | GFC Restaurant</title>
+    <title>Menu | GFC Restaurant Udayar Vilai, Kanyakumari</title>
 
-  <!-- Same CSS as Home page -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/index.css">
+    <meta name="description"
+        content="Explore the delicious menu at GFC Restaurant in Udayar Vilai, Kanyakumari. Enjoy biryani, grilled chicken, burgers, fast food, Indian dishes and cafe specials.">
 
-  <!-- Menu CSS -->
-  <link rel="stylesheet" href="css/menu.css">
+    <meta name="keywords"
+        content="GFC Restaurant, restaurant in Kanyakumari, best restaurant in Kanyakumari, biryani, grilled chicken, fast food, burgers, Indian food, cafe">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Menu CSS -->
+    <link rel="stylesheet" href="css/menu.css">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+    <!-- ================= HEADER ================= -->
 
-<header class="site-header" id="siteHeader" role="banner">
+    <header id="header">
 
-  <div class="container header-inner">
+        <div class="navbar">
 
-    <a href="index.html" class="brand-logo" aria-label="GFC Restaurant Home">
+            <!-- LOGO -->
+            <a href="index.html" class="logo">
 
-      <div class="logo-badge">GFC</div>
+                <div class="logo-circle">
+                    GFC
+                </div>
 
-      <div class="logo-text-group">
-        <span class="logo-title">GFC RESTAURANT</span>
-        <span class="logo-tagline">Udayar Vilai • Kanyakumari</span>
-      </div>
+                <div class="logo-text">
 
-    </a>
+                    <div class="logo-name">
+                        GFC RESTAURANT
+                    </div>
 
-    <nav class="main-nav" aria-label="Main Navigation">
+                    <span class="logo-place">
+                        Udayar Vilai • Kanyakumari
+                    </span>
 
-      <ul class="nav-list">
+                </div>
 
-        <li>
-          <a href="index.html" class="nav-link">Home</a>
-        </li>
+            </a>
 
-        <li>
-          <a href="menu.html" class="nav-link active">Menu</a>
-        </li>
 
-        <li>
-          <a href="about.html" class="nav-link">About</a>
-        </li>
+            <!-- NAVIGATION -->
+            <ul class="nav-links" id="navLinks">
 
-        <li>
-          <a href="gallery.html" class="nav-link">Gallery</a>
-        </li>
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
 
-        <li>
-          <a href="contact.html" class="nav-link">Contact</a>
-        </li>
+                <li>
+                    <a href="menu.html" class="active">
+                        Menu
+                    </a>
+                </li>
 
-      </ul>
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
 
-    </nav>
+                <li>
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+                </li>
 
-    <div class="header-actions">
+                <li>
+                    <a href="blog.html">
+                        Blog
+                    </a>
+                </li>
 
-      <a href="reservation.html" class="btn btn-header-reservation">
-        Book a Table
-      </a>
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
 
-      <button
-        class="hamburger-btn"
-        id="hamburgerBtn"
-        aria-label="Toggle navigation menu"
-        aria-expanded="false"
-        aria-controls="mobileNav">
+            </ul>
 
-        <span></span>
-        <span></span>
-        <span></span>
 
-      </button>
+            <!-- BOOK BUTTON -->
+            <a href="reservation.html" class="nav-btn">
+                Book a Table
+            </a>
 
-    </div>
 
-  </div>
-
-</header>
-
-
-<!-- ================= MOBILE NAV ================= -->
-
-<div class="mobile-nav" id="mobileNav">
-
-  <ul>
-
-    <li>
-      <a href="index.html">Home</a>
-    </li>
-
-    <li>
-      <a href="menu.html" class="active">Menu</a>
-    </li>
-
-    <li>
-      <a href="about.html">About</a>
-    </li>
-
-    <li>
-      <a href="gallery.html">Gallery</a>
-    </li>
-
-    <li>
-      <a href="contact.html">Contact</a>
-    </li>
-
-    <li>
-      <a href="reservation.html">Book a Table</a>
-    </li>
-
-  </ul>
-
-</div>
-
-
-
-
-<!-- ================= MENU ================= -->
-
-<section class="menu-section" id="menu">
-
-  <div class="container">
-
-    <div class="menu-heading">
-
-      <span class="menu-small-title">
-        TASTE THE DIFFERENCE
-      </span>
-
-      <h2>
-        Our Special Menu
-      </h2>
-
-      <p>
-        From delicious biryani to smoky grills and cheesy pizzas,
-        discover your favourite flavours at GFC.
-      </p>
-
-    </div>
-
-
-    <!-- CATEGORY BUTTONS -->
-
-    <div class="menu-filters">
-
-      <button class="filter-btn active" data-filter="all">
-        All
-      </button>
-
-      <button class="filter-btn" data-filter="biryani">
-        Biryani
-      </button>
-
-      <button class="filter-btn" data-filter="grills">
-        Grills
-      </button>
-
-      <button class="filter-btn" data-filter="pizza">
-        Pizza
-      </button>
-
-      <button class="filter-btn" data-filter="snacks">
-        Snacks
-      </button>
-
-      <button class="filter-btn" data-filter="drinks">
-        Drinks
-      </button>
-
-    </div>
-
-
-    <!-- ================= MENU GRID ================= -->
-
-    <div class="menu-grid">
-
-
-      <!-- CARD 1 -->
-
-      <article class="menu-card" data-category="biryani">
-
-        <div class="menu-image">
-
-          <img src="assets/images/gallery-2.jpg"
-               alt="Chicken Dum Biryani">
-
-          <span class="menu-badge">
-            Popular
-          </span>
+            <!-- MOBILE MENU -->
+            <div class="menu-toggle" id="menuToggle">
+                ☰
+            </div>
 
         </div>
 
-        <div class="menu-card-content">
+    </header>
 
-          <div class="menu-card-top">
 
-            <h3>
-              Chicken Dum Biryani
-            </h3>
+    <!-- ================= MENU HERO ================= -->
 
-            <span class="price">
-              ₹220
-            </span>
+    <main>
 
-          </div>
+        <section class="menu-hero">
 
-          <p>
-            Fragrant basmati rice cooked with tender chicken
-            and aromatic spices.
-          </p>
+            <div class="menu-hero-content">
+
+                <span class="eyebrow">
+                    OUR MENU
+                </span>
+
+                <h1>
+                    Delicious Choices
+                </h1>
+
+                <p>
+                    Discover delicious flavours at GFC Restaurant.
+                    From tasty Indian favourites to grilled dishes,
+                    biryani and fast food, there is something for everyone.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MENU FILTER ================= -->
+
+        <section class="menu-section">
+
+            <div class="container">
+
+                <div class="menu-filters">
+
+                    <button class="filter-btn active" data-filter="all">
+                        All
+                    </button>
+
+                    <button class="filter-btn" data-filter="biryani">
+                        Biryani
+                    </button>
+
+                    <button class="filter-btn" data-filter="grill">
+                        Grill
+                    </button>
+
+                    <button class="filter-btn" data-filter="fast-food">
+                        Fast Food
+                    </button>
+
+                    <button class="filter-btn" data-filter="indian">
+                        Indian
+                    </button>
+
+                    <button class="filter-btn" data-filter="cafe">
+                        Cafe
+                    </button>
+
+                </div>
+
+
+                <!-- ================= MENU GRID ================= -->
+
+                <div class="menu-grid">
+
+
+                    <!-- CARD 1 -->
+
+                    <div class="menu-card" data-category="biryani">
+
+                        <div class="menu-image">
+
+                            <img
+                                src="assets/images/menu-2.jpg"
+                                alt="Chicken Biryani at GFC Restaurant"
+                                onerror="this.src='assets/images/menu-2.jpg';">
+
+                            <span class="menu-badge">
+                                POPULAR
+                            </span>
+
+                        </div>
+
+                        <div class="menu-content">
+
+                            <div class="menu-title-row">
+
+                                <h3>
+                                    Chicken Biryani
+                                </h3>
+
+                                <span class="price">
+                                    ₹180
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Fragrant basmati rice cooked with tender chicken
+                                and delicious spices.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 2 -->
+
+                    <div class="menu-card" data-category="grill">
+
+                        <div class="menu-image">
+
+                            <img
+                                src="assets/images/menu-3.jpg"
+                                alt="Grilled Chicken at GFC Restaurant"
+                                onerror="this.src='assets/images/menu-2.jpg';">
+
+                            <span class="menu-badge">
+                                CHEF'S CHOICE
+                            </span>
+
+                        </div>
+
+                        <div class="menu-content">
+
+                            <div class="menu-title-row">
+
+                                <h3>
+                                    Grilled Chicken
+                                </h3>
+
+                                <span class="price">
+                                    ₹220
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Juicy grilled chicken seasoned with aromatic
+                                spices and served hot.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 3 -->
+
+                    <div class="menu-card" data-category="fast-food">
+
+                        <div class="menu-image">
+
+                            <img
+                                src="assets/images/menu-4.jpg"
+                                alt="Chicken Burger at GFC Restaurant"
+                                onerror="this.src='assets/images/menu-2.jpg';">
+
+                        </div>
+
+                        <div class="menu-content">
+
+                            <div class="menu-title-row">
+
+                                <h3>
+                                    Chicken Burger
+                                </h3>
+
+                                <span class="price">
+                                    ₹120
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Crispy chicken, fresh vegetables and creamy
+                                sauce inside a soft bun.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 4 -->
+
+                    <div class="menu-card" data-category="indian">
+
+                        <div class="menu-image">
+
+                            <img
+                                src="assets/images/menu-5.jpg"
+                                alt="Indian Food at GFC Restaurant"
+                                onerror="this.src='assets/images/menu-2.jpg';">
+
+                        </div>
+
+                        <div class="menu-content">
+
+                            <div class="menu-title-row">
+
+                                <h3>
+                                    Special Indian Meal
+                                </h3>
+
+                                <span class="price">
+                                    ₹160
+                                </span>
+
+                            </div>
+
+                            <p>
+                                A delicious combination of traditional Indian
+                                flavours prepared with fresh ingredients.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 5 -->
+
+                    <div class="menu-card" data-category="fast-food">
+
+                        <div class="menu-image">
+
+                            <img
+                                src="assets/images/menu-6.jpg"
+                                alt="French Fries at GFC Restaurant"
+                                onerror="this.src='assets/images/menu-2.jpg';">
+
+                        </div>
+
+                        <div class="menu-content">
+
+                            <div class="menu-title-row">
+
+                                <h3>
+                                    French Fries
+                                </h3>
+
+                                <span class="price">
+                                    ₹90
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Crispy golden fries served hot and perfect
+                                as a tasty snack.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 6 -->
+
+                    <div class="menu-card" data-category="cafe">
+
+                        <div class="menu-image">
+
+                            <img
+                                src="assets/images/menu-7.jpg"
+                                alt="Cafe Special at GFC Restaurant"
+                                onerror="this.src='assets/images/menu-2.jpg';">
+
+                        </div>
+
+                        <div class="menu-content">
+
+                            <div class="menu-title-row">
+
+                                <h3>
+                                    Cafe Special
+                                </h3>
+
+                                <span class="price">
+                                    ₹110
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Refreshing drinks and delicious cafe favourites
+                                for a relaxing break.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="menu-cta">
+
+            <div class="cta-content">
+
+                <span class="eyebrow">
+                    GOOD FOOD • GOOD MOMENTS
+                </span>
+
+                <h2>
+                    Hungry Yet?
+                </h2>
+
+                <p>
+                    Come and enjoy delicious food, warm ambience and
+                    memorable moments at GFC Restaurant.
+                </p>
+
+                <div class="cta-buttons">
+
+                    <a href="reservation.html" class="cta-btn">
+                        Book a Table
+                        <span>→</span>
+                    </a>
+
+                    <a href="contact.html" class="cta-outline">
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    GFC
+                </div>
+
+                <h3>
+                    GFC RESTAURANT
+                </h3>
+
+                <p>
+                    Delicious food, warm hospitality and memorable
+                    moments in Udayar Vilai, Kanyakumari.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h4>
+                    Visit Us
+                </h4>
+
+                <p>
+                    Udayar Vilai
+                </p>
+
+                <p>
+                    Kanyakumari, Tamil Nadu
+                </p>
+
+            </div>
 
         </div>
 
-      </article>
 
+        <div class="footer-bottom">
 
-      <!-- CARD 2 -->
-
-      <article class="menu-card" data-category="grills">
-
-        <div class="menu-image">
-
-          <img src="assets/images/gallery-4.jpg"
-               alt="Chargrilled Chicken">
-
-          <span class="menu-badge">
-            Chef's Pick
-          </span>
+            <p>
+                © 2025 GFC Restaurant. All Rights Reserved.
+            </p>
 
         </div>
 
-        <div class="menu-card-content">
+    </footer>
 
-          <div class="menu-card-top">
 
-            <h3>
-              Smoky Chargrilled Chicken
-            </h3>
+    <!-- ================= JAVASCRIPT ================= -->
 
-            <span class="price">
-              ₹280
-            </span>
+    <script>
 
-          </div>
+        /* MOBILE MENU */
 
-          <p>
-            Juicy chicken grilled with special GFC spices
-            for a smoky flavour.
-          </p>
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
 
-        </div>
+        menuToggle.addEventListener("click", function () {
 
-      </article>
+            navLinks.classList.toggle("mobile-open");
 
+        });
 
-      <!-- CARD 3 -->
 
-      <article class="menu-card" data-category="pizza">
+        /* HEADER SCROLL */
 
-        <div class="menu-image">
+        const header = document.getElementById("header");
 
-          <img src="assets/images/gallery-5.jpg"
-               alt="GFC Pizza">
+        window.addEventListener("scroll", function () {
 
-        </div>
+            if (window.scrollY > 50) {
 
-        <div class="menu-card-content">
+                header.classList.add("scrolled");
 
-          <div class="menu-card-top">
+            } else {
 
-            <h3>
-              GFC Special Pizza
-            </h3>
+                header.classList.remove("scrolled");
 
-            <span class="price">
-              ₹249
-            </span>
+            }
 
-          </div>
+        });
 
-          <p>
-            Crispy artisan crust topped with rich sauce,
-            cheese and delicious toppings.
-          </p>
 
-        </div>
+        /* MENU FILTER */
 
-      </article>
+        const filterButtons =
+            document.querySelectorAll(".filter-btn");
 
+        const menuCards =
+            document.querySelectorAll(".menu-card");
 
-      <!-- CARD 4 -->
 
-      <article class="menu-card" data-category="grills">
+        filterButtons.forEach(function (button) {
 
-        <div class="menu-image">
+            button.addEventListener("click", function () {
 
-          <img src="assets/images/menu-1.jpg"
-               alt="Chicken Grill">
+                filterButtons.forEach(function (btn) {
 
-        </div>
+                    btn.classList.remove("active");
 
-        <div class="menu-card-content">
+                });
 
-          <div class="menu-card-top">
+                button.classList.add("active");
 
-            <h3>
-              GFC Chicken Grill
-            </h3>
+                const filter =
+                    button.getAttribute("data-filter");
 
-            <span class="price">
-              ₹299
-            </span>
 
-          </div>
+                menuCards.forEach(function (card) {
 
-          <p>
-            Tender chicken marinated in special spices
-            and grilled to perfection.
-          </p>
+                    const category =
+                        card.getAttribute("data-category");
 
-        </div>
 
-      </article>
+                    if (
+                        filter === "all" ||
+                        category === filter
+                    ) {
 
+                        card.style.display = "block";
 
-      <!-- CARD 5 -->
+                        setTimeout(function () {
 
-      <article class="menu-card" data-category="snacks">
+                            card.classList.add("show");
 
-        <div class="menu-image">
+                        }, 50);
 
-          <img src="assets/images/menu-2.jpg"
-               alt="Chicken Wrap">
+                    } else {
 
-        </div>
+                        card.style.display = "none";
 
-        <div class="menu-card-content">
+                        card.classList.remove("show");
 
-          <div class="menu-card-top">
+                    }
 
-            <h3>
-              GFC Chicken Wrap
-            </h3>
+                });
 
-            <span class="price">
-              ₹149
-            </span>
+            });
 
-          </div>
+        });
 
-          <p>
-            Soft wrap filled with juicy chicken,
-            fresh vegetables and creamy sauce.
-          </p>
 
-        </div>
+        /* CARD ANIMATION */
 
-      </article>
+        const cards =
+            document.querySelectorAll(".menu-card");
 
 
-      <!-- CARD 6 -->
+        const observer =
+            new IntersectionObserver(
 
-      <article class="menu-card" data-category="drinks">
+                function (entries) {
 
-        <div class="menu-image">
+                    entries.forEach(function (entry) {
 
-          <img src="assets/images/menu-3.jpg"
-               alt="Fresh Mocktail">
+                        if (entry.isIntersecting) {
 
-        </div>
+                            entry.target.classList.add("show");
 
-        <div class="menu-card-content">
+                        }
 
-          <div class="menu-card-top">
+                    });
 
-            <h3>
-              Fresh Mocktail
-            </h3>
+                },
 
-            <span class="price">
-              ₹129
-            </span>
+                {
+                    threshold: 0.15
+                }
 
-          </div>
+            );
 
-          <p>
-            Refreshing chilled mocktail made with
-            fruity flavours.
-          </p>
 
-        </div>
+        cards.forEach(function (card) {
 
-      </article>
+            observer.observe(card);
 
-    </div>
+        });
 
-  </div>
-
-</section>
-
-
-<!-- ================= CTA ================= -->
-
-<section class="menu-cta">
-
-  <div class="container">
-
-    <div class="cta-content">
-
-      <span>
-        GFC RESTAURANT
-      </span>
-
-      <h2>
-        Good Food. Great Ambience.
-      </h2>
-
-      <p>
-        Come hungry. Leave happy.
-      </p>
-
-      <a href="reservation.html" class="cta-btn">
-        Book a Table →
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-</main>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="site-footer">
-
-  <div class="container">
-
-    <p>
-      © 2026 GFC Restaurant • Udayar Vilai, Kanyakumari
-    </p>
-
-  </div>
-
-</footer>
-
-
-<!-- ================= JAVASCRIPT ================= -->
-
-<script>
-
-const filterButtons = document.querySelectorAll(".filter-btn");
-const menuCards = document.querySelectorAll(".menu-card");
-
-filterButtons.forEach(button => {
-
-  button.addEventListener("click", () => {
-
-    filterButtons.forEach(btn => {
-      btn.classList.remove("active");
-    });
-
-    button.classList.add("active");
-
-    const filter = button.dataset.filter;
-
-    menuCards.forEach(card => {
-
-      if (
-        filter === "all" ||
-        card.dataset.category === filter
-      ) {
-
-        card.style.display = "block";
-
-        setTimeout(() => {
-          card.classList.add("show");
-        }, 50);
-
-      } else {
-
-        card.classList.remove("show");
-
-        setTimeout(() => {
-          card.style.display = "none";
-        }, 300);
-
-      }
-
-    });
-
-  });
-
-});
-
-
-// Mobile menu
-
-const hamburgerBtn = document.getElementById("hamburgerBtn");
-const mobileNav = document.getElementById("mobileNav");
-
-hamburgerBtn.addEventListener("click", () => {
-
-  hamburgerBtn.classList.toggle("open");
-  mobileNav.classList.toggle("open");
-
-});
-
-
-// Scroll animation
-
-const observer = new IntersectionObserver(
-  entries => {
-
-    entries.forEach(entry => {
-
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-
-    });
-
-  },
-  {
-    threshold: 0.15
-  }
-);
-
-document.querySelectorAll(".menu-card, .menu-heading")
-.forEach(element => observer.observe(element));
-
-</script>
+    </script>
 
 </body>
+
 </html>
