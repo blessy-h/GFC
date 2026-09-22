@@ -101,19 +101,23 @@ header.scrolled {
 }
 
 .logo-circle {
-    width: 64px;
-    height: 64px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background: var(--orange);
-    color: white;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-weight: 800;
-    font-size: 27px;
-    box-shadow: 0 8px 25px rgba(232,93,4,.35);
+    overflow: hidden;
     transition: .4s;
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
 }
 
 .logo:hover .logo-circle {
@@ -122,16 +126,16 @@ header.scrolled {
 
 .logo-name {
     font-weight: 800;
-    font-size: 22px;
+    font-size: 18px;
     letter-spacing: 1px;
     color: var(--dark);
 }
 
 .logo-place {
     display: block;
-    font-size: 12px;
+    font-size: 10px;
     color: #777;
-    margin-top: 3px;
+    margin-top: 2px;
 }
 
 .nav-links {
@@ -831,26 +835,23 @@ footer {
 }
 
 .footer-logo {
-    width: 55px;
-    height: 55px;
-
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-
-    background: var(--orange);
-
+    background: transparent;
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    font-family: 'Playfair Display', serif;
-
-    font-weight: 800;
-
-    font-size: 20px;
-
     margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
 }
 
 .footer-brand h3 {
@@ -1167,7 +1168,7 @@ footer {
         <a href="index.html" class="logo">
 
             <div class="logo-circle">
-                GFC
+                <img src="gfc-logo.png" alt="GFC Restaurant Logo">
             </div>
 
             <div>
@@ -1574,7 +1575,7 @@ footer {
         <div class="footer-brand">
 
             <div class="footer-logo">
-                GFC
+                <img src="gfc-logo.png" alt="GFC Restaurant Logo">
             </div>
 
             <h3>

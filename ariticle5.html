@@ -123,21 +123,23 @@
 
 
         .logo-circle {
-            width: 64px;
-            height: 64px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            background: var(--orange);
-            color: white;
+            background: transparent;
 
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+        }
 
-            font-family: 'Playfair Display', serif;
-            font-weight: 800;
-            font-size: 27px;
-
-            box-shadow: 0 5px 20px rgba(232,93,4,.35);
+        .logo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+            display: block;
         }
 
 
@@ -145,13 +147,13 @@
             font-weight: 800;
             letter-spacing: 1px;
             color: var(--dark);
-            font-size: 22px;
+            font-size: 18px;
         }
 
 
         .logo-place {
             display: block;
-            font-size: 12px;
+            font-size: 10px;
             color: #777;
             margin-top: 2px;
         }
@@ -527,13 +529,23 @@
 
 
         .footer-logo {
-            font-family: 'Playfair Display', serif;
-
-            font-size: 30px;
-
-            color: var(--orange);
-
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+            display: block;
         }
 
 
@@ -827,7 +839,7 @@
         <a href="index.html" class="logo">
 
             <div class="logo-circle">
-                GFC
+                <img src="gfc-logo.png" alt="GFC Restaurant Logo">
             </div>
 
             <div>
@@ -1196,7 +1208,7 @@
         <div class="footer-column">
 
             <div class="footer-logo">
-                GFC
+                <img src="gfc-logo.png" alt="GFC Restaurant Logo">
             </div>
 
             <p>
