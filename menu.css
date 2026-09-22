@@ -99,41 +99,23 @@ header.scrolled {
 }
 
 .navbar {
-    max-width: 1350px;
+    max-width: 1250px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
 }
+
 
 /* LOGO */
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 14px;
-    text-decoration: none;
-    flex-shrink: 0;
+    gap: 10px;
 }
 
-.logo-circle {
-    width: 64px;
-    height: 64px;
-    min-width: 64px;
-    border-radius: 50%;
-    background: var(--orange);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    font-family: 'Playfair Display', serif;
-    font-weight: 800;
-    font-size: 26px;
-
-    box-shadow: 0 8px 25px rgba(232, 93, 4, 0.30);
-}
 
 .logo-name {
     font-family: 'Montserrat', sans-serif;
