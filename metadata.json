@@ -1,6 +1,6 @@
 {
   "name": "GFC Restaurant",
-  "description": "Premium multi-page restaurant and cafe website for GFC Restaurant in Udayar Vilai, Kanyakumari. Features dynamic menu, table reservation request, gallery lightbox, and local story.",
+  "description": "Best restaurant in Kanyakumari for authentic non-veg delicacies, royal dum biryani, grills & cafe bites. Recommended restaurant near me serving Kanyakumari, Nagercoil, Marthandam & Colachel.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
