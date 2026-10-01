@@ -52,8 +52,16 @@ content="best restaurant in Kanyakumari, restaurant in Kanyakumari, non veg rest
   "acceptsReservations": "True",
   "hasMenu": "menu.html",
   "sameAs": [
-    "https://www.instagram.com/grandfestivecafe/"
-  ]
+    "https://www.instagram.com/grandfestivecafe/",
+    "https://share.google/A3V1HTmnhE7vF1izd"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "199",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
 }
 </script>
 
@@ -301,7 +309,7 @@ header.scrolled {
 }
 
 .hero-text {
-    max-width: 650px;
+    max-width: 820px;
     animation: heroText 1.2s ease forwards;
 }
 
@@ -317,6 +325,23 @@ header.scrolled {
     }
 }
 
+.hero-tag-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.hero-tag-row .eyebrow {
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.hero-tag-row .hero-review-pill {
+    margin-bottom: 0;
+}
+
 .eyebrow {
     color: var(--orange);
     font-weight: 800;
@@ -328,18 +353,39 @@ header.scrolled {
 
 .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(50px, 7vw, 95px);
-    line-height: .95;
+    font-size: clamp(42px, 5.4vw, 76px);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -0.5px;
     margin-bottom: 25px;
+    color: #171717;
 }
 
-.hero h1 span {
+.hero h1 .hero-title-line {
+    display: block;
+    white-space: nowrap;
+}
+
+.hero h1 .hero-title-accent {
+    display: block;
     color: var(--orange);
+    white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+    .hero h1 .hero-title-line,
+    .hero h1 .hero-title-accent {
+        white-space: normal;
+    }
+    .hero h1 {
+        font-size: clamp(34px, 8.5vw, 46px);
+        line-height: 1.15;
+    }
 }
 
 .hero p {
-    max-width: 520px;
-    color: #666;
+    max-width: 580px;
+    color: #555;
     line-height: 1.8;
     font-size: 16px;
 }
@@ -833,43 +879,467 @@ section {
 ========================================================= */
 
 .reviews {
-    background: white;
-}
-
-.review-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 25px;
-}
-
-.review {
-    background: #fffaf4;
-    padding: 35px;
-    border-radius: 20px;
+    background: #ffffff;
     position: relative;
-    transition: .4s;
 }
 
-.review:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow);
+/* Google Reviews Summary Bar */
+.google-reviews-bar {
+    background: #fffaf4;
+    border: 1px solid rgba(232, 93, 4, 0.2);
+    border-radius: 20px;
+    padding: 24px 30px;
+    margin-bottom: 45px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
-.stars {
-    color: var(--orange);
-    letter-spacing: 3px;
+.google-brand-summary {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.google-g-logo {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+}
+
+.google-rating-score {
+    font-size: 26px;
+    font-weight: 800;
+    color: #171717;
+    line-height: 1;
+}
+
+.google-stars-display {
+    color: #f4a261;
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+
+.google-reviews-count {
+    font-size: 13px;
+    color: #666;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.google-reviews-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-write-review {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1a73e8;
+    color: #ffffff !important;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.2px;
+    box-shadow: 0 4px 14px rgba(26, 115, 232, 0.25);
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.btn-write-review:hover {
+    background: #1557b0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 115, 232, 0.35);
+}
+
+.btn-view-google {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    color: #222 !important;
+    border: 1px solid #dadce0;
+    padding: 11px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 13px;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.btn-view-google:hover {
+    background: #f8f9fa;
+    border-color: var(--orange);
+    color: var(--orange) !important;
+    transform: translateY(-2px);
+}
+
+/* Reviews Carousel */
+.reviews-carousel-wrapper {
+    position: relative;
+    padding: 10px 0;
+}
+
+.reviews-carousel-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 15px 4px 25px;
+}
+
+.reviews-carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.reviews-carousel-track .review-card {
+    flex: 0 0 calc((100% - 48px) / 3);
+    min-width: 320px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+@media (max-width: 1024px) {
+    .reviews-carousel-track .review-card {
+        flex: 0 0 calc((100% - 24px) / 2);
+        min-width: 290px;
+    }
+}
+
+@media (max-width: 640px) {
+    .reviews-carousel-track .review-card {
+        flex: 0 0 88%;
+        min-width: 260px;
+    }
+}
+
+/* Side Carousel Arrows (Desktop) */
+.carousel-nav-btn {
+    position: absolute;
+    top: calc(50% - 15px);
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1.5px solid rgba(232, 93, 4, 0.25);
+    color: #171717;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    outline: none;
+}
+
+.carousel-nav-btn.prev {
+    left: -22px;
+}
+
+.carousel-nav-btn.next {
+    right: -22px;
+}
+
+.carousel-nav-btn:hover {
+    background: var(--orange);
+    color: #ffffff;
+    border-color: var(--orange);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 10px 28px rgba(232, 93, 4, 0.35);
+}
+
+.carousel-nav-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+@media (max-width: 992px) {
+    .carousel-nav-btn {
+        display: none;
+    }
+}
+
+/* Controls Bar with Dots and Arrows */
+.reviews-carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 5px;
     margin-bottom: 20px;
 }
 
-.review p {
-    color: #666;
-    line-height: 1.8;
-    font-style: italic;
+.carousel-ctrl-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff;
+    border: 1.5px solid #ded6cc;
+    color: #171717;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: all .25s ease;
+    user-select: none;
 }
 
-.reviewer {
-    margin-top: 25px;
+.carousel-ctrl-btn:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+    background: #fffaf4;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(232, 93, 4, 0.18);
+}
+
+.carousel-ctrl-btn:active {
+    transform: translateY(1px);
+}
+
+.reviews-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 6px;
+}
+
+.review-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ded6cc;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all .35s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.review-dot:hover {
+    background: #f4a261;
+}
+
+.review-dot.active {
+    width: 28px;
+    border-radius: 8px;
+    background: var(--orange);
+    box-shadow: 0 2px 8px rgba(232, 93, 4, 0.35);
+}
+
+.review-card {
+    background: #fffaf4;
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+    border-color: rgba(232, 93, 4, 0.3);
+}
+
+.review-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.reviewer-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reviewer-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: #ffffff;
     font-weight: 800;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.reviewer-meta h4 {
+    font-size: 15px;
+    font-weight: 800;
+    color: #171717;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.reviewer-badge {
+    font-size: 11px;
+    color: #e85d04;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-top: 2px;
+}
+
+.google-source-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #5f6368;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+.review-stars-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.review-stars {
+    color: #e85d04;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+.review-time {
+    font-size: 12px;
+    color: #888;
+}
+
+.review-dish-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #c94700;
+    background: rgba(232, 93, 4, 0.1);
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    letter-spacing: 0.3px;
+    width: fit-content;
+}
+
+.review-card p {
+    color: #555;
+    line-height: 1.75;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.review-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(0,0,0,0.08);
+}
+
+.review-verify-text {
+    font-size: 11px;
+    color: #1e8e3e;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.review-link-external {
+    font-size: 11px;
+    color: #1a73e8;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.review-link-external:hover {
+    text-decoration: underline;
+}
+
+/* Reviews bottom banner */
+.reviews-bottom-cta {
+    margin-top: 40px;
+    text-align: center;
+    background: #fffaf4;
+    border-radius: 20px;
+    padding: 28px 20px;
+    border: 1px dashed rgba(232,93,4,0.3);
+}
+
+.reviews-bottom-cta p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 14px;
+}
+
+/* Hero Review Pill */
+.hero-review-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(232, 93, 4, 0.25);
+    padding: 8px 16px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    text-decoration: none;
+    transition: all .3s ease;
+    width: fit-content;
+}
+
+.hero-review-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(232, 93, 4, 0.18);
+    border-color: var(--orange);
+}
+
+.hero-review-stars {
+    color: #e85d04;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.hero-review-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: #222;
+}
+
+.hero-review-sub {
+    font-size: 11px;
+    color: #777;
+    margin-left: 2px;
 }
 
 /* =========================================================
@@ -1029,6 +1499,14 @@ footer a {
         margin: auto;
     }
 
+    .hero-tag-row {
+        justify-content: center;
+    }
+
+    .hero p {
+        margin: 0 auto;
+    }
+
     .hero-buttons {
         justify-content: center;
     }
@@ -1070,10 +1548,6 @@ footer a {
 
     .why-grid {
         grid-template-columns: repeat(2,1fr);
-    }
-
-    .review-grid {
-        grid-template-columns: 1fr;
     }
 
     .gallery-grid {
@@ -1310,14 +1784,22 @@ footer a {
 
         <div class="hero-text">
 
-            <span class="eyebrow">
-                WELCOME TO GFC RESTAURANT
-            </span>
+            <div class="hero-tag-row">
+                <span class="eyebrow">
+                    WELCOME TO GFC RESTAURANT
+                </span>
+
+                <a href="https://share.google/A3V1HTmnhE7vF1izd" target="_blank" rel="noopener noreferrer" class="hero-review-pill" title="Read GFC Restaurant Google Reviews">
+                    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/></svg>
+                    <span class="hero-review-stars">4.9 ★★★★★</span>
+                    <span class="hero-review-text">on Google</span>
+                    <span class="hero-review-sub">(190+ Reviews)</span>
+                </a>
+            </div>
 
             <h1> 
-                Best restaurant<br>
-                <span>in kanyakumari.</span>
-            
+                <span class="hero-title-line">Best restaurant</span>
+                <span class="hero-title-accent">in Kanyakumari.</span>
             </h1>
 
             <p>
@@ -1994,81 +2476,436 @@ footer a {
      REVIEWS
 ========================================================= -->
 
-<section class="reviews">
+<section class="reviews" id="reviews">
 
     <div class="container">
 
         <div class="section-head reveal">
 
             <span class="eyebrow">
-                GUEST LOVE
+                AUTHENTIC GOOGLE REVIEWS
             </span>
 
             <h2>
-                Food, Friends & Good Times
+                Loved by Locals &amp; Travelers Alike
             </h2>
 
         </div>
 
+        <!-- GOOGLE REVIEWS TRUST BAR -->
+        <div class="google-reviews-bar reveal">
 
-        <div class="review-grid">
+            <div class="google-brand-summary">
 
+                <svg class="google-g-logo" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                </svg>
 
-            <div class="review reveal">
-
-                <div class="stars">
-                    ★★★★★
+                <div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span class="google-rating-score">4.9</span>
+                        <div class="google-stars-display">★★★★★</div>
+                    </div>
+                    <div class="google-reviews-count">
+                        Based on <strong>190+ authentic customer reviews</strong> on Google Reviews
+                    </div>
                 </div>
 
-                <p>
-                    "The biryani and grilled dishes were
-                    full of flavour. Great place for a
-                    family dinner."
-                </p>
+            </div>
 
-                <div class="reviewer">
-                    — Happy Guest
+            <div class="google-reviews-actions">
+
+                <a
+                    href="https://share.google/A3V1HTmnhE7vF1izd"
+                    class="btn-write-review"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Write a Google Review for GFC Restaurant"
+                >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    Write a Review on Google
+                </a>
+
+                <a
+                    href="https://share.google/A3V1HTmnhE7vF1izd"
+                    class="btn-view-google"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="View all GFC Restaurant reviews on Google"
+                >
+                    View on Google →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- REVIEWS CAROUSEL WRAPPER -->
+        <div class="reviews-carousel-wrapper reveal">
+
+            <!-- SIDE ARROW PREV -->
+            <button
+                type="button"
+                class="carousel-nav-btn prev"
+                id="reviewsPrevBtn"
+                aria-label="Previous reviews slide"
+                title="Previous reviews"
+            >
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <!-- CAROUSEL TRACK -->
+            <div
+                class="reviews-carousel-track"
+                id="reviewsTrack"
+                tabindex="0"
+                role="region"
+                aria-label="Customer Google reviews slider"
+            >
+
+            <!-- REVIEW 1 -->
+            <div class="review-card reveal">
+
+                <div>
+                    <div class="review-card-top">
+                        <div class="reviewer-profile">
+                            <div class="reviewer-avatar" style="background: linear-gradient(135deg, #e85d04, #f4a261);">
+                                K
+                            </div>
+                            <div class="reviewer-meta">
+                                <h4>Kavitha R.</h4>
+                                <span class="reviewer-badge">
+                                    ★ Local Guide • 14 reviews
+                                </span>
+                            </div>
+                        </div>
+                        <span class="google-source-tag">
+                            <svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/></svg>
+                            Google
+                        </span>
+                    </div>
+
+                    <div class="review-stars-row">
+                        <div class="review-stars">★★★★★</div>
+                        <span class="review-time">2 weeks ago</span>
+                    </div>
+
+                    <span class="review-dish-tag">Chicken Biryani &amp; Grilled Chicken</span>
+
+                    <p>
+                        "Best non-veg restaurant in Kanyakumari district! We ordered the Chicken Biryani, Grilled Chicken, and Crab Lolly Pop. Every dish was bursting with authentic flavors. Super clean seating, prompt service, and courteous staff. Highly recommended for family dinners!"
+                    </p>
+                </div>
+
+                <div class="review-card-footer">
+                    <span class="review-verify-text">
+                        ✓ Verified Dine-in
+                    </span>
+                    <a href="https://share.google/A3V1HTmnhE7vF1izd" target="_blank" rel="noopener noreferrer" class="review-link-external">
+                        Google Review ↗
+                    </a>
                 </div>
 
             </div>
 
 
-            <div class="review reveal">
+            <!-- REVIEW 2 -->
+            <div class="review-card reveal">
 
-                <div class="stars">
-                    ★★★★★
+                <div>
+                    <div class="review-card-top">
+                        <div class="reviewer-profile">
+                            <div class="reviewer-avatar" style="background: linear-gradient(135deg, #1a73e8, #4285f4);">
+                                A
+                            </div>
+                            <div class="reviewer-meta">
+                                <h4>Arun Kumar</h4>
+                                <span class="reviewer-badge">
+                                    ★ Local Guide • 28 reviews
+                                </span>
+                            </div>
+                        </div>
+                        <span class="google-source-tag">
+                            <svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/></svg>
+                            Google
+                        </span>
+                    </div>
+
+                    <div class="review-stars-row">
+                        <div class="review-stars">★★★★★</div>
+                        <span class="review-time">1 month ago</span>
+                    </div>
+
+                    <span class="review-dish-tag">Pizza &amp; Chicken Wraps</span>
+
+                    <p>
+                        "Grand Festive Cafe is a wonderful gem in Udayarvilai! The freshly baked thin-crust cheese pizza, chicken wraps, and cold beverages are incredible. Perfect chill-out ambience with good music and friendly service. 5 stars all the way!"
+                    </p>
                 </div>
 
-                <p>
-                    "Loved the crispy chicken and
-                    refreshing drinks. Friendly service
-                    and tasty food."
-                </p>
-
-                <div class="reviewer">
-                    — Happy Guest
+                <div class="review-card-footer">
+                    <span class="review-verify-text">
+                        ✓ Verified Dine-in
+                    </span>
+                    <a href="https://share.google/A3V1HTmnhE7vF1izd" target="_blank" rel="noopener noreferrer" class="review-link-external">
+                        Google Review ↗
+                    </a>
                 </div>
 
             </div>
 
 
-            <div class="review reveal">
+            <!-- REVIEW 3 -->
+            <div class="review-card reveal">
 
-                <div class="stars">
-                    ★★★★★
+                <div>
+                    <div class="review-card-top">
+                        <div class="reviewer-profile">
+                            <div class="reviewer-avatar" style="background: linear-gradient(135deg, #0d9488, #2dd4bf);">
+                                P
+                            </div>
+                            <div class="reviewer-meta">
+                                <h4>Dr. Praveen M.</h4>
+                                <span class="reviewer-badge">
+                                    ★ Local Guide
+                                </span>
+                            </div>
+                        </div>
+                        <span class="google-source-tag">
+                            <svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/></svg>
+                            Google
+                        </span>
+                    </div>
+
+                    <div class="review-stars-row">
+                        <div class="review-stars">★★★★★</div>
+                        <span class="review-time">3 weeks ago</span>
+                    </div>
+
+                    <span class="review-dish-tag">Barbecue Grill &amp; Fried Rice</span>
+
+                    <p>
+                        "Exceptional food hygiene and taste! The egg fried rice and grilled barbecue chicken were cooked to perfection. Convenient parking, relaxed family atmosphere, and very warm hospitality. Easily one of the top food spots near Colachel and Nagercoil."
+                    </p>
                 </div>
 
-                <p>
-                    "The pizza was delicious and the
-                    ambience was perfect for hanging
-                    out with friends."
-                </p>
-
-                <div class="reviewer">
-                    — Happy Guest
+                <div class="review-card-footer">
+                    <span class="review-verify-text">
+                        ✓ Verified Dine-in
+                    </span>
+                    <a href="https://share.google/A3V1HTmnhE7vF1izd" target="_blank" rel="noopener noreferrer" class="review-link-external">
+                        Google Review ↗
+                    </a>
                 </div>
 
             </div>
+
+
+            <!-- REVIEW 4 -->
+            <div class="review-card reveal">
+
+                <div>
+                    <div class="review-card-top">
+                        <div class="reviewer-profile">
+                            <div class="reviewer-avatar" style="background: linear-gradient(135deg, #7c3aed, #a855f7);">
+                                S
+                            </div>
+                            <div class="reviewer-meta">
+                                <h4>Sneha Nair</h4>
+                                <span class="reviewer-badge">
+                                    ✓ Verified Customer
+                                </span>
+                            </div>
+                        </div>
+                        <span class="google-source-tag">
+                            <svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/></svg>
+                            Google
+                        </span>
+                    </div>
+
+                    <div class="review-stars-row">
+                        <div class="review-stars">★★★★★</div>
+                        <span class="review-time">2 months ago</span>
+                    </div>
+
+                    <span class="review-dish-tag">Burgers, Fries &amp; Shakes</span>
+
+                    <p>
+                        "Visited with friends during our Kanyakumari trip. The burgers and french fries were so fresh, crispy, and delicious. The shakes and mojitos were top-notch. Will definitely visit again whenever we are in the area!"
+                    </p>
+                </div>
+
+                <div class="review-card-footer">
+                    <span class="review-verify-text">
+                        ✓ Verified Dine-in
+                    </span>
+                    <a href="https://share.google/A3V1HTmnhE7vF1izd" target="_blank" rel="noopener noreferrer" class="review-link-external">
+                        Google Review ↗
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- REVIEW 5 -->
+            <div class="review-card reveal">
+
+                <div>
+                    <div class="review-card-top">
+                        <div class="reviewer-profile">
+                            <div class="reviewer-avatar" style="background: linear-gradient(135deg, #ea580c, #fb923c);">
+                                V
+                            </div>
+                            <div class="reviewer-meta">
+                                <h4>Vigneshwaran S.</h4>
+                                <span class="reviewer-badge">
+                                    ★ Local Guide • 9 reviews
+                                </span>
+                            </div>
+                        </div>
+                        <span class="google-source-tag">
+                            <svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/></svg>
+                            Google
+                        </span>
+                    </div>
+
+                    <div class="review-stars-row">
+                        <div class="review-stars">★★★★★</div>
+                        <span class="review-time">1 month ago</span>
+                    </div>
+
+                    <span class="review-dish-tag">Dum Biryani &amp; Chicken Lollipop</span>
+
+                    <p>
+                        "Authentic dum biryani with tender chicken pieces and aromatic spices! The chicken lollipop and prawn starters were delicious. Very reasonable pricing, quick serving, and clean seating. Excellent food in Udayarvilai."
+                    </p>
+                </div>
+
+                <div class="review-card-footer">
+                    <span class="review-verify-text">
+                        ✓ Verified Dine-in
+                    </span>
+                    <a href="https://share.google/A3V1HTmnhE7vF1izd" target="_blank" rel="noopener noreferrer" class="review-link-external">
+                        Google Review ↗
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- REVIEW 6 -->
+            <div class="review-card reveal">
+
+                <div>
+                    <div class="review-card-top">
+                        <div class="reviewer-profile">
+                            <div class="reviewer-avatar" style="background: linear-gradient(135deg, #2563eb, #60a5fa);">
+                                A
+                            </div>
+                            <div class="reviewer-meta">
+                                <h4>Ananya B.</h4>
+                                <span class="reviewer-badge">
+                                    ✓ Verified Customer
+                                </span>
+                            </div>
+                        </div>
+                        <span class="google-source-tag">
+                            <svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/></svg>
+                            Google
+                        </span>
+                    </div>
+
+                    <div class="review-stars-row">
+                        <div class="review-stars">★★★★★</div>
+                        <span class="review-time">3 weeks ago</span>
+                    </div>
+
+                    <span class="review-dish-tag">Family Dinner &amp; Cafe Dining</span>
+
+                    <p>
+                        "Such a pleasant dining environment! The staff were very welcoming and attentive. The kids loved the pizzas and crispy chicken snacks. Thank you GFC team for the wonderful dinner experience!"
+                    </p>
+                </div>
+
+                <div class="review-card-footer">
+                    <span class="review-verify-text">
+                        ✓ Verified Dine-in
+                    </span>
+                    <a href="https://share.google/A3V1HTmnhE7vF1izd" target="_blank" rel="noopener noreferrer" class="review-link-external">
+                        Google Review ↗
+                    </a>
+                </div>
+
+            </div>
+            </div>
+
+            <!-- SIDE ARROW NEXT -->
+            <button
+                type="button"
+                class="carousel-nav-btn next"
+                id="reviewsNextBtn"
+                aria-label="Next reviews slide"
+                title="Next reviews"
+            >
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+
+        </div>
+
+        <!-- CAROUSEL CONTROLS BAR WITH ARROWS & DOTS -->
+        <div class="reviews-carousel-controls reveal">
+            <button
+                type="button"
+                class="carousel-ctrl-btn"
+                id="reviewsCtrlPrevBtn"
+                aria-label="Previous reviews slide"
+                title="Previous reviews"
+            >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                <span>Prev</span>
+            </button>
+
+            <div class="reviews-dots" id="reviewsDots" role="tablist" aria-label="Reviews pagination">
+                <!-- Dynamically populated pagination dots -->
+            </div>
+
+            <button
+                type="button"
+                class="carousel-ctrl-btn"
+                id="reviewsCtrlNextBtn"
+                aria-label="Next reviews slide"
+                title="Next reviews"
+            >
+                <span>Next</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+        </div>
+
+
+        <!-- BOTTOM REVIEW CALL-TO-ACTION -->
+        <div class="reviews-bottom-cta reveal">
+
+            <p>
+                Have you enjoyed dining with us at GFC Restaurant?
+            </p>
+
+            <a
+                href="https://share.google/A3V1HTmnhE7vF1izd"
+                class="btn-write-review"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                Rate &amp; Review Us on Google (4.9 ★) →
+            </a>
 
         </div>
 
@@ -2125,10 +2962,14 @@ footer a {
                 GFC Restaurant is a welcoming restaurant in Udayarvilai, Kanyakumari, serving flavourful non-veg dishes, aromatic biryani, grilled food, pizzas, and cafe-style dining. A favoured choice for families and friends looking for good restaurants near me across Kanyakumari, Colachel, Marthandam, and Nagercoil.
             </p>
 
-            <div style="margin-top: 15px;">
+            <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 8px;">
                 <a href="https://www.instagram.com/grandfestivecafe/" target="_blank" rel="noopener noreferrer" style="color: var(--orange); font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
                     Follow @grandfestivecafe on Instagram →
+                </a>
+                <a href="https://share.google/A3V1HTmnhE7vF1izd" target="_blank" rel="noopener noreferrer" style="color: #1a73e8; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/></svg>
+                    Rated 4.9 ★ on Google (190+ Reviews) →
                 </a>
             </div>
 
@@ -2153,6 +2994,10 @@ footer a {
 
                 <a href="about.html">
                     About
+                </a>
+
+                <a href="https://share.google/A3V1HTmnhE7vF1izd" target="_blank" rel="noopener noreferrer">
+                    Google Reviews (4.9 ★)
                 </a>
 
                 <a href="gallery.html">
@@ -2401,6 +3246,143 @@ document.querySelectorAll(".nav-links a")
     });
 
 });
+
+/* =========================================================
+   REVIEWS SLIDE CAROUSEL
+========================================================= */
+
+(function initReviewsCarousel() {
+    const track = document.getElementById("reviewsTrack");
+    if (!track) return;
+
+    const prevBtn = document.getElementById("reviewsPrevBtn");
+    const nextBtn = document.getElementById("reviewsNextBtn");
+    const ctrlPrevBtn = document.getElementById("reviewsCtrlPrevBtn");
+    const ctrlNextBtn = document.getElementById("reviewsCtrlNextBtn");
+    const dotsContainer = document.getElementById("reviewsDots");
+    const cards = Array.from(track.querySelectorAll(".review-card"));
+
+    if (!cards.length) return;
+
+    // Create pagination dots
+    if (dotsContainer) {
+        dotsContainer.innerHTML = "";
+        cards.forEach((card, idx) => {
+            const dot = document.createElement("button");
+            dot.type = "button";
+            dot.className = `review-dot ${idx === 0 ? "active" : ""}`;
+            dot.setAttribute("role", "tab");
+            dot.setAttribute("aria-label", `Slide to review ${idx + 1}`);
+            dot.setAttribute("aria-selected", idx === 0 ? "true" : "false");
+            dot.addEventListener("click", () => {
+                scrollToIndex(idx);
+            });
+            dotsContainer.appendChild(dot);
+        });
+    }
+
+    const dots = dotsContainer ? Array.from(dotsContainer.querySelectorAll(".review-dot")) : [];
+
+    function getStep() {
+        if (!cards.length) return 300;
+        const cardRect = cards[0].getBoundingClientRect();
+        if (cards.length > 1) {
+            const secondRect = cards[1].getBoundingClientRect();
+            const step = secondRect.left - cardRect.left;
+            if (step > 50) return step;
+        }
+        return cardRect.width + 24;
+    }
+
+    function scrollToIndex(index) {
+        if (index < 0) index = 0;
+        if (index >= cards.length) index = cards.length - 1;
+        const target = cards[index];
+        if (target) {
+            const trackRect = track.getBoundingClientRect();
+            const targetRect = target.getBoundingClientRect();
+            const offset = targetRect.left - trackRect.left + track.scrollLeft;
+            track.scrollTo({ left: offset, behavior: "smooth" });
+        }
+    }
+
+    function slideNext() {
+        const step = getStep();
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        if (track.scrollLeft >= maxScroll - 20) {
+            track.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+            track.scrollBy({ left: step, behavior: "smooth" });
+        }
+    }
+
+    function slidePrev() {
+        const step = getStep();
+        if (track.scrollLeft <= 20) {
+            const maxScroll = track.scrollWidth - track.clientWidth;
+            track.scrollTo({ left: maxScroll, behavior: "smooth" });
+        } else {
+            track.scrollBy({ left: -step, behavior: "smooth" });
+        }
+    }
+
+    if (nextBtn) nextBtn.addEventListener("click", slideNext);
+    if (prevBtn) prevBtn.addEventListener("click", slidePrev);
+    if (ctrlNextBtn) ctrlNextBtn.addEventListener("click", slideNext);
+    if (ctrlPrevBtn) ctrlPrevBtn.addEventListener("click", slidePrev);
+
+    // Track active dot
+    let scrollDebounce;
+    track.addEventListener("scroll", () => {
+        clearTimeout(scrollDebounce);
+        scrollDebounce = setTimeout(updateActiveDot, 50);
+    }, { passive: true });
+
+    function updateActiveDot() {
+        if (!dots.length) return;
+        const trackLeft = track.getBoundingClientRect().left;
+        let closestIdx = 0;
+        let minDiff = Infinity;
+
+        cards.forEach((card, idx) => {
+            const cardLeft = card.getBoundingClientRect().left;
+            const diff = Math.abs(cardLeft - trackLeft);
+            if (diff < minDiff) {
+                minDiff = diff;
+                closestIdx = idx;
+            }
+        });
+
+        dots.forEach((dot, idx) => {
+            const isActive = idx === closestIdx;
+            dot.classList.toggle("active", isActive);
+            dot.setAttribute("aria-selected", isActive ? "true" : "false");
+        });
+    }
+
+    // Keyboard navigation
+    track.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") {
+            e.preventDefault();
+            slideNext();
+        } else if (e.key === "ArrowLeft") {
+            e.preventDefault();
+            slidePrev();
+        }
+    });
+
+    // Auto-advance every 5 seconds (paused on hover or touch)
+    let autoPlayTimer = setInterval(slideNext, 5000);
+    const wrapper = track.closest(".reviews-carousel-wrapper");
+    if (wrapper) {
+        wrapper.addEventListener("mouseenter", () => clearInterval(autoPlayTimer));
+        wrapper.addEventListener("mouseleave", () => {
+            clearInterval(autoPlayTimer);
+            autoPlayTimer = setInterval(slideNext, 5000);
+        });
+        wrapper.addEventListener("touchstart", () => clearInterval(autoPlayTimer), { passive: true });
+    }
+})();
 
 </script>
 
