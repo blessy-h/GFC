@@ -4,11 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>What Makes a Restaurant Worth Visiting? | GFC Restaurant Kanyakumari</title>
+<title>Brownie with Ice Cream in Kanyakumari | GFC Desserts</title>
 
-<meta name="description" content="Discover what makes a restaurant worth visiting, from delicious food and atmosphere to service, cleanliness and location. Explore GFC Restaurant in Udayarvilai, Kanyakumari.">
+<meta name="description" content="Indulge in rich, warm chocolate brownie paired with chilled vanilla ice cream at GFC Restaurant in Udayarvilai, Kanyakumari. The sweetest finish to your meal.">
 
-<meta name="keywords" content="restaurant in Kanyakumari, restaurant near me, best restaurant near me, restaurants around me, food near me, restaurant in Udayarvilai, GFC Restaurant">
+<meta name="keywords" content="brownie with ice cream in Kanyakumari, chocolate brownie, desserts near me, cafe desserts, GFC Restaurant">
+
+<!-- Open Graph -->
+<meta property="og:title" content="The Ultimate Sweet Indulgence: Brownie with Ice Cream | GFC">
+<meta property="og:description" content="Decadent warm chocolate fudge brownie paired with velvety chilled vanilla ice cream at GFC Restaurant in Udayarvilai, Kanyakumari.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="assets/images/desert-1.jpeg">
+<meta property="og:site_name" content="GFC Restaurant">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Warm Brownie with Ice Cream | GFC Restaurant">
+<meta name="twitter:description" content="Rich chocolate brownie served warm with a scoop of cold vanilla ice cream at GFC in Udayarvilai, Kanyakumari.">
+<meta name="twitter:image" content="assets/images/desert-1.jpeg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,18 +63,19 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: var(--cream);
-    color: var(--dark);
+    background: #fffaf4;
+    color: #222;
     overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
 }
 
 img {
     width: 100%;
     display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 
@@ -109,7 +123,6 @@ header.scrolled {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    transition: .4s;
 }
 
 .logo-circle img {
@@ -120,15 +133,9 @@ header.scrolled {
     display: block;
 }
 
-.logo:hover .logo-circle {
-    transform: rotate(-8deg) scale(1.05);
-}
-
 .logo-name {
     font-weight: 800;
-    font-size: 18px;
     letter-spacing: 1px;
-    color: var(--dark);
 }
 
 .logo-place {
@@ -142,22 +149,20 @@ header.scrolled {
     display: flex;
     list-style: none;
     gap: 30px;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-links a {
-    color: var(--dark);
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 600;
     position: relative;
+    transition: .3s;
 }
 
 .nav-links a::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -8px;
+    bottom: -7px;
     width: 0;
     height: 2px;
     background: var(--orange);
@@ -169,17 +174,13 @@ header.scrolled {
     width: 100%;
 }
 
-.nav-links a.active {
-    color: var(--orange);
-}
-
 .nav-btn {
     background: var(--orange);
-    color: white !important;
-    padding: 17px 32px;
+    color: white;
+    padding: 13px 22px;
     border-radius: 30px;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 13px;
     transition: .3s;
 }
 
@@ -193,227 +194,6 @@ header.scrolled {
     display: none;
     font-size: 28px;
     cursor: pointer;
-    color: var(--dark);
-}
-
-
-/* =========================================================
-   ARTICLE HERO
-========================================================= */
-
-.article-hero {
-    min-height: 620px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    background:
-        url("assets/images/gallery-6.jpg")
-        center/cover no-repeat;
-
-    overflow: hidden;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(0,0,0,.85),
-            rgba(0,0,0,.48),
-            rgba(0,0,0,.80)
-        );
-}
-
-
-/* animated glow */
-
-.article-hero::before {
-    content: "";
-    position: absolute;
-
-    width: 450px;
-    height: 450px;
-
-    border-radius: 50%;
-
-    background: rgba(232,93,4,.18);
-
-    filter: blur(80px);
-
-    top: -180px;
-    left: -150px;
-
-    animation: heroGlow 7s ease-in-out infinite;
-}
-
-.article-hero::after {
-    content: "";
-
-    position: absolute;
-
-    width: 350px;
-    height: 350px;
-
-    border-radius: 50%;
-
-    background: rgba(244,162,97,.13);
-
-    filter: blur(70px);
-
-    right: -120px;
-    bottom: -150px;
-
-    animation: heroGlow2 9s ease-in-out infinite;
-}
-
-@keyframes heroGlow {
-
-    0%,100% {
-        transform: translate(0,0) scale(1);
-    }
-
-    50% {
-        transform: translate(100px,80px) scale(1.2);
-    }
-
-}
-
-@keyframes heroGlow2 {
-
-    0%,100% {
-        transform: translate(0,0);
-    }
-
-    50% {
-        transform: translate(-80px,-70px);
-    }
-
-}
-
-
-/* =========================================================
-   HERO CONTENT
-========================================================= */
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-
-    max-width: 900px;
-
-    padding: 140px 25px 70px;
-}
-
-.hero-category {
-    color: var(--gold);
-
-    font-size: 14px;
-    font-weight: 800;
-
-    letter-spacing: 4px;
-
-    display: inline-block;
-
-    margin-bottom: 20px;
-
-    animation: fadeDown .9s ease forwards;
-}
-
-.hero-content h1 {
-    color: white;
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: clamp(45px, 6vw, 78px);
-
-    line-height: 1.05;
-
-    margin-bottom: 25px;
-
-    animation: heroTitle 1s ease forwards;
-}
-
-.hero-content h1 span {
-    color: var(--gold);
-}
-
-.hero-content p {
-    max-width: 700px;
-
-    margin: auto;
-
-    color: rgba(255,255,255,.85);
-
-    font-size: 17px;
-
-    line-height: 1.8;
-
-    animation: fadeUp 1.2s ease forwards;
-}
-
-.breadcrumb {
-    margin-top: 30px;
-
-    color: rgba(255,255,255,.65);
-
-    font-size: 13px;
-}
-
-.breadcrumb a {
-    color: white;
-    transition: .3s;
-}
-
-.breadcrumb a:hover {
-    color: var(--gold);
-}
-
-
-@keyframes fadeDown {
-
-    from {
-        opacity: 0;
-        transform: translateY(-25px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-@keyframes fadeUp {
-
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-@keyframes heroTitle {
-
-    from {
-        opacity: 0;
-        transform: translateY(45px) scale(.96);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-
 }
 
 
@@ -422,153 +202,128 @@ header.scrolled {
 ========================================================= */
 
 .article-section {
-    padding: 100px 5%;
+    padding: 140px 5% 90px;
 }
 
 .article-container {
     max-width: 1200px;
-
     margin: auto;
-
     display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        330px;
-
-    gap: 70px;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
 }
 
 .article-content {
     background: white;
-
     padding: 55px;
-
     border-radius: 25px;
-
-    box-shadow: var(--shadow);
+    box-shadow: 0 15px 40px rgba(0,0,0,.05);
 }
 
 .article-meta {
     display: flex;
-
-    gap: 12px;
-
-    color: var(--orange);
-
+    gap: 10px;
     font-size: 12px;
-
     font-weight: 800;
-
     letter-spacing: 2px;
-
+    color: var(--orange);
     margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.article-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4.5vw, 46px);
+    font-weight: 800;
+    color: var(--dark);
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+
+.intro {
+    font-size: 18px;
+    line-height: 1.85;
+    color: #444;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.article-content p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.85;
+    margin-bottom: 22px;
 }
 
 .article-content h2 {
     font-family: 'Playfair Display', serif;
-
-    font-size: clamp(35px,5vw,52px);
-
-    line-height: 1.15;
-
-    margin-bottom: 25px;
+    font-size: 30px;
+    color: var(--dark);
+    margin: 45px 0 18px;
+    line-height: 1.3;
 }
 
 .article-content h3 {
     font-family: 'Playfair Display', serif;
-
-    font-size: 29px;
-
-    margin-top: 45px;
-
-    margin-bottom: 16px;
+    font-size: 22px;
+    color: var(--dark);
+    margin: 30px 0 12px;
 }
-
-.article-content p {
-    color: #666;
-
-    font-size: 16px;
-
-    line-height: 1.9;
-
-    margin-bottom: 20px;
-}
-
-.article-content .intro {
-    font-size: 19px;
-
-    color: #444;
-
-    font-weight: 500;
-}
-
-
-/* =========================================================
-   ARTICLE IMAGE
-========================================================= */
 
 .article-image {
-    margin: 40px 0;
-
-    overflow: hidden;
-
+    margin: 35px 0 20px;
     border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
 }
 
 .article-image img {
-    height: 430px;
-
+    height: 420px;
     object-fit: cover;
-
-    transition: transform .8s ease;
 }
 
-.article-image:hover img {
-    transform: scale(1.06);
+.image-caption {
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+    margin: -10px 0 35px;
+    font-style: italic;
 }
 
+.article-highlight {
+    background: #fff6ee;
+    border-left: 4px solid var(--orange);
+    padding: 24px 30px;
+    border-radius: 12px;
+    margin: 35px 0;
+}
 
-/* =========================================================
-   INTERNAL LINKS
-========================================================= */
+.article-highlight p {
+    font-size: 18px;
+    font-style: italic;
+    color: #333;
+    margin: 0;
+    line-height: 1.7;
+}
 
 .article-links {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin-top: 40px;
-
-    padding-top: 30px;
-
+    margin-top: 50px;
+    padding-top: 35px;
     border-top: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .article-links a {
-    background: #fff3e8;
-
     color: var(--orange);
-
-    padding: 13px 18px;
-
-    border-radius: 30px;
-
-    font-size: 13px;
-
     font-weight: 700;
-
     transition: .3s;
 }
 
 .article-links a:hover {
-    background: var(--orange);
-
-    color: white;
-
-    transform: translateY(-3px);
+    color: var(--dark-orange);
+    text-decoration: underline;
 }
 
 
@@ -578,234 +333,140 @@ header.scrolled {
 
 .article-sidebar {
     display: flex;
-
     flex-direction: column;
-
-    gap: 25px;
+    gap: 30px;
 }
 
 .sidebar-card {
     background: white;
-
     padding: 35px;
-
-    border-radius: 25px;
-
-    box-shadow: var(--shadow);
-
-    position: relative;
-
-    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.05);
 }
 
-.sidebar-card::before {
-    content: "";
-
-    position: absolute;
-
-    width: 100px;
-    height: 100px;
-
-    border-radius: 50%;
-
-    background: rgba(232,93,4,.1);
-
-    right: -40px;
-    top: -40px;
-}
-
-.sidebar-card > span {
-    color: var(--orange);
-
-    font-size: 11px;
-
+.sidebar-card span {
+    font-size: 12px;
     font-weight: 800;
-
     letter-spacing: 2px;
+    color: var(--orange);
+    display: block;
+    margin-bottom: 12px;
 }
 
 .sidebar-card h3 {
     font-family: 'Playfair Display', serif;
-
-    font-size: 29px;
-
-    line-height: 1.2;
-
-    margin: 15px 0;
+    font-size: 24px;
+    margin-bottom: 15px;
+    line-height: 1.3;
 }
 
 .sidebar-card p {
-    color: var(--gray);
-
-    font-size: 14px;
-
-    line-height: 1.8;
-
+    color: #666;
+    font-size: 15px;
+    line-height: 1.7;
     margin-bottom: 20px;
 }
 
 .sidebar-card a {
     color: var(--orange);
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
+    transition: .3s;
+}
 
-    font-weight: 800;
-
-    font-size: 13px;
+.sidebar-card a:hover {
+    color: var(--dark-orange);
+    transform: translateX(4px);
 }
 
 .dark-card {
     background: var(--dark);
-
     color: white;
-}
-
-.dark-card p {
-    color: #bbb;
 }
 
 .dark-card h3 {
     color: white;
 }
 
+.dark-card p {
+    color: #aaa;
+}
+
 
 /* =========================================================
-   CTA
+   ARTICLE CTA
 ========================================================= */
 
 .article-cta {
-    margin: 0 5% 100px;
-
-    border-radius: 30px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #171717,
-            #2a2a2a
-        );
-
-    padding: 90px 30px;
-
+    background: var(--dark);
+    color: white;
+    padding: 80px 5%;
     text-align: center;
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-.article-cta::before {
-    content: "";
-
-    position: absolute;
-
-    width: 300px;
-    height: 300px;
-
-    border-radius: 50%;
-
-    background: rgba(232,93,4,.2);
-
-    filter: blur(70px);
-
-    left: -100px;
-    top: -150px;
-
-    animation: ctaMove 7s ease-in-out infinite;
-}
-
-@keyframes ctaMove {
-
-    0%,100% {
-        transform: translate(0,0);
-    }
-
-    50% {
-        transform: translate(150px,100px);
-    }
-
-}
-
-.cta-content {
-    position: relative;
-
-    z-index: 2;
+    border-radius: 30px;
+    max-width: 1200px;
+    margin: 0 auto 80px;
 }
 
 .cta-content span {
-    color: var(--gold);
-
-    font-size: 12px;
-
+    color: var(--orange);
+    font-size: 13px;
     font-weight: 800;
-
     letter-spacing: 3px;
+    display: block;
+    margin-bottom: 15px;
 }
 
 .cta-content h2 {
-    color: white;
-
     font-family: 'Playfair Display', serif;
-
-    font-size: clamp(40px,5vw,60px);
-
-    margin: 15px 0;
+    font-size: 38px;
+    margin-bottom: 15px;
+    color: white;
 }
 
 .cta-content p {
-    color: #bbb;
-
-    margin-bottom: 30px;
+    color: #aaa;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
 }
 
 .cta-buttons {
     display: flex;
-
     justify-content: center;
-
     gap: 15px;
-
     flex-wrap: wrap;
 }
 
 .btn {
-    padding: 15px 28px;
-
+    padding: 14px 28px;
     border-radius: 30px;
-
     font-weight: 700;
-
     font-size: 14px;
-
     transition: .3s;
+    display: inline-block;
 }
 
 .btn.primary {
     background: var(--orange);
-
     color: white;
 }
 
 .btn.primary:hover {
     background: var(--dark-orange);
-
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 12px 30px
-        rgba(232,93,4,.3);
+    transform: translateY(-3px);
 }
 
 .btn.secondary {
+    background: transparent;
     border: 1px solid rgba(255,255,255,.4);
-
     color: white;
 }
 
 .btn.secondary:hover {
     background: white;
-
     color: var(--dark);
-
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 }
 
 
@@ -815,22 +476,15 @@ header.scrolled {
 
 footer {
     background: #111;
-
     color: white;
-
     padding: 70px 5% 0;
 }
 
 .footer-container {
     max-width: 1200px;
-
     margin: auto;
-
     display: grid;
-
-    grid-template-columns:
-        2fr 1fr 1fr;
-
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 60px;
 }
 
@@ -838,10 +492,6 @@ footer {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 15px;
     overflow: hidden;
 }
@@ -850,70 +500,51 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: 50%;
-    display: block;
 }
 
 .footer-brand h3 {
     font-family: 'Playfair Display', serif;
-
-    font-size: 25px;
-
+    font-size: 22px;
     margin-bottom: 12px;
 }
 
 .footer-brand p {
     color: #aaa;
-
     max-width: 400px;
-
     line-height: 1.8;
-
     font-size: 14px;
 }
 
 .footer-links {
     display: flex;
-
     flex-direction: column;
-
     gap: 12px;
 }
 
 .footer-links h4 {
     color: white;
-
     margin-bottom: 10px;
 }
 
 .footer-links a,
 .footer-links p {
     color: #aaa;
-
     font-size: 14px;
-
     transition: .3s;
 }
 
 .footer-links a:hover {
     color: var(--orange);
-
     transform: translateX(4px);
 }
 
 .footer-bottom {
     max-width: 1200px;
-
     margin: 50px auto 0;
-
     padding: 25px 0;
-
     border-top: 1px solid #333;
-
     color: #777;
-
     text-align: center;
-
     font-size: 12px;
 }
 
@@ -924,238 +555,76 @@ footer {
 
 #backTop {
     position: fixed;
-
     right: 25px;
     bottom: 25px;
-
     width: 48px;
     height: 48px;
-
     border: none;
-
     border-radius: 50%;
-
     background: var(--orange);
-
     color: white;
-
     font-size: 22px;
-
     cursor: pointer;
-
     opacity: 0;
-
     visibility: hidden;
-
     transform: translateY(20px);
-
-    transition: .3s;
-
+    transition: .4s;
+    box-shadow: 0 10px 25px rgba(232,93,4,.3);
     z-index: 999;
 }
 
 #backTop.show {
     opacity: 1;
-
     visibility: visible;
-
     transform: translateY(0);
 }
 
 #backTop:hover {
     background: var(--dark-orange);
-
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
 
 
 /* =========================================================
-   SCROLL REVEAL
-========================================================= */
-
-.reveal {
-    opacity: 0;
-
-    transform: translateY(45px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s cubic-bezier(.2,.7,.2,1);
-}
-
-.reveal.show {
-    opacity: 1;
-
-    transform: translateY(0);
-}
-
-
-/* =========================================================
-   MOBILE
+   RESPONSIVE
 ========================================================= */
 
 @media (max-width: 900px) {
-
-    .nav-links,
-    .nav-btn {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
+    .nav-links, .nav-btn { display: none; }
+    .menu-toggle { display: block; }
     .nav-links.mobile-open {
-
         display: flex;
-
         position: absolute;
-
         top: 90px;
-
         left: 5%;
         right: 5%;
-
         flex-direction: column;
-
         gap: 0;
-
         background: white;
-
         padding: 25px;
-
         border-radius: 20px;
-
-        box-shadow:
-            0 20px 50px
-            rgba(0,0,0,.15);
+        box-shadow: 0 20px 50px rgba(0,0,0,.15);
     }
-
-    .nav-links.mobile-open li {
-        width: 100%;
-    }
-
-    .nav-links.mobile-open a {
-
-        display: block;
-
-        padding: 15px 0;
-
-        border-bottom: 1px solid #eee;
-    }
-
-    .article-container {
-
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-    .article-content {
-        padding: 35px 25px;
-    }
-
-    .article-sidebar {
-
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-container {
-
-        grid-template-columns:
-            1fr 1fr;
-    }
+    .nav-links.mobile-open li { width: 100%; }
+    .nav-links.mobile-open a { display: block; padding: 14px 0; border-bottom: 1px solid #eee; }
+    .article-container { grid-template-columns: 1fr; gap: 40px; }
+    .article-content { padding: 35px 25px; }
+    .article-sidebar { display: grid; grid-template-columns: 1fr 1fr; }
+    .footer-container { grid-template-columns: 1fr 1fr; }
 }
 
-
 @media (max-width: 600px) {
-
-    header {
-        padding: 12px 5%;
-    }
-
-    .logo-circle {
-
-        width: 50px;
-        height: 50px;
-
-        font-size: 21px;
-    }
-
-    .logo-name {
-        font-size: 16px;
-    }
-
-    .logo-place {
-        font-size: 9px;
-    }
-
-    .article-hero {
-        min-height: 580px;
-    }
-
-    .hero-content {
-        padding: 130px 20px 60px;
-    }
-
-    .hero-content h1 {
-        font-size: 43px;
-    }
-
-    .hero-content p {
-        font-size: 15px;
-    }
-
-    .article-section {
-        padding: 60px 5%;
-    }
-
-    .article-content {
-        padding: 30px 20px;
-    }
-
-    .article-content h2 {
-        font-size: 36px;
-    }
-
-    .article-content h3 {
-        font-size: 25px;
-    }
-
-    .article-content p {
-        font-size: 15px;
-    }
-
-    .article-image img {
-        height: 280px;
-    }
-
-    .article-sidebar {
-        display: flex;
-    }
-
-    .article-cta {
-        margin: 0 5% 60px;
-
-        padding: 65px 20px;
-    }
-
-    .footer-container {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
+    .article-section { padding: 100px 5% 60px; }
+    .article-content { padding: 25px 18px; }
+    .article-image img { height: 260px; }
+    .article-sidebar { display: flex; flex-direction: column; }
+    .footer-container { grid-template-columns: 1fr; gap: 40px; }
 }
 
 </style>
 </head>
 
-
 <body>
-
 
 <!-- =========================================================
      HEADER
@@ -1166,13 +635,11 @@ footer {
     <div class="navbar">
 
         <a href="index.html" class="logo">
-
             <div class="logo-circle">
                 <img src="gfc-logo.png" alt="GFC Restaurant Logo">
             </div>
 
             <div>
-
                 <div class="logo-name">
                     GFC RESTAURANT
                 </div>
@@ -1180,14 +647,10 @@ footer {
                 <span class="logo-place">
                     Udayarvilai • Kanyakumari
                 </span>
-
             </div>
-
         </a>
 
-
         <ul class="nav-links">
-
             <li>
                 <a href="index.html">
                     Home
@@ -1223,14 +686,11 @@ footer {
                     Contact
                 </a>
             </li>
-
         </ul>
-
 
         <a href="reservation.html" class="nav-btn">
             Book a Table
         </a>
-
 
         <div class="menu-toggle" id="menuToggle">
             ☰
@@ -1240,8 +700,6 @@ footer {
 
 </header>
 
-
-
 <!-- =========================================================
      ARTICLE
 ========================================================= -->
@@ -1250,225 +708,124 @@ footer {
 
     <div class="article-container">
 
-
         <article class="article-content reveal">
 
             <div class="article-meta">
-
                 <span>
-                    EXPERIENCE • GFC
+                    DESSERTS &amp; SWEETS • GFC DELIGHTS
                 </span>
-
                 <span>•</span>
-
                 <span>
                     GFC RESTAURANT
                 </span>
-
             </div>
 
-
-            <h2>
-                What Makes a Restaurant Worth Visiting?
-            </h2>
-
+            <h1>
+                The Ultimate Sweet Indulgence: Warm Brownie with Cool Ice Cream
+            </h1>
 
             <p class="intro">
-                Choosing a restaurant is about more than simply
-                finding something to eat. A good restaurant can make
-                an ordinary meal feel enjoyable through delicious
-                food, a comfortable atmosphere, friendly service,
-                cleanliness and a convenient location.
-            </p>
-
-
-            <p>
-                When people search for a restaurant near me or look
-                for restaurants around them, they often consider
-                several things before deciding where to eat. The food
-                is important, but the overall experience also plays
-                an important role.
-            </p>
-
-
-            <h3>
-                1. Delicious and Well-Prepared Food
-            </h3>
-
-            <p>
-                Food is naturally one of the first things people
-                consider when choosing a restaurant. A good menu
-                should offer food that is prepared with care and
-                served fresh.
+                There is something universally magical about the union of piping-hot, decadent chocolate fudge and velvety, ice-cold vanilla cream. When a warm chocolate brownie arrives at your table, crowned with a generous scoop of vanilla ice cream and drizzled with glossy chocolate syrup, every sense is immediately captivated.
             </p>
 
             <p>
-                Different people have different preferences. Some
-                may enjoy traditional Indian flavours, while others
-                may prefer grilled food, fast food or cafe-style
-                options. Having different choices can make it easier
-                for families and groups to find something they enjoy.
+                At GFC Restaurant in Udayarvilai, Kanyakumari, our Brownie with Ice Cream is more than just a dessert item—it is the signature sweet finale that turns an everyday lunch or dinner into a celebration.
             </p>
-
 
             <div class="article-image reveal">
-
                 <img
                     src="assets/images/desert-1.jpeg"
-                    alt="Food and restaurant experience at GFC">
-
+                    alt="Warm chocolate brownie with a scoop of vanilla ice cream at GFC Restaurant in Kanyakumari">
             </div>
 
+            <p class="image-caption">
+                Decadent warm chocolate fudge brownie served with a scoop of cool vanilla ice cream at GFC Restaurant in Udayarvilai.
+            </p>
+
+            <div class="article-highlight">
+                <p>
+                    <strong>
+                        “The hot-and-cold contrast between warm, fudgy chocolate and slow-melting vanilla ice cream creates an unforgettable sweet harmony.”
+                    </strong>
+                </p>
+            </div>
+
+            <h2>
+                The Chemistry of Hot &amp; Cold Temperature Contrast
+            </h2>
+
+            <p>
+                Great desserts often play on sensory contrasts—crisp meets smooth, bitter cocoa meets sweet cream, and hot meets cold. As the freshly warmed brownie releases rich cocoa aromas, the chilled vanilla ice cream begins to soften, forming a luscious ribbon of cream that coats each forkful.
+            </p>
 
             <h3>
-                2. A Comfortable Atmosphere
+                1. Fudgy, Rich Chocolate Centre
             </h3>
 
             <p>
-                The atmosphere of a restaurant can change the way a
-                meal feels. Comfortable seating, a pleasant interior
-                and a welcoming environment can make guests feel
-                relaxed.
+                Our brownie features a thin, delicate crackly crust with a dense, chewy, chocolate-rich interior. Baked to hold moisture rather than drying out like cake, it provides substantial, indulgent richness in every bite.
             </p>
-
-            <p>
-                Whether someone is having a quick meal, meeting
-                friends or spending time with family, a comfortable
-                environment can make the experience more enjoyable.
-            </p>
-
 
             <h3>
-                3. Friendly Service
+                2. Velvety Cool Vanilla Ice Cream
             </h3>
 
             <p>
-                Service is another important part of the restaurant
-                experience. Simple things such as welcoming guests,
-                taking orders clearly and serving food properly can
-                create a positive impression.
+                The chill of classic vanilla ice cream provides the necessary counterweight to the intense cocoa. The cool dairy cuts through the sweetness, keeping the dessert balanced and refreshing.
             </p>
-
-            <p>
-                Good communication between the restaurant team and
-                guests helps create a smoother experience from the
-                moment people arrive until they finish their meal.
-            </p>
-
 
             <h3>
-                4. Cleanliness Matters
+                3. Decadent Drizzle Finish
             </h3>
 
             <p>
-                Cleanliness is an important consideration when
-                choosing a restaurant. Guests naturally appreciate
-                clean tables, dining areas and surroundings.
+                A final swirl of dark chocolate sauce ties the plate together, creating a visual treat that delights before the very first spoonful is enjoyed.
+            </p>
+
+            <h2>
+                Why Every Great Meal Deserves a Sweet Ending
+            </h2>
+
+            <p>
+                Enjoying a dessert signals the leisurely wrap-up of a great gathering. It gives families and friends a reason to linger at the table, share reflections, and conclude their meal on a joyful note.
             </p>
 
             <p>
-                A clean environment helps people feel comfortable
-                while enjoying their food and spending time with
-                friends or family.
+                Whether you have just enjoyed royal dum biryani, crispy chicken wraps, or savoury wok noodles, our Brownie with Ice Cream provides the sweet balance your palate craves.
             </p>
 
-
-            <h3>
-                5. A Menu With Different Choices
-            </h3>
+            <h2>
+                A Favourite for Celebrations Big and Small
+            </h2>
 
             <p>
-                A restaurant can become more convenient when its menu
-                offers different types of food. Groups often include
-                people with different tastes, so having several
-                options can make choosing a meal easier.
+                From children with big smiles to groups of friends celebrating birthdays or anniversaries, this classic dessert never fails to bring smiles. Guests visiting from Udayarvilai, Colachel, Marthandam, and Nagercoil frequently make sure to leave room for dessert when dining at GFC.
             </p>
+
+            <h2>
+                Conclusion: Save Room for Dessert at GFC
+            </h2>
 
             <p>
-                From Indian food to grilled specialities and fast
-                food, a varied menu can give guests the freedom to
-                choose according to their mood and preferences.
+                Next time you visit GFC Restaurant in Kanyakumari, treat yourself and your loved ones to our warm Brownie with Ice Cream. It is the sweet ending your dining experience deserves.
             </p>
-
-
-            <h3>
-                6. A Convenient Location
-            </h3>
-
-            <p>
-                Location also matters when people search for a
-                restaurant. Someone looking for food near me will
-                usually prefer a place that is convenient to reach.
-            </p>
-
-            <p>
-                For people around Udayarvilai and Kanyakumari,
-                finding a restaurant in a convenient location can make
-                planning a meal easier.
-            </p>
-
-
-            <h3>
-                7. The Overall Experience
-            </h3>
-
-            <p>
-                A restaurant experience is created by many small
-                details working together. Food, atmosphere, service,
-                cleanliness and convenience all contribute to the
-                overall experience.
-            </p>
-
-            <p>
-                This is why choosing a restaurant is not always about
-                one particular feature. People often remember how
-                comfortable they felt, how they enjoyed their food
-                and the moments they shared with others.
-            </p>
-
-
-            <h3>
-                Enjoy Your Food Experience at GFC
-            </h3>
-
-            <p>
-                At GFC Restaurant, the focus is on creating a
-                comfortable place where guests can enjoy food and
-                spend meaningful moments together.
-            </p>
-
-            <p>
-                Located in Udayarvilai, Kanyakumari, GFC offers a
-                place to explore different food choices in a relaxed
-                restaurant environment.
-            </p>
-
-            <p>
-                Whether you are searching for a restaurant near me,
-                looking for food in Kanyakumari or planning a meal
-                with friends and family, you can explore the GFC menu
-                and discover the available options.
-            </p>
-
 
             <div class="article-links">
-
+                <a href="blog.html">
+                    Back to All GFC Food Stories →
+                </a>
                 <a href="menu.html">
-                    Explore Our Menu →
+                    Explore Our Full Menu &amp; Desserts →
                 </a>
-
                 <a href="about.html">
-                    About GFC →
+                    Learn More About GFC Restaurant →
                 </a>
-
                 <a href="contact.html">
-                    Contact Us →
+                    Get in Touch with GFC →
                 </a>
-
             </div>
 
         </article>
-
 
         <!-- SIDEBAR -->
 
@@ -1477,30 +834,28 @@ footer {
             <div class="sidebar-card">
 
                 <span>
-                    GFC RESTAURANT
+                    GFC DESSERTS
                 </span>
 
                 <h3>
-                    Good Food.
-                    Good Moments.
+                    Sweet Moments.
+                    Great Company.
                 </h3>
 
                 <p>
-                    Explore our menu and discover delicious food
-                    at GFC Restaurant, Udayarvilai, Kanyakumari.
+                    Explore our sweet treats, shakes, and falooda creations at GFC Restaurant in Udayarvilai, Kanyakumari.
                 </p>
 
                 <a href="menu.html">
-                    Explore Menu →
+                    View Dessert Menu →
                 </a>
 
             </div>
 
-
             <div class="sidebar-card dark-card">
 
                 <span>
-                    READY TO VISIT?
+                    PLAN YOUR VISIT
                 </span>
 
                 <h3>
@@ -1509,7 +864,7 @@ footer {
                 </h3>
 
                 <p>
-                    Plan your next visit to GFC Restaurant.
+                    Enjoy warm hospitality, delicious food, and comfortable booth seating at GFC.
                 </p>
 
                 <a href="reservation.html">
@@ -1524,7 +879,6 @@ footer {
 
 </main>
 
-
 <!-- =========================================================
      CTA
 ========================================================= -->
@@ -1538,12 +892,11 @@ footer {
         </span>
 
         <h2>
-            Good Food Starts
-            With a Great Place
+            Sweet Endings to Wonderful Meals
         </h2>
 
         <p>
-            Explore the GFC menu and enjoy your next food experience.
+            Explore the GFC menu and make your next dining experience unforgettable.
         </p>
 
         <div class="cta-buttons">
@@ -1562,7 +915,6 @@ footer {
 
 </section>
 
-
 <!-- =========================================================
      FOOTER
 ========================================================= -->
@@ -1570,7 +922,6 @@ footer {
 <footer>
 
     <div class="footer-container">
-
 
         <div class="footer-brand">
 
@@ -1583,8 +934,7 @@ footer {
             </h3>
 
             <p>
-                Delicious food, comfortable moments and
-                memorable dining experiences at GFC Restaurant, Udayarvilai, Kanyakumari.
+                Delicious food, comfortable moments and memorable dining experiences at GFC Restaurant, Udayarvilai, Kanyakumari.
             </p>
 
             <div style="margin-top: 10px;">
@@ -1594,7 +944,6 @@ footer {
             </div>
 
         </div>
-
 
         <div class="footer-links">
 
@@ -1610,7 +959,6 @@ footer {
             <a href="contact.html">Contact</a>
 
         </div>
-
 
         <div class="footer-links">
 
@@ -1634,147 +982,86 @@ footer {
 
     </div>
 
-
     <div class="footer-bottom">
-
         © 2026 GFC Restaurant. All Rights Reserved.
-
     </div>
 
 </footer>
-
 
 <!-- =========================================================
      BACK TO TOP
 ========================================================= -->
 
-<button id="backTop">
+<button id="backTop" aria-label="Back to top">
     ↑
 </button>
-
 
 <!-- =========================================================
      JAVASCRIPT
 ========================================================= -->
 
+<script type="module" src="js/script.js"></script>
+
 <script>
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
+/* MOBILE MENU */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.querySelector(".nav-links");
 
-const menuToggle =
-    document.getElementById("menuToggle");
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("mobile-open");
+    });
+}
 
-const navLinks =
-    document.querySelector(".nav-links");
-
-
-menuToggle.addEventListener("click", function () {
-
-    navLinks.classList.toggle("mobile-open");
-
-});
-
-
-/* =========================================================
-   HEADER SCROLL
-========================================================= */
-
-const header =
-    document.getElementById("header");
-
-
-window.addEventListener("scroll", function () {
-
-    if (window.scrollY > 50) {
-
-        header.classList.add("scrolled");
-
-    } else {
-
-        header.classList.remove("scrolled");
-
-    }
-
-});
-
-
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
-
-const revealElements =
-    document.querySelectorAll(".reveal");
-
-
-const observer =
-    new IntersectionObserver(
-
-        (entries) => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("show");
-
-                    observer.unobserve(entry.target);
-
-                }
-
-            });
-
-        },
-
-        {
-            threshold: 0.12
+/* HEADER SCROLL */
+const header = document.getElementById("header");
+if (header) {
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
         }
+    });
+}
 
-    );
-
+/* SCROLL REVEAL */
+const revealElements = document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.12 }
+);
 
 revealElements.forEach(element => {
-
     observer.observe(element);
-
 });
 
-
-/* =========================================================
-   BACK TO TOP
-========================================================= */
-
-const backTop =
-    document.getElementById("backTop");
-
-
-window.addEventListener("scroll", function () {
-
-    if (window.scrollY > 500) {
-
-        backTop.classList.add("show");
-
-    } else {
-
-        backTop.classList.remove("show");
-
-    }
-
-});
-
-
-backTop.addEventListener("click", function () {
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
+/* BACK TO TOP */
+const backTop = document.getElementById("backTop");
+if (backTop) {
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 400) {
+            backTop.classList.add("show");
+        } else {
+            backTop.classList.remove("show");
+        }
     });
 
-});
+    backTop.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
 
 </script>
 
