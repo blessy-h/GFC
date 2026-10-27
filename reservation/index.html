@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Table Reservation | GFC Restaurant in Kanyakumari | Udayarvilai</title>
+
+  <meta
+    name="description"
+    content="Reserve your table at GFC Restaurant in Udayarvilai, Kanyakumari. Enjoy flavourful non-veg dishes, biryani and grilled food with family and friends."
+  >
+
+  <meta
+    name="keywords"
+    content="best restaurant in Kanyakumari, restaurant in Kanyakumari, non veg restaurants near me, restaurant near me, nearby restaurants, restaurant in Nagercoil, restaurant in Marthandam, restaurant in Colachel, recommended restaurants near me, nearby restaurant, good restaurants near me"
+  >
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Reservation CSS -->
+
+  <link rel="stylesheet" href="../css/reservation.css">
+
+  <link rel="canonical" href="https://blessy-h.github.io/GFC/reservation/">
+  <meta property="og:url" content="https://blessy-h.github.io/GFC/reservation/">
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+     SAME AS INDEX.HTML
+===================================================== -->
+
+<header id="header">
+
+  <div class="navbar">
+
+
+    <!-- LOGO -->
+
+    <a href="../"
+       class="logo"
+       aria-label="GFC Restaurant Home">
+
+      <div class="logo-circle">
+        <img src="../gfc-logo.png" alt="GFC Restaurant Logo">
+      </div>
+
+      <div>
+
+        <div class="logo-name">
+          GFC RESTAURANT
+        </div>
+
+        <span class="logo-place">
+          Udayarvilai • Kanyakumari
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <!-- NAVIGATION -->
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="../">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="../menu/">
+          Menu
+        </a>
+      </li>
+
+      <li>
+        <a href="../about/">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="../gallery/">
+          Gallery
+        </a>
+      </li>
+
+      <li>
+        <a href="../blog/">
+          Blog
+        </a>
+      </li>
+
+      <li>
+        <a href="../contact/">
+          Contact
+        </a>
+      </li>
+
+    </ul>
+
+
+    <!-- BOOK TABLE -->
+
+    <a href="../reservation/"
+       class="nav-btn">
+
+      Book a Table
+
+    </a>
+
+
+    <!-- MOBILE MENU -->
+
+    <div class="menu-toggle"
+         id="menuToggle">
+
+      ☰
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+
+<!-- =====================================================
+     RESERVATION SECTION
+===================================================== -->
+
+<section class="reservation-section">
+
+  <div class="container reservation-grid">
+
+
+    <!-- =================================================
+         LEFT CONTENT
+    ================================================== -->
+
+    <div class="reservation-info reveal">
+
+
+      <span class="eyebrow">
+        GFC RESTAURANT
+      </span>
+
+
+      <h2>
+        Your Table Is Waiting
+      </h2>
+
+
+      <p>
+        Planning a family dinner, a friendly gathering,
+        or a special evening? Reserve your table with us
+        and let GFC make your visit memorable.
+      </p>
+
+
+      <!-- FEATURES -->
+
+      <div class="reservation-features">
+
+
+        <!-- FEATURE 1 -->
+
+        <div class="feature-item">
+
+          <div class="feature-icon">
+            🍽️
+          </div>
+
+          <div>
+
+            <h3>
+              Delicious Food
+            </h3>
+
+            <p>
+              Freshly prepared dishes made with care.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- FEATURE 2 -->
+
+        <div class="feature-item">
+
+          <div class="feature-icon">
+            ✨
+          </div>
+
+          <div>
+
+            <h3>
+              Great Ambience
+            </h3>
+
+            <p>
+              A comfortable place for every occasion.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- FEATURE 3 -->
+
+        <div class="feature-item">
+
+          <div class="feature-icon">
+            ❤️
+          </div>
+
+          <div>
+
+            <h3>
+              Happy Moments
+            </h3>
+
+            <p>
+              Create wonderful memories with your loved ones.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- LOCATION -->
+
+      <div class="reservation-note">
+
+        <strong>
+          📍 Visit Us
+        </strong>
+
+        <span>
+          Udayarvilai, Kanyakumari
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         RESERVATION FORM
+    ================================================== -->
+
+    <div class="reservation-card reveal">
+
+
+      <div class="reservation-card-header">
+
+        <span>
+          TABLE RESERVATION
+        </span>
+
+        <h2>
+          Book Your Table
+        </h2>
+
+        <p>
+          Fill in your details below.
+        </p>
+
+      </div>
+
+
+
+      <form id="reservationForm">
+
+
+        <!-- NAME + PHONE -->
+
+        <div class="form-row">
+
+
+          <div class="form-group">
+
+            <label for="name">
+              Full Name
+            </label>
+
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="phone">
+              Phone Number
+            </label>
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              required
+            >
+
+          </div>
+
+        </div>
+
+
+
+        <!-- DATE + TIME -->
+
+        <div class="form-row">
+
+
+          <div class="form-group">
+
+            <label for="date">
+              Date
+            </label>
+
+            <input
+              type="date"
+              id="date"
+              name="date"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="time">
+              Preferred Time
+            </label>
+
+            <input
+              type="time"
+              id="time"
+              name="time"
+              required
+            >
+
+          </div>
+
+        </div>
+
+
+
+        <!-- GUESTS -->
+
+        <div class="form-group">
+
+          <label for="guests">
+            Number of Guests
+          </label>
+
+          <select
+            id="guests"
+            name="guests"
+            required
+          >
+
+            <option value="">
+              Select guests
+            </option>
+
+            <option value="1">
+              1 Guest
+            </option>
+
+            <option value="2">
+              2 Guests
+            </option>
+
+            <option value="3">
+              3 Guests
+            </option>
+
+            <option value="4">
+              4 Guests
+            </option>
+
+            <option value="5">
+              5 Guests
+            </option>
+
+            <option value="6">
+              6 Guests
+            </option>
+
+            <option value="7">
+              7 Guests
+            </option>
+
+            <option value="8+">
+              8+ Guests
+            </option>
+
+          </select>
+
+        </div>
+
+
+
+        <!-- SPECIAL REQUEST -->
+
+        <div class="form-group">
+
+          <label for="message">
+            Special Request
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Any special request?"
+          ></textarea>
+
+        </div>
+
+
+
+        <!-- SUBMIT -->
+
+        <button
+          type="submit"
+          class="reservation-submit"
+        >
+
+          Reserve My Table
+
+          <span>
+            →
+          </span>
+
+        </button>
+
+
+        <!-- FORM MESSAGE -->
+
+        <p
+          class="form-message"
+          id="formMessage"
+        ></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="reservation-cta">
+
+  <div class="container">
+
+    <div class="cta-content">
+
+
+      <span class="eyebrow">
+        HAVE QUESTIONS?
+      </span>
+
+
+      <h2>
+        We'd Love to Hear From You
+      </h2>
+
+
+      <p>
+        For special requests or group reservations,
+        feel free to contact GFC Restaurant.
+      </p>
+
+
+      <div class="cta-buttons">
+
+
+        <a
+          href="../contact/"
+          class="btn btn-primary"
+        >
+          Contact Us
+        </a>
+
+
+        <a
+          href="../menu/"
+          class="btn btn-secondary"
+        >
+          Explore Menu
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+  <div class="container footer-grid">
+
+
+    <!-- BRAND -->
+
+    <div class="footer-brand">
+
+      <div class="logo-badge">
+        <img src="../gfc-logo.png" alt="GFC Restaurant Logo">
+      </div>
+
+      <h3>
+        GFC RESTAURANT
+      </h3>
+
+      <p>
+        A welcoming restaurant in Udayarvilai, Kanyakumari, serving non-veg dishes, biryani, grilled food, and cafe dining. Near Colachel, Marthandam & Nagercoil.
+      </p>
+
+      <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 8px;">
+        <a href="https://www.instagram.com/grandfestivecafe/" target="_blank" rel="noopener noreferrer" style="color: var(--gold, #d4a373); font-weight: 600; display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem;">
+          Follow @grandfestivecafe on Instagram →
+        </a>
+        <a href="https://share.google/A3V1HTmnhE7vF1izd" target="_blank" rel="noopener noreferrer" style="color: #4285f4; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem;">
+          Rated 4.9 ★ on Google (190+ Reviews) →
+        </a>
+      </div>
+
+    </div>
+
+
+
+    <!-- LINKS -->
+
+    <div class="footer-links">
+
+      <h4>
+        Quick Links
+      </h4>
+
+      <a href="../">
+        Home
+      </a>
+
+      <a href="../menu/">
+        Menu
+      </a>
+
+      <a href="../about/">
+        About
+      </a>
+
+      <a href="https://share.google/A3V1HTmnhE7vF1izd" target="_blank" rel="noopener noreferrer">
+        Google Reviews (4.9 ★)
+      </a>
+
+      <a href="../gallery/">
+        Gallery
+      </a>
+
+      <a href="../blog/">
+        Blog
+      </a>
+
+      <a href="../contact/">
+        Contact
+      </a>
+
+    </div>
+
+
+
+    <!-- CONTACT -->
+
+    <div class="footer-contact">
+
+      <h4>
+        Visit Us
+      </h4>
+
+      <p>
+        📍 Udayarvilai,<br>
+        Kanyakumari, Tamil Nadu
+      </p>
+
+      <p>
+        <a href="tel:9585046767" style="color: inherit; text-decoration: none;">
+          📞 +91 95850 46767
+        </a>
+      </p>
+
+      <p>
+        ✉️ info@gfcrestaurant.com
+      </p>
+
+    </div>
+
+
+  </div>
+
+
+  <!-- FOOTER BOTTOM -->
+
+  <div class="footer-bottom">
+
+    <p>
+      © 2026 GFC Restaurant. All Rights Reserved.
+    </p>
+
+  </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuToggle =
+  document.getElementById("menuToggle");
+
+const navLinks =
+  document.querySelector(".nav-links");
+
+
+if (menuToggle && navLinks) {
+
+
+  menuToggle.addEventListener(
+    "click",
+    function () {
+
+      navLinks.classList.toggle(
+        "mobile-open"
+      );
+
+    }
+  );
+
+
+  document
+    .querySelectorAll(".nav-links a")
+    .forEach(function (link) {
+
+      link.addEventListener(
+        "click",
+        function () {
+
+          navLinks.classList.remove(
+            "mobile-open"
+          );
+
+        }
+      );
+
+    });
+
+}
+
+
+
+/* =====================================================
+   HEADER SCROLL
+===================================================== */
+
+const header =
+  document.getElementById("header");
+
+
+if (header) {
+
+  window.addEventListener(
+    "scroll",
+    function () {
+
+      if (window.scrollY > 50) {
+
+        header.classList.add(
+          "scrolled"
+        );
+
+      } else {
+
+        header.classList.remove(
+          "scrolled"
+        );
+
+      }
+
+    }
+  );
+
+}
+
+
+
+/* =====================================================
+   REVEAL ANIMATION
+===================================================== */
+
+const revealElements =
+  document.querySelectorAll(".reveal");
+
+
+const revealObserver =
+  new IntersectionObserver(
+    function (entries) {
+
+      entries.forEach(function (entry) {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add(
+            "show"
+          );
+
+          revealObserver.unobserve(
+            entry.target
+          );
+
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+
+revealElements.forEach(function (element) {
+
+  revealObserver.observe(element);
+
+});
+
+
+
+/* =====================================================
+   RESERVATION FORM
+===================================================== */
+
+const reservationForm =
+  document.getElementById(
+    "reservationForm"
+  );
+
+const formMessage =
+  document.getElementById(
+    "formMessage"
+  );
+
+
+if (reservationForm) {
+
+  reservationForm.addEventListener(
+    "submit",
+    function (event) {
+
+      event.preventDefault();
+
+
+      formMessage.textContent =
+        "Thank you! Your reservation request has been received.";
+
+
+      formMessage.classList.add(
+        "success"
+      );
+
+
+      reservationForm.reset();
+
+    }
+  );
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

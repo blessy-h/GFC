@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title> Best Restaurant in Kanyakumari </title>
+<title>GFC Restaurant | Best Restaurant in Kanyakumari</title>
 
 <meta name="description"
-content="Looking for the best restaurant in Kanyakumari? Visit GFC Restaurant in udayarvilai for delicious biryani, non-veg dishes, grilled food, pizza and burger.">
+content="Best restaurant in Kanyakumari for authentic non-veg delicacies, royal dum biryani, grills & cafe bites. Recommended restaurant near me serving Kanyakumari, Nagercoil, Marthandam & Colachel.">
 
 <meta name="keywords"
 content="best restaurant in Kanyakumari, restaurant in Kanyakumari, non veg restaurants near me, restaurant near me, nearby restaurants, restaurant in Nagercoil, restaurant in Marthandam, restaurant in Colachel, recommended restaurants near me, nearby restaurant, good restaurants near me">
@@ -15,7 +15,7 @@ content="best restaurant in Kanyakumari, restaurant in Kanyakumari, non veg rest
 <!-- OpenGraph / Social Cards -->
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:title" content="GFC Restaurant | Best Restaurant in Kanyakumari | Udayarvilai">
-<meta property="og:description" content="Discover flavourful non-veg dishes, aromatic biryani, grilled food, and cafe dining at GFC Restaurant in Udayarvilai, Kanyakumari.">
+<meta property="og:description" content="Best restaurant in Kanyakumari for authentic non-veg delicacies, royal dum biryani, grills & cafe bites. Recommended restaurant near me serving Kanyakumari, Nagercoil, Marthandam & Colachel.">
 <meta property="og:image" content="gfc-hero.jpg">
 <meta property="og:site_name" content="GFC Restaurant">
   
@@ -3079,16 +3079,22 @@ footer a {
    LOADER
 ========================================================= */
 
-window.addEventListener("load", function () {
+function dismissLoader() {
+    var loader = document.getElementById("loader");
+    if (loader && !loader.classList.contains("hide")) {
+        loader.classList.add("hide");
+    }
+}
 
-    setTimeout(function () {
-
-        document.getElementById("loader")
-            .classList.add("hide");
-
-    }, 800);
-
-});
+if (document.readyState === "complete") {
+    setTimeout(dismissLoader, 300);
+} else {
+    window.addEventListener("load", function () {
+        setTimeout(dismissLoader, 400);
+    });
+    // Fallback in case load event was already dispatched or slow assets
+    setTimeout(dismissLoader, 1500);
+}
 
 
 /* =========================================================

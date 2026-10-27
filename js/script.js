@@ -4,7 +4,7 @@
  * Clean Vanilla JavaScript (No jQuery, No external UI frameworks)
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
   initHeaderAndNav();
   initActiveNavLink();
   initScrollReveal();
@@ -14,7 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initGalleryPage();
   initContactForm();
   initReservationForm();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
 
 /* ==========================================================================
    1. STICKY HEADER & MOBILE NAVIGATION
