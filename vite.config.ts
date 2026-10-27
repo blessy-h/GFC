@@ -33,6 +33,7 @@ export default defineConfig(() => {
           blogHtml: path.resolve(__dirname, 'blog.html'),
           contactHtml: path.resolve(__dirname, 'contact.html'),
           reservationHtml: path.resolve(__dirname, 'reservation.html'),
+          notFound: path.resolve(__dirname, '404.html'),
         },
       },
     },

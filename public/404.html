@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | GFC Restaurant Kanyakumari</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <script>
+    // GitHub Pages Smart SPA / Route Redirector
+    (function () {
+      var path = window.location.pathname;
+      var base = '/GFC';
+      if (!path.startsWith(base)) {
+        base = '';
+      }
+      var clean = path.replace(/^\/GFC/, '');
+
+      var knownDirs = [
+        'about', 'menu', 'gallery', 'blog', 'contact', 'reservation',
+        'the-art-of-royal-dum-biryani-why-it-remains-a-timeless-favourite',
+        'the-art-of-royal-dum-biryani',
+        'crispy-chicken-wraps-fresh-flavours-rolled-to-perfection',
+        'crispy-chicken-wraps',
+        'chilled-mocktails-refreshing-coolers-the-ultimate-thirst-quenchers',
+        'chilled-mocktails-and-refreshing-coolers',
+        'comfortable-dining-booths-designing-spaces-for-family-and-friends',
+        'comfortable-dining-booths',
+        'wok-tossed-perfection-the-secret-behind-our-savoury-egg-fried-rice',
+        'savoury-egg-fried-rice',
+        'the-ultimate-sweet-indulgence-warm-brownie-with-cool-ice-cream',
+        'warm-brownie-with-cool-ice-cream'
+      ];
+
+      for (var i = 0; i < knownDirs.length; i++) {
+        var d = knownDirs[i];
+        if (clean === '/' + d || clean === '/' + d + '.html') {
+          window.location.replace(base + '/' + d + '/');
+          return;
+        }
+      }
+
+      if (clean.indexOf('ariticle1') !== -1 || clean.indexOf('article1') !== -1 || clean.indexOf('biryani') !== -1) {
+        window.location.replace(base + '/the-art-of-royal-dum-biryani-why-it-remains-a-timeless-favourite/');
+        return;
+      }
+      if (clean.indexOf('ariticle2') !== -1 || clean.indexOf('article2') !== -1 || clean.indexOf('wrap') !== -1) {
+        window.location.replace(base + '/crispy-chicken-wraps-fresh-flavours-rolled-to-perfection/');
+        return;
+      }
+      if (clean.indexOf('ariticle3') !== -1 || clean.indexOf('article3') !== -1 || clean.indexOf('mocktail') !== -1 || clean.indexOf('cooler') !== -1) {
+        window.location.replace(base + '/chilled-mocktails-refreshing-coolers-the-ultimate-thirst-quenchers/');
+        return;
+      }
+      if (clean.indexOf('ariticle4') !== -1 || clean.indexOf('article4') !== -1 || clean.indexOf('booth') !== -1) {
+        window.location.replace(base + '/comfortable-dining-booths-designing-spaces-for-family-and-friends/');
+        return;
+      }
+      if (clean.indexOf('ariticle5') !== -1 || clean.indexOf('article5') !== -1 || clean.indexOf('fried-rice') !== -1) {
+        window.location.replace(base + '/wok-tossed-perfection-the-secret-behind-our-savoury-egg-fried-rice/');
+        return;
+      }
+      if (clean.indexOf('ariticle6') !== -1 || clean.indexOf('article6') !== -1 || clean.indexOf('brownie') !== -1) {
+        window.location.replace(base + '/the-ultimate-sweet-indulgence-warm-brownie-with-cool-ice-cream/');
+        return;
+      }
+    })();
+  </script>
+  <style>
+    :root {
+      --orange: #e85d04;
+      --dark-orange: #c94700;
+      --dark: #171717;
+      --cream: #fffaf4;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 24px;
+    }
+    .box {
+      max-width: 600px;
+      background: white;
+      padding: 50px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(232, 93, 4, 0.1);
+      color: var(--orange);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 1px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.1;
+      margin-bottom: 16px;
+      color: var(--dark);
+    }
+    h1 span { color: var(--orange); }
+    p {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .btns {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 13px 26px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      transition: .3s;
+    }
+    .btn-primary { background: var(--orange); color: white; }
+    .btn-primary:hover { background: var(--dark-orange); transform: translateY(-2px); }
+    .btn-outline { border: 2px solid var(--orange); color: var(--orange); }
+    .btn-outline:hover { background: var(--orange); color: white; transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <span class="badge">GFC RESTAURANT</span>
+    <h1>Page Not <span>Found</span></h1>
+    <p>The page you are looking for may have moved or is being updated. Let's get you back to the delicious food!</p>
+    <div class="btns">
+      <a href="./" class="btn btn-primary">Return Home</a>
+      <a href="menu/" class="btn btn-outline">Explore Menu</a>
+      <a href="blog/" class="btn btn-outline">Food Stories</a>
+    </div>
+  </div>
+</body>
+</html>
