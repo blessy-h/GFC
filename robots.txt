@@ -1,0 +1,3 @@
+User-agent: * Allow: /
+
+Sitemap: https://blessy-h.github.io/GFC/sitemap.xml
