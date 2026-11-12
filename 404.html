@@ -25,18 +25,7 @@
       // Trailing slash fix
       var knownDirs = [
         'about', 'menu', 'gallery', 'blog', 'contact', 'reservation',
-        'the-art-of-royal-dum-biryani-why-it-remains-a-timeless-favourite',
-        'the-art-of-royal-dum-biryani',
-        'crispy-chicken-wraps-fresh-flavours-rolled-to-perfection',
-        'crispy-chicken-wraps',
-        'chilled-mocktails-refreshing-coolers-the-ultimate-thirst-quenchers',
-        'chilled-mocktails-and-refreshing-coolers',
-        'comfortable-dining-booths-designing-spaces-for-family-and-friends',
-        'comfortable-dining-booths',
-        'wok-tossed-perfection-the-secret-behind-our-savoury-egg-fried-rice',
-        'savoury-egg-fried-rice',
-        'the-ultimate-sweet-indulgence-warm-brownie-with-cool-ice-cream',
-        'warm-brownie-with-cool-ice-cream'
+        'chicken-dum-biryani-kanyakumari'
       ];
 
       function redirectTo(target) {
@@ -53,29 +42,18 @@
         }
       }
 
-      // Legacy article aliases
-      if (clean.indexOf('ariticle1') !== -1 || clean.indexOf('article1') !== -1 || clean.indexOf('biryani') !== -1) {
-        redirectTo(base + '/the-art-of-royal-dum-biryani-why-it-remains-a-timeless-favourite/');
+      // Biryani queries -> redirect to the Chicken Dum Biryani article
+      if (clean.indexOf('biryani') !== -1) {
+        redirectTo(base + '/chicken-dum-biryani-kanyakumari/');
         return;
       }
-      if (clean.indexOf('ariticle2') !== -1 || clean.indexOf('article2') !== -1 || clean.indexOf('wrap') !== -1) {
-        redirectTo(base + '/crispy-chicken-wraps-fresh-flavours-rolled-to-perfection/');
-        return;
-      }
-      if (clean.indexOf('ariticle3') !== -1 || clean.indexOf('article3') !== -1 || clean.indexOf('mocktail') !== -1 || clean.indexOf('cooler') !== -1) {
-        redirectTo(base + '/chilled-mocktails-refreshing-coolers-the-ultimate-thirst-quenchers/');
-        return;
-      }
-      if (clean.indexOf('ariticle4') !== -1 || clean.indexOf('article4') !== -1 || clean.indexOf('booth') !== -1) {
-        redirectTo(base + '/comfortable-dining-booths-designing-spaces-for-family-and-friends/');
-        return;
-      }
-      if (clean.indexOf('ariticle5') !== -1 || clean.indexOf('article5') !== -1 || clean.indexOf('fried-rice') !== -1) {
-        redirectTo(base + '/wok-tossed-perfection-the-secret-behind-our-savoury-egg-fried-rice/');
-        return;
-      }
-      if (clean.indexOf('ariticle6') !== -1 || clean.indexOf('article6') !== -1 || clean.indexOf('brownie') !== -1) {
-        redirectTo(base + '/the-ultimate-sweet-indulgence-warm-brownie-with-cool-ice-cream/');
+
+      // Legacy article aliases -> redirect to /blog/
+      if (clean.indexOf('ariticle') !== -1 || clean.indexOf('article') !== -1 ||
+          clean.indexOf('wrap') !== -1 || clean.indexOf('mocktail') !== -1 ||
+          clean.indexOf('cooler') !== -1 || clean.indexOf('booth') !== -1 ||
+          clean.indexOf('fried-rice') !== -1 || clean.indexOf('brownie') !== -1) {
+        redirectTo(base + '/blog/');
         return;
       }
     })();
