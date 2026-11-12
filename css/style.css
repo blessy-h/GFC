@@ -13,13 +13,13 @@
   --primary-dark: #B45309;
   --primary-glow: rgba(245, 158, 11, 0.22);
 
-  --dark: #e9e6d9;
-  --dark-surface: white;
-  --dark-card: #edb846;
-  --dark-card-hover: #de8202;
-  --dark-border: rgba(255, 248, 248, 0.08);
+  --dark: #171717;
+  --dark-surface: #ffffff;
+  --dark-card: #ffffff;
+  --dark-card-hover: #fffaf4;
+  --dark-border: rgba(0, 0, 0, 0.08);
 
-  --black: #edb846;
+  --black: #171717;
   --obsidian: #050505;
 
   --cream: #FFF9E8;
@@ -84,16 +84,12 @@ html {
 
 body {
   font-family: var(--font-body);
-  color: var(--text-main);
-  background-color: var(--black);
+  color: #222222;
+  background-color: #fffaf4;
   line-height: 1.7;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: 
-    radial-gradient(ellipse at 50% 0%, rgba(226, 219, 210, 0.035) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 40%, rgba(212, 160, 23, 0.02) 0%, transparent 50%);
-  background-attachment: fixed;
 }
 
 img, svg, video {
