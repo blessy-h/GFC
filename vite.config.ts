@@ -13,6 +13,7 @@ const rawInputs: Record<string, string> = {
   contact: path.resolve(__dirname, 'contact/index.html'),
   reservation: path.resolve(__dirname, 'reservation/index.html'),
   chickenDumBiryani: path.resolve(__dirname, 'chicken-dum-biryani-kanyakumari/index.html'),
+  bestRestaurantKanyakumari: path.resolve(__dirname, 'best-restaurant-in-kanyakumari/index.html'),
   aboutHtml: path.resolve(__dirname, 'about.html'),
   menuHtml: path.resolve(__dirname, 'menu.html'),
   galleryHtml: path.resolve(__dirname, 'gallery.html'),
